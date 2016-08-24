@@ -1,0 +1,21 @@
+{
+  "name": "bikram",
+  "homepage": "https://github.com/ceto/bikram",
+  "authors": [
+    "Gabor Szabo <szabogabi@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "owl.carousel": "owl-carousel2#^2.1.6"
+  },
+  "overrides": {
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "src/scss/owl.carousel.scss"
+      ]
+    }
+  }
+}

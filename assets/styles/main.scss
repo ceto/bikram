@@ -1,0 +1,17 @@
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/foundation-sites/scss/foundation.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+// endbower
+
+
+@import "settings";
+@include foundation-everything;
+
+//@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
