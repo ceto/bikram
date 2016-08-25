@@ -16,13 +16,17 @@ function setup() {
   add_theme_support('soil-jquery-cdn');
   add_theme_support('soil-relative-urls');
 
+  //Timetable plugin template overides enabled
+  add_theme_support('mp-timetable');
+
+
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
   load_theme_textdomain('bikram', get_template_directory() . '/lang');
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-  add_theme_support('title-tag');
+  //add_theme_support('title-tag');
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
@@ -57,18 +61,18 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Primary', 'bikram'),
     'id'            => 'sidebar-primary',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_widget' => '<div class="columns medium-2 large-4"><section class="widget widget--sidebar %1$s %2$s">',
+    'after_widget'  => '</section></div>',
+    'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
 
   register_sidebar([
     'name'          => __('Footer', 'bikram'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
+    'before_widget' => '<div class="columns medium-2 large-4"><section class="widget widget--footer %1$s %2$s">',
+    'after_widget'  => '</section></div>',
+    'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
 }
@@ -86,10 +90,14 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    is_singular('mp-event'),
+    is_singular('mp-column')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
 }
+
+
 
 /**
  * Theme assets
