@@ -1,10 +1,7 @@
 <?php
-
-use Roots\Sage\Setup;
-use Roots\Sage\Wrapper;
-
+  use Roots\Sage\Setup;
+  use Roots\Sage\Wrapper;
 ?>
-
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
@@ -18,18 +15,16 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
-    <div class="wrap container" role="document">
-      <div class="content row">
-        <main class="main">
+    <div class="document" role="document">
+      <main class="main <?= (Setup\display_sidebar())?'main--hassidebar':'';  ?>">
           <?php include Wrapper\template_path(); ?>
-        </main><!-- /.main -->
-        <?php if (Setup\display_sidebar()) : ?>
-          <aside class="sidebar">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
-        <?php endif; ?>
-      </div><!-- /.content -->
-    </div><!-- /.wrap -->
+      </main><!-- /.main -->
+      <?php if (Setup\display_sidebar()) : ?>
+      <aside class="sidebar sidebar--main">
+        <?php include Wrapper\sidebar_path(); ?>
+      </aside><!-- /.sidebar -->
+      <?php endif; ?>
+    </div><!-- /.document -->
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');

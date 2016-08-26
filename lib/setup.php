@@ -70,8 +70,8 @@ function widgets_init() {
   register_sidebar([
     'name'          => __('Footer', 'bikram'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<div class="columns medium-2 large-4"><section class="widget widget--footer %1$s %2$s">',
-    'after_widget'  => '</section></div>',
+    'before_widget' => '<section class="widget widget--footer %1$s %2$s">',
+    'after_widget'  => '</section>',
     'before_title'  => '<h3 class="widget__title">',
     'after_title'   => '</h3>'
   ]);
@@ -89,6 +89,7 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_home(),
     is_page_template('template-custom.php'),
     is_singular('mp-event'),
     is_singular('mp-column')
