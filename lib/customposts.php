@@ -35,7 +35,7 @@ function bikram_custom_post_types() {
     'label'                 => __( 'Event', 'bikram' ),
     'description'           => __( 'Event Description', 'bikram' ),
     'labels'                => $labels,
-    'supports'              => array('title'),
+    'supports'              => array(''),
     'taxonomies'            => array(),
     'hierarchical'          => false,
     'public'                => true,
@@ -171,7 +171,7 @@ add_action( 'manage_event_posts_custom_column', 'bikramr_event_table_content', 1
 
 function bikramr_event_table_content( $column_name, $post_id ) {
     if ($column_name == 'event_date') {
-      echo  date( _x( 'F d, Y H:i', 'Event date format', 'bikram' ), strtotime( get_post_meta( $post_id, 'starts', true ) ) ).' - '. date( _x( 'H:i', 'Event date format', 'bikram' ), strtotime( get_post_meta( $post_id, 'ends', true ) ) ) ;
+      echo get_field('starts') .' - ' .get_field('ends') ;
     }
 
     if ($column_name == 'event_teacher') {
@@ -179,3 +179,41 @@ function bikramr_event_table_content( $column_name, $post_id ) {
       echo get_the_title( $teacher_object->ID);
     }
 }
+
+// Event list is always ascending by date and starts
+function bikram_event_order( $query ) {
+    if ( ( ! is_admin() ) && ($query->query['post_type']=='event') ) {
+        $query->set( 'meta_query', array( 'relation'=>'AND', array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d H:i:s'), type => 'DATETIME' ) ) );
+        $query->set( 'order', 'ASC');
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'meta_key', 'starts');
+        $query->set( 'meta_type', 'DATETIME');
+        if ($query->is_main_query()) {
+            $query->set('posts_per_page', '-1');
+        }
+    }
+}
+add_action( 'pre_get_posts', 'bikram_event_order' );
+
+// set event title
+function bikram_set_event_title ($post_id) {
+    if ( $post_id == null || empty($_POST) )
+        return;
+
+    if ( !isset( $_POST['post_type'] ) || $_POST['post_type']!='event' )
+        return;
+
+    if ( wp_is_post_revision( $post_id ) )
+        $post_id = wp_is_post_revision( $post_id );
+
+    global $post;
+    if ( empty( $post ) )
+        $post = get_post($post_id);
+
+    global $wpdb;
+
+    $title = get_the_title( get_field('class') ) . ' | ' . get_field('starts') .' - ' . get_field('ends') . ' | ' .  get_the_title( get_field('teacher') ) ;
+    $where = array( 'ID' => $post_id );
+    $wpdb->update( $wpdb->posts, array( 'post_title' => $title ), $where );
+}
+add_action('acf/save_post', 'bikram_set_event_title', 20 );
