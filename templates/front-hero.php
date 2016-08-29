@@ -4,7 +4,7 @@
       <div class="hero__content">
         <h1>Szuper felütés kell ide amitől lehasalsz</h1>
         <p>ide meg a lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste modi deserunt animi obcaecati aut maxime itaque consequatur, nemo adipisci.</p>
-        <a href="#" class="button">Ismerd meg óráinkat</a>
+        <a href="#" class="button">Tudnivalók kezdőknek</a>
       </div>
     </div>
     <div class="columns large-4">
