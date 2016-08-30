@@ -7,3 +7,7 @@
     <?php endwhile; ?>
   </div>
 </div>
+<?php  get_template_part('templates/sticky', 'block'); ?>
+<?php
+  get_template_part('tmpl', 'classlist');
+?>

@@ -147,7 +147,7 @@ function bikram_custom_post_types() {
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
     'can_export'            => true,
-    'has_archive'           => true,
+    'has_archive'           => false,
     'exclude_from_search'   => false,
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
@@ -183,12 +183,13 @@ function bikramr_event_table_content( $column_name, $post_id ) {
 // Event list is always ascending by date and starts
 function bikram_event_order( $query ) {
     if ( ( ! is_admin() ) && ($query->query['post_type']=='event') ) {
-        $query->set( 'meta_query', array( 'relation'=>'AND', array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d H:i:s'), type => 'DATETIME' ) ) );
+
         $query->set( 'order', 'ASC');
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'meta_key', 'starts');
         $query->set( 'meta_type', 'DATETIME');
         if ($query->is_main_query()) {
+            $query->set( 'meta_query', array( 'relation'=>'AND', array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d H:i:s'), type => 'DATETIME' ) ) );
             $query->set('posts_per_page', '-1');
         }
     }
@@ -217,3 +218,14 @@ function bikram_set_event_title ($post_id) {
     $wpdb->update( $wpdb->posts, array( 'post_title' => $title ), $where );
 }
 add_action('acf/save_post', 'bikram_set_event_title', 20 );
+
+
+//remove sticky posts
+function bikram_remove_sticky_posts( $query ) {
+    if ( is_home() && $query->is_main_query() ) {
+        //$query->set( 'ignore_sticky_posts', true );
+        $query->set( 'post__not_in' , get_option( 'sticky_posts' ));
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts', 'bikram_remove_sticky_posts' );

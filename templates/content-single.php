@@ -2,15 +2,17 @@
 <article <?php post_class('singlepost'); ?>>
   <header class="singlepost__header">
     <div class="row">
-      <div class="columns">
+      <div class="columns large-10 large-centered xlarge-9">
         <h1 class="singlepost__title"><?php the_title(); ?></h1>
-        <?php get_template_part('templates/entry-meta'); ?>
+        <?php if ( get_field('hasdate')==0 ) : ?>
+          <?php get_template_part('templates/entry-meta'); ?>
+        <?php endif; ?>
       </div>
     </div>
   </header>
   <div class="singlepost__content content">
     <div class="row">
-      <div class="columns">
+      <div class="columns large-10 large-centered xlarge-9">
         <?php the_content(); ?>
       </div>
     </div>

@@ -8,7 +8,9 @@
 @import "settings";
 @include foundation-everything;
 
-//@import "components/wp-classes";
+@import "globals";
+@import "components/wp-classes";
+@import "layouts/hero";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

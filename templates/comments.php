@@ -5,7 +5,7 @@ return;
 ?>
 <section id="comments" class="comments">
   <div class="row">
-    <div class="columns">
+    <div class="columns large-10 large-centered xlarge-9">
       <?php if (have_comments()) : ?>
       <h2><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'bikram'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
       <ol class="comment-list">

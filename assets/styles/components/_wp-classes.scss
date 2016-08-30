@@ -1,6 +1,13 @@
 // WordPress Generated Classes
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
+
+.hentry.sticky {
+  position: initial;
+  transform: none;
+  z-index: auto;
+}
+
 // Media alignment
 .alignnone {
   margin-left: 0;
@@ -10,23 +17,23 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: ($global-lineheight / 2) auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: ($global-lineheight / 2);
   height: auto;
 }
-@media (min-width: $screen-sm-min) {
+@include breakpoint(medium) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: ($global-lineheight / 2);
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: ($global-lineheight / 2);
   }
 }
 
@@ -35,11 +42,10 @@
   @extend .thumbnail;
 }
 .wp-caption-text {
-  padding: $thumbnail-caption-padding;
+  padding: .5rem;
 }
 
 // Text meant only for screen readers
 .screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+
 }

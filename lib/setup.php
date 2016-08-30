@@ -92,7 +92,8 @@ function display_sidebar() {
     is_home(),
     is_page_template('template-custom.php'),
     is_singular('mp-event'),
-    is_singular('mp-column')
+    is_singular('mp-column'),
+    is_page()
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
