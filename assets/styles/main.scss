@@ -9,7 +9,6 @@
 @include foundation-everything;
 
 @import "globals";
-@import "components/wp-classes";
 @import "layouts/hero";
 @import "layouts/header";
 @import "layouts/sidebar";
@@ -17,3 +16,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "components/wp-classes";
+@import "components/teachercard";
+

@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
-  <header class="pagehead pagehead--singleclass">
+  <header class="pagehead pagehead--singleclass ps">
     <div class="row">
       <div class="columns large-8">
         <h1 class="pagehead__title"><?php the_title(); ?></h1>
@@ -22,9 +22,9 @@
         );
         $the_events = new WP_Query( $args );
       ?>
-      <section class="pagehead__schedule" role="marquee">
+      <section class="pagehead__schedule callout" role="marquee">
         <div class="calendar calendar--full">
-          <h2>Közelgő órák</h2>
+          <h2><?php the_title(); ?> órák</h2>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <?php get_template_part('templates/calendar','entryfull'); ?>
           <?php endwhile; ?>
@@ -35,7 +35,8 @@
       </div>
     </div>
   </header>
-  <div class="singleclass__content content">
+  <?php wp_reset_query(); ?>
+  <div class="singleclass__content content ps">
     <div class="row">
       <div class="columns">
         <?php the_content(); ?>
