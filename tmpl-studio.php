@@ -11,7 +11,7 @@
   <div class="ps">
     <div class="row">
       <div class="columns">
-        <h2>Nem vagyunk merevek, lazák szabadok barátságosak</h2>
+        <h2>MANIFESTO: Nem vagyunk merevek, lazák szabadok barátságosak</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam laborum hic optio dolor ratione illum unde ullam tempora. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis laudantium quae, voluptatem sit eum placeat provident atque recusandae porro magni cum reiciendis accusamus tenetur iure unde. Aperiam quis neque, nostrum. facere voluptatem? Debitis eligendi praesentium voluptatibus. Quae vitae numquam placeat earum consequuntur?</p>
         <img src="http://placehold.it/1920x600?text=hangulatfotok" alt="">
       </div>

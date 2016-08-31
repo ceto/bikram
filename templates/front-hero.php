@@ -8,14 +8,14 @@
       </div>
     </div>
     <div class="columns large-4">
-      <?php
+     <!--  <?php
         $todayargs = array(
           'post_type'  => 'event',
           'posts_per_page' => -1,
           'meta_query' => array(
             'relation'=>'AND',
             array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d'), type => 'DATE' ),
-            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-08-31'), type => 'DATE' )
+            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-09-01'), type => 'DATE' )
           )
         );
         $the_eventstoday = new WP_Query( $todayargs );
@@ -25,7 +25,7 @@
           'meta_query' => array(
             'relation'=>'AND',
             array('key' => 'starts', 'compare' => '>', 'value'=> date('Y-m-d'), type => 'DATE' ),
-            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-09-01'), type => 'DATE' )
+            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-09-02'), type => 'DATE' )
           )
         );
         $the_eventstomorrow = new WP_Query( $tomorrowargs );
@@ -55,7 +55,7 @@
         </div>
         <a href="<?= get_the_permalink(42) ?>" class="button small">Teljes órarend</a>
 
-      </section>
+      </section> -->
 
 
 

@@ -2,13 +2,19 @@
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
 @import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../bower_components/motion-ui/src/motion-ui.scss";
 // endbower
 
 
 @import "settings";
 @include foundation-everything;
 
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
 @import "globals";
+@import "layouts/banner";
 @import "layouts/hero";
 @import "layouts/header";
 @import "layouts/sidebar";

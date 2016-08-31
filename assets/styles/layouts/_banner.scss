@@ -1,0 +1,45 @@
+.banner {
+  height: 3rem;
+  position: relative;
+  text-align: center;
+
+  @include clearfix();
+}
+.menutoggle, .eventstoggle {
+  font-size: .875rem;
+
+  display: block;
+  float: left;
+
+  height: 100%;
+  padding: 0 .5em;
+
+  background-color: $dark-gray;
+  color:$white;
+  &:hover, &:focus {
+    background-color: $black;
+    color:$white;
+  }
+}
+.brand {
+  display: inline-block;
+  height: 100%;
+}
+.banner__events {
+  display: block;
+  float: right;
+  height: 100%;
+  .eventstoggle {
+    float:right;
+  }
+}
+
+
+.menumodal {
+  text-align: center;
+}
+
+.primarynav {
+  margin:0 auto;
+  max-width: 36rem;
+}

@@ -4,7 +4,12 @@
     <div class="row">
       <div class="columns large-8">
         <h1 class="pagehead__title"><?php the_title(); ?></h1>
-        <p class="pagehead__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cum pariatur neque doloribus magnam, vel mollitia sit consectetur veniam eaque facilis distinctio, ipsa. Veniam suscipit et magni porro, officia, at.</p>
+        <p class="pagehead__lead">
+          <?php
+            global $more; $more = 0;
+            the_excerpt();
+          ?>
+        </p>
         <div class="pagehead__actions">
           <a href="#" class="button">Részletek</a>
         </div>
@@ -39,7 +44,7 @@
   <div class="singleclass__content content ps">
     <div class="row">
       <div class="columns">
-        <?php the_content(); ?>
+        <?php $more=1; the_content('', TRUE); ?>
       </div>
     </div>
   </div>
@@ -50,6 +55,6 @@
       </div>
     </div>
   </footer>
-  <?php comments_template('/templates/comments.php'); ?>
+  <?php //comments_template('/templates/comments.php'); ?>
 </article>
 <?php endwhile; ?>

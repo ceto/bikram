@@ -13,7 +13,13 @@
   <div class="singlepost__content content">
     <div class="row">
       <div class="columns large-10 large-centered xlarge-9">
-        <?php the_content(); ?>
+        <div class="lead">
+          <?php
+            global $more; $more = 0;
+            the_excerpt();
+          ?>
+        </div>
+        <?php $more=1; the_content('', TRUE); ?>
       </div>
     </div>
   </div>
@@ -24,6 +30,6 @@
       </div>
     </div>
   </footer>
-  <?php comments_template('/templates/comments.php'); ?>
+  <?php //comments_template('/templates/comments.php'); ?>
 </article>
 <?php endwhile; ?>
