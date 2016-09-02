@@ -6,7 +6,7 @@
   </div>
 </header>
 
-<div class="reveal full menumodal" id="menumodal" data-reveal data-animation-in="slide-in-down" data-animation-out="slide-out-up">
+<div class="reveal large menumodal" id="menumodal" data-reveal data-animation-in="slide-in-down" data-animation-out="slide-out-up">
   <img src="http://placehold.it/300x300" alt="">
   <p class="lead">Jóga jóga és métöbb jóga.</p>
   <nav class="primarynav">
@@ -17,7 +17,7 @@
   </button>
 </div>
 
-<div class="reveal full eventsmodal" id="eventsmodal" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
+<div class="reveal large eventsmodal" id="eventsmodal" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
   <img src="http://placehold.it/300x300" alt="">
 
 
