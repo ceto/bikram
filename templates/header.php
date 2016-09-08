@@ -17,13 +17,9 @@
   </button>
 </div>
 
-<div class="reveal large eventsmodal" id="eventsmodal" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
-  <img src="http://placehold.it/300x300" alt="">
-
-
-
-
-
+<div class="reveal eventsmodal" id="eventsmodal" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
+  <h3>Becsúszó órarend</h3>
+  <p>Javasolt működés és formára <a target="_blank" href="http://yogawerkstatt-hannover.de/" class="button small alert">Példa</a></p>
  <?php
         $todayargs = array(
           'post_type'  => 'event',
@@ -31,7 +27,7 @@
           'meta_query' => array(
             'relation'=>'AND',
             array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d'), type => 'DATE' ),
-            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-09-01'), type => 'DATE' )
+            array('key' => 'starts', 'compare' => '<', 'value'=> date('Y-m-d', strtotime('tomorrow')), type => 'DATE' )
           )
         );
         $the_eventstoday = new WP_Query( $todayargs );
@@ -41,7 +37,7 @@
           'meta_query' => array(
             'relation'=>'AND',
             array('key' => 'starts', 'compare' => '>', 'value'=> date('Y-m-d'), type => 'DATE' ),
-            array('key' => 'starts', 'compare' => '<', 'value'=> date('2016-09-02'), type => 'DATE' )
+            array('key' => 'starts', 'compare' => '<', 'value'=> date('Y-m-d', strtotime('+2 day')), type => 'DATE' )
           )
         );
         $the_eventstomorrow = new WP_Query( $tomorrowargs );

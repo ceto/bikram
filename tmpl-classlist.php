@@ -4,7 +4,7 @@
 */
 ?>
 <?php if (!is_front_page()) : ?>
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php //get_template_part('templates/page', 'header'); ?>
 
   <?php
     $args = array(
@@ -32,7 +32,7 @@
       </div>
     </div>
   </section>
-  <?php  get_template_part('templates/sticky', 'block'); ?>
+  <?php get_template_part('templates/sticky', 'block'); ?>
 <?php endif; ?>
 
 <?php
