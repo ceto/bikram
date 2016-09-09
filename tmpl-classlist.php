@@ -3,8 +3,8 @@
 * Template Name: Class List Template
 */
 ?>
-<?php if (!is_front_page()) : ?>
-  <?php //get_template_part('templates/page', 'header'); ?>
+
+  <?php get_template_part('templates/page', 'header'); ?>
 
   <?php
     $args = array(
@@ -17,7 +17,7 @@
     );
     $the_events = new WP_Query( $args );
   ?>
-  <section class="ps">
+  <section class="ps ps--opaque">
     <div class="row">
       <div class="columns large-10 large-centered xxlarge-9">
         <div class="calendar calendar--all">
@@ -32,8 +32,7 @@
       </div>
     </div>
   </section>
-  <?php get_template_part('templates/sticky', 'block'); ?>
-<?php endif; ?>
+
 
 <?php
   $args = array(
@@ -46,7 +45,7 @@
 ?>
 
 
-<section id="classes" class="ps">
+<section id="classes" class="ps classlist">
   <div class="row large-up-2">
     <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
       <div class="column">
@@ -55,3 +54,5 @@
     <?php endwhile; ?>
   </div>
 </section>
+
+<?php get_template_part('templates/sticky', 'block'); ?>

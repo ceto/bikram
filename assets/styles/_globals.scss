@@ -1,8 +1,29 @@
+.row {
+  @include breakpoint(medium) {
+    max-width: 97%;
+  }
+  @include breakpoint(xlarge) {
+    max-width: 87%;
+  }
+  @include breakpoint(xxlarge) {
+    max-width: 85%;
+  }
+  @media screen and (min-width: 120em) {
+    max-width: $global-width;
+  }
+  .row {
+    max-width: $global-width;
+  }
+}
+
 .ps {
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-top: calc(2rem + 5vh);
   padding-bottom: calc(2rem + 5vh);
+  &.hero , &.pagehead, &.bloghead {
+    padding-top: calc(5rem + 5vh + 2vw);
+  }
 }
 .ps--narrow {
   padding-top: .5rem;
@@ -10,3 +31,13 @@
   padding-top: calc(.5rem + 1vh);
   padding-bottom: calc(.5rem + 1vh);
 }
+
+.ps--opaque {
+  background-color: $white;
+}
+
+.button {
+  font-family: $sans-serif;
+  font-weight: $global-weight-extrabold;
+}
+

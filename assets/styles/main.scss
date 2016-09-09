@@ -7,6 +7,7 @@
 
 
 @import "settings";
+@import "mui-settings";
 @include foundation-everything;
 
 @include motion-ui-transitions;
@@ -22,6 +23,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/bloghead";
 @import "components/wp-classes";
 @import "components/teachercard";
 

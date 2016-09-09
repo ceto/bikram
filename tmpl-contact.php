@@ -8,10 +8,10 @@
   <?php get_template_part('templates/page', 'header'); ?>
 
   <?php get_template_part('templates/content', 'page'); ?>
-  <div class="ps">
+  <div id="location">
     <div class="row">
       <div class="columns large-6">
-        <img src="http://placehold.it/800x800?text=googlemaps" alt="">
+        <img src="http://placehold.it/800x600?text=googlemaps" alt="">
       </div>
       <div class="columns large-6">
         <h2>Pontos cím</h2>

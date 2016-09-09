@@ -91,7 +91,10 @@ function display_sidebar() {
     is_front_page(),
     is_home(),
     is_singular('class'),
-    is_page()
+    is_singular('post'),
+    is_singular('teacher'),
+    is_archive(),
+    is_page(),
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

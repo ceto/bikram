@@ -1,4 +1,64 @@
 .stickypost {
+  color: $body-background;
   background-color: $body-font-color;
-  color:$body-background;
+}
+
+
+.minipost__fig {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+
+  margin: 0;
+  padding: 0;
+  background-color: red;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+.minipost {
+  @include clearfix();
+  position: relative;
+}
+
+.firsthalf{
+  background-color: blue;
+  position: relative;
+  @include breakpoint(large) {
+    position: absolute;
+    width:50%;
+    height: 100%;
+    left:0;
+    .minipost:nth-of-type(2n) & {
+      left:50%;
+    }
+  }
+}
+.secondhalf{
+  position: relative;
+  @include breakpoint(large) {
+    float:right;
+    width:50%;
+    .minipost:nth-of-type(2n) & {
+      float:left;
+    }
+  }
+}
+
+.minipost__text {
+  max-width: $global-width / 2;
+  padding: 1rem 2rem;
+  @include breakpoint(large) {
+    margin:2rem auto;
+    margin:calc(1rem + 3vw) auto;
+    min-height: 15rem;
+    .minipost:nth-of-type(2n) & {
+
+    }
+  }
 }

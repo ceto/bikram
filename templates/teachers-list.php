@@ -7,7 +7,7 @@
   );
   $the_teachers = new WP_Query( $args );
 ?>
-<section class="" id="teachers" data-magellan-target="teachers">
+<section class="teachers" id="teachers" data-magellan-target="teachers">
   <div class="ps">
     <div class="row">
       <div class="columns">
