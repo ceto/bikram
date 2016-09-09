@@ -1,6 +1,7 @@
 .stickypost {
   color: $body-background;
   background-color: $body-font-color;
+  border-bottom: .5rem solid #000;
 }
 
 
@@ -24,6 +25,7 @@
 .minipost {
   @include clearfix();
   position: relative;
+  border-bottom: .5rem solid #000;
 }
 
 .firsthalf{
@@ -34,8 +36,11 @@
     width:50%;
     height: 100%;
     left:0;
+    border-right: .25rem solid #000;
     .minipost:nth-of-type(2n) & {
       left:50%;
+      border-right: none;
+      border-left: .25rem solid #000;
     }
   }
 }
@@ -44,8 +49,11 @@
   @include breakpoint(large) {
     float:right;
     width:50%;
+    border-left: .25rem solid #000;
     .minipost:nth-of-type(2n) & {
       float:left;
+      border-left: none;
+      border-right: .25rem solid #000;
     }
   }
 }

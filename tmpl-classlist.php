@@ -17,7 +17,7 @@
     );
     $the_events = new WP_Query( $args );
   ?>
-  <section class="ps ps--opaque">
+  <section class="ps ps--opaque thetimetable">
     <div class="row">
       <div class="columns large-10 large-centered xxlarge-9">
         <div class="calendar calendar--all">

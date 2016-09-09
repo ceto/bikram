@@ -1,3 +1,33 @@
+html {
+  height: auto;
+  padding: 1rem;
+
+  background-color: #000;
+  &:before, &:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 1rem;
+    z-index: 101;
+
+    content: '';
+
+    background-color: inherit;
+
+  }
+  &:after {
+    top:auto;
+    bottom:0;
+  }
+}
+body {
+  position: relative;
+}
+
 .row {
   @include breakpoint(medium) {
     max-width: 97%;
@@ -18,17 +48,17 @@
 
 .ps {
   padding-top: 2rem;
-  padding-bottom: 2rem;
   padding-top: calc(2rem + 5vh);
+  padding-bottom: 2rem;
   padding-bottom: calc(2rem + 5vh);
-  &.hero , &.pagehead, &.bloghead {
+  &.hero, &.pagehead, &.bloghead {
     padding-top: calc(5rem + 5vh + 2vw);
   }
 }
 .ps--narrow {
   padding-top: .5rem;
-  padding-bottom: .5rem;
   padding-top: calc(.5rem + 1vh);
+  padding-bottom: .5rem;
   padding-bottom: calc(.5rem + 1vh);
 }
 
@@ -40,4 +70,3 @@
   font-family: $sans-serif;
   font-weight: $global-weight-extrabold;
 }
-

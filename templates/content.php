@@ -2,7 +2,7 @@
   <div class="firsthalf">
     <figure class="minipost__fig">
       <a href="<?php the_permalink(); ?>">
-        <img src="http://lorempixel.com/1280/640" alt="">
+        <img src="http://lorempixel.com/1280/640/sports" alt="">
       </a>
     </figure>
   </div>
