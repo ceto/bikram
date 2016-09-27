@@ -2,7 +2,7 @@ html {
   height: auto;
   padding: 1rem;
 
-  background-color: #000;
+  background-color: $body-background;
   &:before, &:after {
     position: fixed;
     top: 0;
@@ -51,9 +51,6 @@ body {
   padding-top: calc(2rem + 5vh);
   padding-bottom: 2rem;
   padding-bottom: calc(2rem + 5vh);
-  &.hero, &.pagehead, &.bloghead {
-    padding-top: calc(5rem + 5vh + 2vw);
-  }
 }
 .ps--narrow {
   padding-top: .5rem;

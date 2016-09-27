@@ -1,13 +1,19 @@
 <?php use Roots\Sage\Titles; ?>
-<header class="pagehead ps">
-  <div class="row">
-    <div class="columns large-8">
-      <div class="pagehead__content">
+<header class="pagehead">
+  <div class="pagehead__pics">
+    <div class="pagehead__pics__inner">
+      <?php the_post_thumbnail(full); ?>
+    </div>
+  </div>
+  <div class="pagehead__content">
+    <div class="row">
+      <div class="columns large-8">
         <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
-        <p class="pagehead__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cum pariatur neque doloribus magnam, vel mollitia sit consectetur veniam eaque facilis distinctio, ipsa. Veniam suscipit et magni porro, officia, at.</p>
+        <h2 class="pagehead__subtitle">Lorem ipsum dolor sit amet</h2>
         <div class="pagehead__actions">
           <a href="#" class="button">Részletek</a>
         </div>
-      </div></div>
+      </div>
     </div>
-  </header>
+  </div>
+</header>

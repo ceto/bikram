@@ -1,10 +1,12 @@
 .bloghead {
   position: relative;
-  border-bottom: 1rem solid #000;
+  //background-color: $primary-color;
+}
+.ps.bloghead {
+  padding-top: calc(2rem + 2vh + 2vw);
 }
 .bloghead__catlist {
   list-style-type: none;
-  margin:.5rem 0 0;
   padding:0;
   > li {
     display: inline-block;
@@ -13,10 +15,14 @@
       font-family: $sans-serif;
       font-weight: $global-weight-extrabold;
       font-size: .875rem;
+      //color: $body-background;
     }
     &:not(:last-child):after {
       content:' | ';
       color:$medium-gray;
+    }
+    &.current-cat a {
+      color:inherit;
     }
   }
   @include breakpoint(large) {
@@ -26,6 +32,11 @@
 
 .bloghead__title {
   margin:0;
+  // font-size: 1.25rem;
+  @include breakpoint(large) {
+    margin-top: .125em;
+    font-size: 2.5rem;
+  }
   a {
     color:inherit;
     &:hover, &.focus {

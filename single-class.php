@@ -1,30 +1,20 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
-  <header class="pagehead pagehead--singleclass ps">
+  <?php get_template_part('templates/page', 'header'); ?>
+  <div class="pagelead ps ps">
     <div class="row">
-      <div class="columns large-8">
-        <div class="pagehead__content">
-          <h1 class="pagehead__title"><?php the_title(); ?></h1>
-          <p class="pagehead__lead">
+      <div class="columns large-12">
+        <div class="lead">
             <?php
             global $more; $more = 0;
             the_excerpt();
             ?>
-          </p>
-          <div class="pagehead__actions">
-            <a href="#" class="button">Ugrás az órarendre</a>
-          </div>
         </div>
       </div>
     </div>
-  </header>
-  <div class="singleclass__content content ps">
+  </div>
+  <div class="singleclass__content content">
     <div class="row">
-      <div class="columns large-8">
-        <?php $more=1; the_content('', TRUE); ?>
-        <br>
-        <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
-      </div>
       <div class="columns large-4">
         <?php
         $args = array(
@@ -47,6 +37,12 @@
           </div>
         </section>
         <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
+        <?php wp_reset_query(); ?>
+      </div>
+      <div class="columns large-8">
+        <?php $more=1; the_content('', TRUE); ?>
+        <br>
+        <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
       </div>
     </div>
   </div>

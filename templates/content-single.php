@@ -1,24 +1,29 @@
 <?php get_template_part('templates/blog', 'header'); ?>
 <?php while (have_posts()) : the_post(); ?>
-<article <?php post_class('singlepost ps'); ?>>
-  <header class="singlepost__header">
+<article <?php post_class('singlepost'); ?>>
+  <header class="singlepost__header posthead ps ps--narrow">
     <div class="row">
-      <div class="columns large-10 large-centered xlarge-9">
-        <h1 class="singlepost__title"><?php the_title(); ?></h1>
+      <div class="columns large-12 large-centered xlarge-12">
         <?php get_template_part('templates/entry-meta'); ?>
-       </div>
-    </div>
-  </header>
-  <div class="singlepost__content content">
-    <div class="row">
-      <div class="columns large-10 large-centered xlarge-9">
+        <h1 class="singlepost__title"><?php the_title(); ?></h1>
         <div class="lead">
           <?php
-            global $more; $more = 0;
-            the_excerpt();
+          global $more; $more = 0;
+          the_excerpt();
           ?>
         </div>
-        <hr>
+      </div>
+    </div>
+  </header>
+  <div class="singlepost__content content ps ps--narrow">
+    <div class="row">
+      <div class="columns large-10 large-centered xlarge-9">
+        <?php if ( has_post_thumbnail() ) : ?>
+        <figure class="post__featimage">
+          <?php the_post_thumbnail(large); ?>
+          <figcaption><?php the_title(); ?></figcaption>
+        </figure>
+      <?php endif; ?>
         <?php $more=1; the_content('', TRUE); ?>
       </div>
     </div>
