@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
   <?php get_template_part('templates/page', 'header'); ?>
-  <div class="pagelead ps ps">
+  <div class="pagelead ps">
     <div class="row">
       <div class="columns large-12">
         <div class="lead">
@@ -13,9 +13,9 @@
       </div>
     </div>
   </div>
-  <div class="singleclass__content content">
+  <div class="singleclass__content content ps">
     <div class="row">
-      <div class="columns large-4">
+      <div class="columns large-5 large-push-7">
         <?php
         $args = array(
         'post_type'  => 'event',
@@ -39,7 +39,8 @@
         <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
         <?php wp_reset_query(); ?>
       </div>
-      <div class="columns large-8">
+      <div class="columns large-7 large-pull-5">
+      <h2>Az óra részletei</h2>
         <?php $more=1; the_content('', TRUE); ?>
         <br>
         <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
@@ -66,6 +67,15 @@ $args = array(
 $the_classes = new WP_Query( $args );
 ?>
 <section id="classes" class="ps ps--opaque classlist">
+  <header class="heading">
+    <div class="row">
+      <div class="columns">
+        <h2 class="heading__title">További órák az Astorián</h2>
+        <hr>
+      </div>
+    </div>
+  </header>
+
   <div class="row large-up-2">
     <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
     <div class="column">

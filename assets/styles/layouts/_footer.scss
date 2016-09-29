@@ -1,0 +1,11 @@
+.sitefooter {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-color: $dark-gray;
+  color:$body-background;
+  font-family: $sans-serif;
+  hr {
+    border-color: $primary-color;
+    border-width:.25rem;
+  }
+}
