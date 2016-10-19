@@ -1,0 +1,119 @@
+.calentrywrap {
+  display: table;
+
+  width: 100%;
+  .aday & {
+    float: right;
+
+    width: 75%;
+  }
+}
+.calentry {
+  font-family: $sans-serif;
+  font-size: .875rem;
+  line-height: 1;
+
+  display: table-row;
+
+  padding: .5rem 0;
+
+  @include clearfix();
+  //background-color: $medium-gray;
+  span {
+    display: table-cell;
+
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+    vertical-align: middle;
+  }
+  &:not(:last-child) span {
+    border-bottom: 1px solid $light-gray;
+  }
+  figure {
+    display: table-cell;
+  }
+  &:not(:last-child) figure {
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+.calentry__starttime {
+  width: 5rem;
+  //font-size: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  //background-color: $light-gray;
+  //font-size: 1.125rem;
+  //font-weight: $global-weight-bold;
+  //font-family: $serif;
+
+  letter-spacing: .025em;
+}
+
+.calentry__title {
+  font-weight: $global-weight-bold;
+
+  letter-spacing: .0125em;
+  text-transform: uppercase;
+  //color:$dark-gray;
+  a {
+    //color:inherit;
+  }
+}
+.calentry__teachername {
+  font-family: $serif;
+  font-style: italic;
+  a {
+    color: inherit;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.calentry__teacherpic {
+  padding:.5rem 0;
+  text-align: center;
+  figcaption {
+    font-family: $serif;
+    font-style: italic;
+    font-size: .75rem;
+    padding: .25em 0 0;
+    a {
+      color: inherit;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.aday {
+  margin-bottom: 1rem;
+  padding: 2rem 2rem 2rem;
+
+  background-color: $white;
+  //border:.5rem solid $dark-gray;
+
+  @include clearfix();
+}
+
+.aday__title {
+  line-height: 1;
+
+  float: left;
+
+  width: 25%;
+  margin: .75rem 0 1rem 0;
+  small {
+    font-size: 66.666%;
+    line-height: 1;
+
+    display: block;
+
+    margin-top: .25em;
+
+    color: $dark-gray;
+  }
+}

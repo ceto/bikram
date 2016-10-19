@@ -1,10 +1,10 @@
 <?php
 /**
-* Template Name: Class List Template
+* Template Name: Schedule
 */
 ?>
 
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/schedule', 'header'); ?>
 
   <?php
     $args = array(
@@ -17,17 +17,28 @@
     );
     $the_events = new WP_Query( $args );
   ?>
-  <section class="ps ps--opaque thetimetable">
+  <section class="ps thetimetable">
     <div class="row">
       <div class="columns large-10 large-centered xxlarge-9">
         <div class="calendar calendar--all">
-          <h2>Órarend</h2>
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-            <?php $thisday = date('Y-m-d l', strtotime(get_field('starts'))); ?>
-            <?php if ( $thisday != $prevday ) : ?><h3><?= $prevday=$thisday; ?></h3><?php endif; ?>
+            <?php
+              $thisday = date('Y. F d.', strtotime(get_field('starts')));
+              $nameoftheday = date('l', strtotime(get_field('starts')));
+            ?>
+            <?php if ( ($prevday!='') && ($thisday != $prevday)  ) : ?></div></div><?php endif; ?>
+            <?php if ( $thisday != $prevday ) : ?>
+              <div class="aday">
+                <h3 class="aday__title">
+                  <?= $nameoftheday ?> <small><?= $prevday=$thisday; ?></small>
+                </h3>
+                <div class="calentrywrap">
+            <?php endif; ?>
             <?php get_template_part('templates/calendar','entry'); ?>
           <?php endwhile; ?>
+          <?php if ( ($thisday == $prevday)  ) : ?></div></div><?php endif; ?>
+
         </div>
       </div>
     </div>
@@ -45,16 +56,13 @@
 ?>
 
 
-<section id="classes" class="classlist">
+<section id="classes" class="classlist ps ps--opaque">
   <header class="heading">
     <div class="row">
       <div class="columns">
         <h2 class="heading__title">Jóga órák az Astorián</h2>
-        <a class="button heading__button" href="<?php the_permalink(42) ?>">Ugrás az órarendre</a>
-          <hr>
-        <!-- <h3 class="heading__subtitle">Lorem ipsum dolor sit amet</h3> -->
+        <hr>
         <p class="heading__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dicta nisi, cupiditate illum explicabo voluptates veniam tenetur sed quo ab, exercitationem sunt vero adipisci officiis. Sunt doloribus, enim impedit? Dolorem.</p>
-
       </div>
     </div>
   </header>
