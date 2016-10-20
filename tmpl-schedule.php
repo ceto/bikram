@@ -36,6 +36,7 @@
                 <div class="calentrywrap">
             <?php endif; ?>
             <?php get_template_part('templates/calendar','entry'); ?>
+            <?php get_template_part('templates/calendar','entry'); ?>
           <?php endwhile; ?>
           <?php if ( ($thisday == $prevday)  ) : ?></div></div><?php endif; ?>
 

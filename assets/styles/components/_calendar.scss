@@ -40,15 +40,23 @@
 
 .calentry__starttime {
   width: 5rem;
-  //font-size: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  //padding-top: 1rem;
+  //padding-bottom: 1rem;
   //background-color: $light-gray;
   //font-size: 1.125rem;
-  //font-weight: $global-weight-bold;
+  font-weight: $global-weight-bold;
   //font-family: $serif;
-
+  vertical-align: top;
   letter-spacing: .025em;
+  small {
+    display: block;
+    margin-top: .25em;
+    text-transform: none;
+    font-weight: $global-weight-normal;
+
+    font-size: .75em;
+  }
 }
 
 .calentry__title {
@@ -56,10 +64,22 @@
 
   letter-spacing: .0125em;
   text-transform: uppercase;
-  //color:$dark-gray;
+  width: 11em;
   a {
     //color:inherit;
   }
+  small {
+    display: block;
+    margin-top: .25em;
+    text-transform: none;
+    font-weight: $global-weight-normal;
+    font-size: .875em;
+  }
+}
+
+.calentry__note {
+  //font-family: $serif;
+  //font-style: italic;
 }
 .calentry__teachername {
   font-family: $serif;
@@ -73,8 +93,8 @@
 }
 
 .calentry__teacherpic {
+  text-align: right;
   padding:.5rem 0;
-  text-align: center;
   figcaption {
     font-family: $serif;
     font-style: italic;
