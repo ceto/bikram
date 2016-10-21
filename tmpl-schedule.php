@@ -19,8 +19,8 @@
   ?>
   <section class="ps thetimetable">
     <div class="row">
-      <div class="columns large-10 large-centered xxlarge-9">
-        <div class="calendar calendar--all">
+      <div class="columns large-12 large-centered xxlarge-12">
+        <div class="schedule schedule--all">
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <?php
@@ -33,7 +33,7 @@
                 <h3 class="aday__title">
                   <?= $nameoftheday ?> <small><?= $prevday=$thisday; ?></small>
                 </h3>
-                <div class="calentrywrap">
+                <div class="calendar calendar--day">
             <?php endif; ?>
             <?php get_template_part('templates/calendar','entry'); ?>
             <?php get_template_part('templates/calendar','entry'); ?>

@@ -4,23 +4,65 @@
   margin-bottom: 1rem;
 }
 
+.updated {
+  font-family: $sans-serif;
+  font-weight: $global-weight-bold;
+  color:$body-background;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: $dark-gray;
+  line-height: 1;
+  padding:.4em .4em;
+  font-size: 1.125rem;
+
+  .minipost & {
+    background-color: $medium-gray;
+    margin-top: .125em;
+    font-size: .666rem;
+  }
+}
+
+
 .minipost {
   @include clearfix();
   position: relative;
+  margin-bottom: 2rem;
 }
-
+.minipost__header {
+  margin-bottom: .5rem;
+}
 .minipost__fig {
   margin: 0;
   padding:0;
 }
 
 .minipost__text {
-  padding: 1rem 1rem;
+  padding: 1rem 0;
   font-size: .875rem;
 }
 
 .minipost__title {
   font-size: 1.125rem;
+  margin:0;
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$primary-color;
+    }
+  }
+}
+.minipost__summary {
+  p {
+    margin-bottom: .75rem;
+  }
+}
+.readmore {
+  font-family: $sans-serif;
+  font-weight: $global-weight-bold;
+  font-size: .75rem;
+  line-height: 1;
+  //text-transform: uppercase;
+  color:inherit;
 }
 
 .posthead {

@@ -14,6 +14,6 @@
     <div class="minipost__summary">
       <?php the_excerpt(); ?>
     </div>
-    <a href="<?php the_permalink(); ?>" class="button small">Részletek</a>
+    <a href="<?php the_permalink(); ?>" class="readmore"><?= __('Read more','bikram'); ?> &hellip;</a>
   </div>
 </article>

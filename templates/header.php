@@ -19,7 +19,7 @@
   <span aria-hidden="true">&times;</span>
   </button>
 </div>
-<div class="reveal eventsmodal fast" id="eventsmodal" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
+<div class="reveal eventsmodal fast" id="eventsmodal" data-overlay="false" data-v-offset="0" data-show-delay="0" data-hide-delay="0" data-reveal data-animation-in="slide-in-right" data-animation-out="slide-out-right">
   <h3>Becsúszó órarend</h3>
   <p>Javasolt működés és formára <a target="_blank" href="http://yogawerkstatt-hannover.de/" class="button small alert">Példa</a></p>
   <?php
@@ -58,7 +58,7 @@
         </div>
       </div>
       <div class="tabs-panel" id="caltomorrow">
-        <div class="calendar calendar--mini">
+        <div class="calendar calendar--day">
           <?php while ($the_eventstomorrow->have_posts()) : $the_eventstomorrow->the_post(); ?>
           <?php get_template_part('templates/calendar','entry'); ?>
           <?php endwhile; ?>

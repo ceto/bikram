@@ -29,10 +29,11 @@
         $the_events = new WP_Query( $args );
         ?>
         <section class="pagehead__schedule callout" role="marquee">
+          <h2><?php the_title(); ?><br><small>Az órák 60 percesek</small></h2>
+          <hr>
           <div class="calendar calendar--full">
-            <h2><?php the_title(); ?> órák</h2>
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-            <?php get_template_part('templates/calendar','entryfull'); ?>
+              <?php get_template_part('templates/calendar','entryfull'); ?>
             <?php endwhile; ?>
           </div>
         </section>

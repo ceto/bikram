@@ -61,7 +61,7 @@ $foundation-palette: (
   alert: #ec5840,
 );
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$medium-gray: #777777;
 $dark-gray: #2a2a2a;
 $black: #0a0a0a;
 $white: #fefefe;
@@ -270,7 +270,7 @@ $buttongroup-expand-max: 6;
 
 $callout-background: $white;
 $callout-background-fade: 85%;
-$callout-border: .5rem solid rgba($black, 0.25);
+$callout-border: none;
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
@@ -459,10 +459,10 @@ $progress-radius: $global-radius;
 // ----------
 
 $reveal-background: $white;
-$reveal-width: 600px;
+$reveal-width: 480px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
-$reveal-border: .5rem solid #000;
+$reveal-padding: 2rem 2rem;
+$reveal-border: none;
 $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
