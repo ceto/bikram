@@ -33,7 +33,7 @@
           <hr>
           <div class="calendar calendar--full">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-              <?php get_template_part('templates/calendar','entryfull'); ?>
+              <?php get_template_part('templates/calendar','entryclass'); ?>
             <?php endwhile; ?>
           </div>
         </section>

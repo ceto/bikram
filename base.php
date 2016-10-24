@@ -25,6 +25,7 @@
       </aside><!-- /.sidebar -->
       <?php endif; ?>
     </div><!-- /.document -->
+    <?php get_template_part('templates/events','modal'); ?>
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');

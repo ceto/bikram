@@ -36,9 +36,10 @@
         ?>
         <section class="pagehead__schedule callout" role="marquee">
           <h2><?php the_title(); ?> órái</h2>
-          <div class="calendar calendar--full">
+          <hr>
+          <div class="calendar calendar--teacher">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-              <?php get_template_part('templates/calendar','entry'); ?>
+              <?php get_template_part('templates/calendar','entryteacher'); ?>
             <?php endwhile; ?>
           </div>
         </section>
