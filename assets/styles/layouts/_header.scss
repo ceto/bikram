@@ -3,57 +3,86 @@
 
   margin-bottom: 1rem;
 
-  background-color: #000;
+  background-color: $dark-gray;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
+  @include breakpoint('medium') {
+    background-color: #000;
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
 
-    width: 100%;
-    height: 100%;
+      width: 100%;
+      height: 100%;
 
-    content: '';
+      content: '';
 
-    background-image: linear-gradient(135deg, rgba(#000, .666) 0, rgba(#000, .125) 100%);
+      background-image: linear-gradient(45deg, rgba(#000, .75) 0, rgba(#000, .25) 33.333%, transparent 50%);
+    }
   }
 }
 
 
 .pagehead__title {
   text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
 }
+.pagehead__subtitle {
+  margin: 0;
+  line-height: 1.2;
+}
+
 .pagehead__pics {
   position: relative;
+  img {
+    border-bottom: 1rem solid $body-background;
+  }
 
-  height: 0;
-  padding-bottom: 40%;
+  @include breakpoint('medium') {
+    height: 0;
+    padding-bottom: 40%;
+    img {
+      border:none;
+    }
+  }
 }
 
 .pagehead__pics__inner {
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include breakpoint('medium') {
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .pagehead__content {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 0;
 
-  width: 100%;
-
-  transform: translateY(-50%);
-
+  padding:1.5rem 0;
   color: $white;
+
+  @include breakpoint('medium') {
+    padding:0;
+    position: absolute;
+    z-index: 1;
+    bottom: 13%;
+    left: 0;
+
+    width: 100%;
+
+    //transform: translateY(-50%);
+  }
+
+  .button {
+    margin:0;
+  }
 }
 
 .pagelead {
@@ -76,18 +105,18 @@
   padding-bottom: 2rem;
   padding-bottom: calc(2rem + 2vh);
 
-
-
   @include clearfix();
 }
 .heading__title {
   //text-align: center;
   font-size: 2.5rem;
-  margin:0 0 .5em;
+
+  margin: 0 0 .5em;
 
   text-transform: uppercase;
+
   @include breakpoint(tablet) {
-    float:left;
+    float: left;
   }
 }
 
@@ -99,7 +128,8 @@
 
 .heading__button {
   @include breakpoint(tablet) {
-    float:right;
+    float: right;
+
     margin-top: .5rem;
   }
 }

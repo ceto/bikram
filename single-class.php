@@ -1,9 +1,10 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
   <?php get_template_part('templates/page', 'header'); ?>
-  <div class="pagelead ps">
+
+  <div class="classleader">
     <div class="row">
-      <div class="columns large-12">
+      <div class="columns large-7">
         <div class="lead">
             <?php
             global $more; $more = 0;
@@ -11,11 +12,7 @@
             ?>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="singleclass__content content ps">
-    <div class="row">
-      <div class="columns large-5 large-push-7">
+      <div class="columns large-5  classleader__naptar">
         <?php
         $args = array(
         'post_type'  => 'event',
@@ -28,9 +25,9 @@
         );
         $the_events = new WP_Query( $args );
         ?>
-        <section class="pagehead__schedule callout" role="marquee">
-          <h2><?php the_title(); ?><br><small>Az órák 60 percesek</small></h2>
-          <hr>
+        <section class="pagehead__schedule" role="marquee">
+          <h2>Ezekre még odaérsz</h2>
+
           <div class="calendar calendar--full">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryclass'); ?>
@@ -40,11 +37,22 @@
         <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
         <?php wp_reset_query(); ?>
       </div>
-      <div class="columns large-7 large-pull-5">
+
+    </div>
+  </div>
+
+  <div class="singleclass__content content ps ps--opaque">
+    <div class="row">
+      <div class="columns large-7">
       <h2>Az óra részletei</h2>
         <?php $more=1; the_content('', TRUE); ?>
         <br>
         <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
+      </div>
+      <div class="columns large-5">
+          <h2>Tanárok</h2>
+          <hr>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis atque aliquid blanditiis itaque ut minima, minus fuga soluta. Soluta adipisci quibusdam distinctio repellat doloribus eos, veritatis provident. Libero, voluptates voluptatibus.</p>
       </div>
     </div>
   </div>
@@ -67,7 +75,7 @@ $args = array(
 );
 $the_classes = new WP_Query( $args );
 ?>
-<section id="classes" class="ps ps--opaque classlist">
+<section id="classes" class="ps classlist">
   <header class="heading">
     <div class="row">
       <div class="columns">

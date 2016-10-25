@@ -2,6 +2,33 @@
   color: $body-background;
   background-color: $body-font-color;
   margin-bottom: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  .button {
+    margin:.333rem 0 0;
+  }
+}
+.stickypost__header {
+  //margin-top: .333rem;
+  .updated {
+    padding:0;
+    background-color: none;
+    font-size: .875rem;
+    margin-bottom:0;
+  }
+}
+.stickypost__title {
+  text-transform: uppercase;
+  margin:0;
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$primary-color;
+    }
+  }
+}
+.stickypost__summary {
+ //font-family: $sans-serif;
 }
 
 .updated {

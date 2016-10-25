@@ -10,9 +10,6 @@
       <div class="columns large-8">
         <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
         <h2 class="pagehead__subtitle">Lorem ipsum dolor sit amet</h2>
-        <div class="pagehead__actions">
-          <a href="#" class="button">Részletek</a>
-        </div>
       </div>
     </div>
   </div>

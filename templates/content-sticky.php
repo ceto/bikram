@@ -1,16 +1,12 @@
-<article <?php post_class('stickypost ps'); ?>>
+<article <?php post_class('stickypost'); ?>>
   <div class="row">
-    <div class="columns large-4">
+    <div class="columns medium-8">
       <header class="stickypost__header">
-        <h2 class="stickypost__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php if ( get_field('hasdate')==0 ) : ?>
         <?php get_template_part('templates/entry-meta'); ?>
-        <?php endif; ?>
+        <h2 class="stickypost__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
       </header>
     </div>
-    <div class="columns large-8">
-      <div class="stickypost__summary">
-        <?php the_excerpt(); ?>
-      </div>
+    <div class="columns medium-4 medium-text-right">
+      <a href="<?php the_permalink(); ?>" class="button primary"><?php _e('Click for details','bikram'); ?> &hellip;</a>
     </div>
   </article>

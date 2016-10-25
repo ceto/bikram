@@ -6,12 +6,12 @@
   </div>
   <div class="hero__content">
     <div class="row">
-      <div class="columns large-8">
-        <h1>Szuper felütés kell ide amitől lehasalsz</h1>
-        <p>ide meg a lead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste modi deserunt animi obcaecati aut maxime itaque consequatur, nemo adipisci.</p>
+      <div class="columns xxlarge-8">
+        <h1 class="hero__title">Szuper felütés kell ide amitől lehasalsz</h1>
+        <h2 class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
         <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>
       </div>
-      <div class="columns large-4">
+      <div class="columns xxlarge-4">
       </div>
     </div>
   </div>
