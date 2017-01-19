@@ -6,7 +6,7 @@
   </div>
   <div class="hero__content">
     <div class="row">
-      <div class="columns xxlarge-8">
+      <div class="columns large-8 large-centered">
         <h1 class="hero__title">Szuper felütés kell ide amitől lehasalsz</h1>
         <h2 class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
         <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>

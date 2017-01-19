@@ -7,7 +7,7 @@
   </div>
   <div class="pagehead__content">
     <div class="row">
-      <div class="columns large-8">
+      <div class="columns">
         <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
         <h2 class="pagehead__subtitle">Lorem ipsum dolor sit amet</h2>
       </div>

@@ -19,9 +19,5 @@
       </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="columns">
-      <hr>
-    </div>
-  </div>
+
 </header>

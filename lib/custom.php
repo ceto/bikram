@@ -18,3 +18,15 @@
   // 4. Include ACF
   include_once( get_stylesheet_directory() . '/lib/acf/acf.php' );
 
+
+
+  add_filter('body_class','bikram_body_class_slugs');
+  function bikram_body_class_slugs($classes) {
+      global $wp_query, $wpdb;
+
+      if ( is_archive() || is_search() || is_home() || is_singular('post') || is_singular('teacher') || is_page_template('tmpl-schedule.php') ) {
+          $classes[] = 'no-hero';
+      }
+      return $classes;
+
+  }

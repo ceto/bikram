@@ -4,43 +4,41 @@
 
   <div class="classleader">
     <div class="row">
-      <div class="columns large-7">
-        <div class="lead">
+      <div class="columns large-10 large-centered">
+        <div class="classleader__naptar">
+          <?php
+            $args = array(
+              'post_type'  => 'event',
+              'posts_per_page' => -1,
+              'meta_query' => array(
+              'relation'=>'AND',
+              array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
+              array('key' => 'class', 'compare' => '=', 'value' => $post->ID)
+            ));
+            $the_events = new WP_Query( $args );
+          ?>
+          <section role="marquee">
+            <h3>Ezekre még odaérsz</h3>
+
+            <div class="calendar calendar--full">
+              <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
+                <?php get_template_part('templates/calendar','entryclass'); ?>
+              <?php endwhile; ?>
+            </div>
+          </section>
+          <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
+          <?php wp_reset_query(); ?>
+        </div>
+        <div class="classleader__lead">
             <?php
             global $more; $more = 0;
             the_excerpt();
             ?>
         </div>
-      </div>
-      <div class="columns large-5  classleader__naptar">
-        <?php
-        $args = array(
-        'post_type'  => 'event',
-        'posts_per_page' => -1,
-        'meta_query' => array(
-        'relation'=>'AND',
-        array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
-        array('key' => 'class', 'compare' => '=', 'value' => $post->ID)
-        )
-        );
-        $the_events = new WP_Query( $args );
-        ?>
-        <section class="pagehead__schedule" role="marquee">
-          <h2>Ezekre még odaérsz</h2>
-
-          <div class="calendar calendar--full">
-            <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-              <?php get_template_part('templates/calendar','entryclass'); ?>
-            <?php endwhile; ?>
-          </div>
-        </section>
-        <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
-        <?php wp_reset_query(); ?>
-      </div>
 
     </div>
   </div>
-
+</div>
   <div class="singleclass__content content ps ps--opaque">
     <div class="row">
       <div class="columns large-7">
@@ -85,7 +83,7 @@ $the_classes = new WP_Query( $args );
     </div>
   </header>
 
-  <div class="row large-up-2">
+  <div class="row large-up-3">
     <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
     <div class="column">
       <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>

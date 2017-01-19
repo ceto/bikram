@@ -1,12 +1,11 @@
 .pagehead {
   position: relative;
 
-  margin-bottom: 1rem;
-
   background-color: $dark-gray;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
   @include breakpoint('medium') {
     background-color: #000;
     &:after {
@@ -29,10 +28,16 @@
   text-transform: uppercase;
   margin: 0;
   line-height: 1.2;
+  text-shadow: 0 0 1rem rgba(#000,.5);
+  @include breakpoint('large') {
+    font-size: calc(3rem + 3vw);
+  }
 }
 .pagehead__subtitle {
   margin: 0;
   line-height: 1.2;
+  font-weight: $global-weight-normal;
+  text-shadow: 0 0 1rem rgba(#000,.5);
 }
 
 .pagehead__pics {
@@ -82,6 +87,13 @@
 
   .button {
     margin:0;
+  }
+}
+
+.single-class .pagehead__content {
+  @include breakpoint('large') {
+    margin-bottom: 3rem;
+    margin-bottom: calc(3rem + 2vw);
   }
 }
 

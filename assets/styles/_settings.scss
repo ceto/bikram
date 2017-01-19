@@ -16,11 +16,11 @@
 //  11. Button
 //  12. Button Group
 //  13. Callout
-//  14. Close Button
-//  15. Drilldown
-//  16. Dropdown
-//  17. Dropdown Menu
-//  18. Flex Video
+//  14. Card
+//  15. Close Button
+//  16. Drilldown
+//  17. Dropdown
+//  18. Dropdown Menu
 //  19. Forms
 //  20. Label
 //  21. Media Object
@@ -30,15 +30,16 @@
 //  25. Orbit
 //  26. Pagination
 //  27. Progress Bar
-//  28. Reveal
-//  29. Slider
-//  30. Switch
-//  31. Table
-//  32. Tabs
-//  33. Thumbnail
-//  34. Title Bar
-//  35. Tooltip
-//  36. Top Bar
+//  28. Responsive Embed
+//  29. Reveal
+//  30. Slider
+//  31. Switch
+//  32. Table
+//  33. Tabs
+//  34. Thumbnail
+//  35. Title Bar
+//  36. Tooltip
+//  37. Top Bar
 
 @import '../../bower_components/foundation-sites/scss/util/util';
 
@@ -117,20 +118,20 @@ $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': ('font-size': 24),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 17),
+    'h6': ('font-size': 16),
   ),
   large: (
-    'h1': 48,
-    'h2': 24,
-    'h3': 20,
-    'h4': 18,
-    'h5': 16,
-    'h6': 16,
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 24),
+    'h3': ('font-size': 20),
+    'h4': ('font-size': 18),
+    'h5': ('font-size': 16),
+    'h6': ('font-size': 16),
   ),
 );
 $header-color: inherit;
@@ -193,9 +194,9 @@ $stat-font-size: 2.5rem;
 
 $abide-inputs: true;
 $abide-labels: true;
-$input-background-invalid: map-get($foundation-palette, alert);
-$form-label-color-invalid: map-get($foundation-palette, alert);
-$input-error-color: map-get($foundation-palette, alert);
+$input-background-invalid: get-color(alert);
+$form-label-color-invalid: get-color(alert);
+$input-error-color: get-color(alert);
 $input-error-font-size: rem-calc(12);
 $input-error-font-weight: $global-weight-bold;
 
@@ -204,12 +205,13 @@ $input-error-font-weight: $global-weight-bold;
 
 $accordion-background: $white;
 $accordion-plusminus: true;
-$accordion-item-color: foreground($accordion-background, $primary-color);
+$accordion-title-font-size: rem-calc(12);
+$accordion-item-color: $primary-color;
 $accordion-item-background-hover: $light-gray;
 $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: $white;
 $accordion-content-border: 1px solid $light-gray;
-$accordion-content-color: foreground($accordion-content-background, $body-font-color);
+$accordion-content-color: $body-font-color;
 $accordion-content-padding: 1rem;
 
 // 8. Accordion Menu
@@ -217,12 +219,15 @@ $accordion-content-padding: 1rem;
 
 $accordionmenu-arrows: true;
 $accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrow-size: 6px;
 
 // 9. Badge
 // --------
 
 $badge-background: $primary-color;
-$badge-color: foreground($badge-background);
+$badge-color: $white;
+$badge-color-alt: $black;
+$badge-palette: $foundation-palette;
 $badge-padding: 0.3em;
 $badge-minwidth: 2.1em;
 $badge-font-size: 0.6rem;
@@ -256,7 +261,11 @@ $button-sizes: (
   default: 0.9rem,
   large: 1.25rem,
 );
+$button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
+$button-hollow-hover-lightness: -50%;
+$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
 // 12. Button Group
 // ----------------
@@ -370,7 +379,9 @@ $input-radius: $global-radius;
 // ---------
 
 $label-background: $primary-color;
-$label-color: foreground($label-background);
+$label-color: $white;
+$label-color-alt: $black;
+$label-palette: $foundation-palette;
 $label-font-size: 0.8rem;
 $label-padding: 0.33333rem 0.5rem;
 $label-radius: $global-radius;
@@ -388,9 +399,11 @@ $mediaobject-image-width-stacked: 100%;
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, primary);
+$menu-item-color-active: get-color(primary);
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
+$menu-item-background-hover: $light-gray;
+$menu-border: $light-gray;
 
 // 23. Meter
 // ---------
@@ -456,7 +469,16 @@ $progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
 $progress-radius: $global-radius;
 
-// 28. Reveal
+// 28. Responsive Embed
+// --------------------
+
+$responsive-embed-margin-bottom: rem-calc(16);
+$responsive-embed-ratios: (
+  default: 4 by 3,
+  widescreen: 16 by 9,
+);
+
+// 29. Reveal
 // ----------
 
 $reveal-background: $white;
@@ -468,7 +490,7 @@ $reveal-radius: $global-radius;
 $reveal-zindex: 1005;
 $reveal-overlay-background: rgba($black, 0.45);
 
-// 29. Slider
+// 30. Slider
 // ----------
 
 $slider-width-vertical: 0.5rem;
@@ -482,7 +504,7 @@ $slider-handle-background: $primary-color;
 $slider-opacity-disabled: 0.25;
 $slider-radius: $global-radius;
 
-// 30. Switch
+// 31. Switch
 // ----------
 
 $switch-background: $medium-gray;
@@ -498,7 +520,7 @@ $switch-paddle-offset: 0.25rem;
 $switch-paddle-radius: $global-radius;
 $switch-paddle-transition: all 0.25s ease-out;
 
-// 31. Table
+// 32. Table
 // ---------
 
 $table-background: $white;
@@ -515,7 +537,7 @@ $table-foot-background: smart-scale($table-background, $table-color-scale);
 $table-head-font-color: $body-font-color;
 $show-header-for-stacked: false;
 
-// 32. Tabs
+// 33. Tabs
 // --------
 
 $tab-margin: 0;
@@ -530,7 +552,7 @@ $tab-content-border: $light-gray;
 $tab-content-color: foreground($tab-background, $primary-color);
 $tab-content-padding: 1rem;
 
-// 33. Thumbnail
+// 34. Thumbnail
 // -------------
 
 $thumbnail-border: solid 4px $white;
@@ -540,7 +562,7 @@ $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
-// 34. Title Bar
+// 35. Title Bar
 // -------------
 
 $titlebar-background: $black;
@@ -551,7 +573,7 @@ $titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
-// 35. Tooltip
+// 36. Tooltip
 // -----------
 
 $has-tip-font-weight: $global-weight-bold;
@@ -564,7 +586,7 @@ $tooltip-pip-width: 0.75rem;
 $tooltip-pip-height: $tooltip-pip-width * 0.866;
 $tooltip-radius: $global-radius;
 
-// 36. Top Bar
+// 37. Top Bar
 // -----------
 
 $topbar-padding: 0.5rem;
