@@ -24,7 +24,7 @@
   function bikram_body_class_slugs($classes) {
       global $wp_query, $wpdb;
 
-      if ( is_archive() || is_search() || is_home() || is_singular('post') || is_singular('teacher') || is_page_template('tmpl-schedule.php') ) {
+      if ( is_archive() || is_search() || is_home() || is_singular('post') || is_singular('teacher') || is_page_template('tmpl-schedule.php') || is_page_template('tmpl-newcomer.php') ) {
           $classes[] = 'no-hero';
       }
       return $classes;

@@ -73,7 +73,8 @@ body.no-hero {
 .menu {
   > li {
     > a {
-      color: #fff;
+      //color: #fff;
+      color: $body-background;
       text-transform: uppercase;
       font-family: $sans-serif;
       font-weight: $global-weight-extrabold;

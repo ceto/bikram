@@ -43,14 +43,14 @@
 .pagehead__pics {
   position: relative;
   img {
-    border-bottom: 1rem solid $body-background;
+    
   }
 
   @include breakpoint('medium') {
     height: 0;
     padding-bottom: 40%;
     img {
-      border:none;
+      
     }
   }
 }
@@ -71,7 +71,8 @@
 .pagehead__content {
 
   padding:1.5rem 0;
-  color: $white;
+  //color: $white;
+  color: $body-background;
 
   @include breakpoint('medium') {
     padding:0;

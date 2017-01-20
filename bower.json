@@ -9,13 +9,20 @@
   "dependencies": {
     "foundation-sites": "^6.2.3",
     "owl.carousel": "owl-carousel2#^2.1.6",
-    "motion-ui": "^1.2.2"
+    "motion-ui": "^1.2.2",
+    "FitText.js": "^1.2.0",
+    "instafeed.js": "^1.4.1"
   },
   "overrides": {
     "owl.carousel": {
       "main": [
         "dist/owl.carousel.js",
         "src/scss/owl.carousel.scss"
+      ]
+    },
+    "instafeed.js": {
+      "main" : [
+        "instafeed.min.js"
       ]
     },
     "motion-ui": {

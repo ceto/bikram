@@ -1,0 +1,29 @@
+.photostripe {
+    font-size: 0;
+    line-height: 0;
+
+    overflow-x: scroll; /* has to be scroll, not auto */
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    & {
+        -ms-overflow-style: none;  // IE 10+
+        //overflow: -moz-scrollbars-none;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.photostripe__item {
+    display: inline-block;
+
+    height: 50vh;
+    max-height: 40rem;
+    img {
+        height: inherit;
+    }
+    .photostripe--narrow & {
+      height: 14rem;
+    }
+}

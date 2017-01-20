@@ -4,5 +4,36 @@
 
 .tcard__photo {
   margin:0 auto;
-  max-width: 50%;
+  max-width: 60%;
+  margin-bottom: 1.5rem;
+
+  a {
+    display: block;
+    border-radius: 50%;
+    border:.5rem solid $body-background;
+    &:hover, &:focus {
+      border-color: $medium-gray;
+    }
+  }
+
+
+  img {
+    display: block;
+    border-radius: inherit;
+  }
+}
+
+.tcard__name {
+  font-size: 1.875rem;
+  margin-bottom: .5em;
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color: $primary-color;
+    }
+  }
+}
+
+.tcard__text {
+  font-size: .875rem;
 }

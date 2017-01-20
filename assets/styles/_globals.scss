@@ -39,6 +39,10 @@ body {
 .ps--opaque {
   background-color: $white;
 }
+.ps--dark {
+  background-color: $dark-gray;
+  color:$body-background;
+}
 
 .button {
   font-family: $sans-serif;

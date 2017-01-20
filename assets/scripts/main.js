@@ -10,7 +10,23 @@
 $(document).foundation();
 
 
-$(document).ready(function(){
+$(document).ready(function() {
+
+  $('.facts > li:odd()').fitText( 0.8 );
+  $('.facts > li:even()').fitText( 1.2 );
+
+    if ($('#instafeed').length) {
+      var feed = new Instafeed({
+        get: 'location',
+        locationId: '3576608',
+        accessToken: '306843849.ba4c844.edc12d767da4449092c3eaefc7d94056',
+        template: '<a class="photostripe__item" target="_blank" href="{{link}}"><img src="{{image}}" alt="{{caption}}"></a>',
+        sortBy: 'most-liked',
+        limit: 10,
+        resolution: 'standard_resolution'
+      });
+      feed.run();
+    }
 
   var minicalcarousel = $('.minical-carousel').owlCarousel({
     //margin:32,

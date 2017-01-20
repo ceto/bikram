@@ -31,5 +31,8 @@
       </div>
     <?php endwhile; ?>
   </div>
+</section>
 
+<section class="photostripe photostripe--narrow">
+  <div id="instafeed"></div>
 </section>

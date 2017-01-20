@@ -1,56 +1,57 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
   <?php get_template_part('templates/page', 'header'); ?>
-
   <div class="classleader">
     <div class="row">
       <div class="columns large-10 large-centered">
         <div class="classleader__naptar">
           <?php
-            $args = array(
-              'post_type'  => 'event',
-              'posts_per_page' => -1,
-              'meta_query' => array(
-              'relation'=>'AND',
-              array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
-              array('key' => 'class', 'compare' => '=', 'value' => $post->ID)
-            ));
-            $the_events = new WP_Query( $args );
+          $args = array(
+          'post_type'  => 'event',
+          'posts_per_page' => -1,
+          'meta_query' => array(
+          'relation'=>'AND',
+          array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
+          array('key' => 'class', 'compare' => '=', 'value' => $post->ID)
+          ));
+          $the_events = new WP_Query( $args );
           ?>
           <section role="marquee">
             <h3>Ezekre még odaérsz</h3>
-
             <div class="calendar calendar--full">
               <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
-                <?php get_template_part('templates/calendar','entryclass'); ?>
+              <?php get_template_part('templates/calendar','entryclass'); ?>
               <?php endwhile; ?>
             </div>
           </section>
           <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
           <?php wp_reset_query(); ?>
         </div>
-        <div class="classleader__lead">
-            <?php
-            global $more; $more = 0;
-            the_excerpt();
-            ?>
-        </div>
 
+      </div>
     </div>
   </div>
-</div>
-  <div class="singleclass__content content ps ps--opaque">
+  <div class="singleclass__content content ps">
     <div class="row">
-      <div class="columns large-7">
-      <h2>Az óra részletei</h2>
+      <div class="columns large-6">
+        <ul class="facts">
+          <li>korhatár nélkül</li>
+          <li>90 perces óra</li>
+          <li>40 <em>C&deg;</em> hőségben</li>
+          <li>nincs házifeladat</li>
+        </ul>
+        <div class="classleader__lead">
+          <?php
+          global $more; $more = 0;
+          the_excerpt();
+          ?>
+        </div>
+      </div>
+      <div class="columns large-6">
+        <h2>Az óra részletei</h2>
         <?php $more=1; the_content('', TRUE); ?>
         <br>
         <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
-      </div>
-      <div class="columns large-5">
-          <h2>Tanárok</h2>
-          <hr>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis atque aliquid blanditiis itaque ut minima, minus fuga soluta. Soluta adipisci quibusdam distinctio repellat doloribus eos, veritatis provident. Libero, voluptates voluptatibus.</p>
       </div>
     </div>
   </div>
@@ -73,7 +74,7 @@ $args = array(
 );
 $the_classes = new WP_Query( $args );
 ?>
-<section id="classes" class="ps classlist">
+<section id="classes" class="ps classlist ps--opaque">
   <header class="heading">
     <div class="row">
       <div class="columns">
@@ -82,7 +83,6 @@ $the_classes = new WP_Query( $args );
       </div>
     </div>
   </header>
-
   <div class="row large-up-3">
     <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
     <div class="column">

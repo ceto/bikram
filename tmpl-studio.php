@@ -16,11 +16,15 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="columns">
-      <img src="http://placehold.it/1920x600?text=hangulatfotok" alt="">
+  <section class="photostripe">
+    <div class="photostripe__item">
+      <img src="http://placehold.it/1200x800/2a2a2a?text=hangulatfoto 1." alt="">
+      <img src="http://placehold.it/1200x800/333/?text=hangulatfoto 2." alt="">
+      <img src="http://placehold.it/1000x1000/e60376" alt="">
+      <img src="http://placehold.it/1200x800/000/?text=hangulatfotok" alt="">
+      <img src="http://placehold.it/1200x800?text=hangulatfoto 1." alt="">
     </div>
-  </div>
+  </section>
   <div class="ps">
     <div class="row">
       <div class="columns">
@@ -32,10 +36,13 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="columns">
-      <img src="http://placehold.it/1920x600?text=studiofotok" alt="">
+    <section class="photostripe">
+    <div class="photostripe__item">
+      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
+      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
+      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
+      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
     </div>
-  </div>
+  </section>
   <?php get_template_part('templates/teachers', 'list'); ?>
 <?php endwhile; ?>
