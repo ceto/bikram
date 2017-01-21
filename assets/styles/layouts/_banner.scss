@@ -1,107 +1,150 @@
 body.no-hero {
-  padding-top: 6rem;
-  padding-top: calc(6rem + 2vw);
+    padding-top: 6rem;
+    padding-top: calc(6rem + 2vw);
 }
 
 .banner {
-  position: fixed;
-  width:100%;
-  left:0;
-  top:0;
-  z-index: 9;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    transition: top .4s;
+    .no-hero & {
+      background-color: $body-background;
+    }
 }
+
+.banner--stucked {
+    top: -6rem;
+
+    color: $body-background;
+    background-color: $dark-gray;
+    background-image: none;
+
+    .no-hero & {
+      background-color: $dark-gray;
+    }
+
+    &.banner--show {
+        top: 0;
+        box-shadow: 0 0 3px 0 rgba(#000,.25);
+    }
+}
+.banner--show {
+    //top:-4rem;
+}
+
 .banner__wrap {
-  display: table;
-  width:100%;
-  height:6rem;
-  height:calc(6rem + 4vw);
-  .no-hero & {
-    height:6rem;
-    height:calc(6rem + 2vw);
-    //border-bottom: .5rem solid #000;
-  }
+    display: table;
+
+    width: 100%;
+    height: 6rem;
+    height: calc(6rem + 4vw);
+    .no-hero & {
+        height: 6rem;
+        height: calc(6rem + 2vw);
+    }
+    .banner--stucked & {
+        height: 6rem;
+    }
 }
 
-.banner__brand, .banner__nav, .banner__actions {
-  display: table-cell;
-  vertical-align: middle;
+.banner__brand,
+.banner__nav,
+.banner__actions {
+    display: table-cell;
 
+    vertical-align: middle;
 }
 
 .banner__brand {
-  //background-color: red;
-  width:12rem;
+    //background-color: red;
+    width: 12rem;
 }
 
 .banner__logo {
-  //background-color: blue;
-  display: block;
-  height: 5rem;
-  width:12rem;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  background-position: left center;
-  /**zeldman text-hide **/
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  /** zeldman end of text-hide **/
+    //background-color: blue;
+    display: block;
+    overflow: hidden;
+
+    width: 12rem;
+    height: 5rem;
+
+    white-space: nowrap;
+    /**zeldman text-hide **/
+    text-indent: 100%;
+
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: auto 80%;
+    /** zeldman end of text-hide **/
 }
 
 .banner__nav {
-  .menu {
-    float: right;
-  }
+    .menu {
+        float: right;
+    }
 }
 
 .banner__actions {
-
-  text-align: right;
+    text-align: right;
 }
 
 
 .menumodal {
-  text-align: center;
+    text-align: center;
 }
 
 .primarynav {
-  max-width: 40rem;
-  margin: 0 auto;
+    max-width: 40rem;
+    margin: 0 auto;
 }
 
 .menu {
-  > li {
-    > a {
-      //color: #fff;
-      color: $body-background;
-      text-transform: uppercase;
-      font-family: $sans-serif;
-      font-weight: $global-weight-extrabold;
-      .no-hero & {
-        color:$body-font-color;
-      }
+    > li {
+        > a {
+            font-family: $sans-serif;
+            font-weight: $global-weight-extrabold;
+
+            text-transform: uppercase;
+            //color: #fff;
+
+            color: $body-background;
+            .no-hero & {
+                color: $body-font-color;
+            }
+            .light-hero & {
+                color: $body-font-color;
+            }
+
+            .banner--stucked & {
+                color: inherit;
+            }
+        }
     }
-  }
-  > li.active {
-    > a {
-      .no-hero & {
-        color:get-color(primary);
-      }
+    > li.active {
+        > a {
+            color: get-color(primary);
+        }
     }
-  }
 }
 
 
-.menutoggle, .eventstoggle {
-  margin: 0;
+.menutoggle,
+.eventstoggle {
+    margin: 0;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  color: $white;
-  background-color: $primary-color;
-  &:hover, &:focus {
     color: $white;
-    background-color: $black;
-  }
+    background-color: $primary-color;
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $black;
+    }
 }

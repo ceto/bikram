@@ -1,5 +1,5 @@
 html {
-
+  background-color: $dark-gray;
 }
 body {
 
@@ -36,6 +36,10 @@ body {
   padding-bottom: calc(.5rem + 1vh);
 }
 
+.ps--largetop {
+  padding-top: 8rem;
+  padding-top: calc(8rem + 2vw);
+}
 .ps--opaque {
   background-color: $white;
 }

@@ -24,9 +24,13 @@
   function bikram_body_class_slugs($classes) {
       global $wp_query, $wpdb;
 
-      if ( is_archive() || is_search() || is_home() || is_singular('post') || is_singular('teacher') || is_page_template('tmpl-schedule.php') || is_page_template('tmpl-newcomer.php') ) {
+      if ( /*is_archive() ||*/ is_search() /*|| is_home()*/ || is_singular('aapost') || is_singular('aateacher') || is_page_template('aatmpl-schedule.php') || is_page_template('aatmpl-newcomer.php') ) {
           $classes[] = 'no-hero';
       }
+      if ( is_archive() || is_home() || is_singular('post') || is_page_template('tmpl-schedule.php')) {
+          $classes[] = 'light-hero';
+      }
+
       return $classes;
 
   }

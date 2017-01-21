@@ -19,6 +19,7 @@
 }
 .hero__content {
   @extend .pagehead__content;
+  text-align: left;
   @include breakpoint('medium') {
     bottom:16%;
   }

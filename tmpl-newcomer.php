@@ -8,45 +8,34 @@
   <!-- <?php get_template_part('templates/page', 'header'); ?> -->
 
   <?php //get_template_part('templates/content', 'page'); ?>
-  <div class="ps ps--dark">
+  <div class="ps ps--dark ps--largetop">
     <div class="row">
       <div class="columns large-6">
         <ul class="facts">
-          <li>10 napos próbabérlet</li>
-          <li><em>2&nbsp500</em>  Ft-ért</li>
-          <li>első alkalommal</li>
+          <li>Első alkalommal</li>
+          <li><em>10</em> napos</li>
+          <li>próbabérlet <em>2&nbsp500</em>  Ft-ért</li>
+          <li>vásárolhatsz</li>
         </ul>
-      </div>
-      <div class="columns large-6">
-        <div class="lead">
-          <p>Kipróbálhatod az összes jóga fajtát, megismerheted az oktatókat és találkozhatsz, ismerkedhetsz a többi jógázóval és a környezettel. Semmilyen előképzettség vagy jógás múlt nem szükséges</p>
+        <div class="classleader__lead">
+          <p>Próbabérlettel kipróbálhatod az összes jóga fajtát, megismerheted az oktatókat és találkozhatsz, ismerkedhetsz a többi jógázóval és a környezettel. Semmilyen előképzettség vagy jógás múlt nem szükséges</p>
         </div>
       </div>
-    </div>
-  </div>
-<!--   <div class="ps ps--opaque">
-    <div class="row">
-      <div class="columns">
+      <div class="columns large-6 content">
+        <h2>Felkészülés az órára</h2>
         <div class="lead">
           <?php
           global $more; $more = 0;
           the_excerpt();
           ?>
         </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div class="ps ps--dark">
-    <div class="row">
-      <div class="columns large-6">
         <?php $more=1; the_content('', TRUE); ?>
       </div>
     </div>
   </div>
-  <div class="ps">
+  <div class="ps ps--opaque">
     <div class="row">
-      <div class="columns large-6 large-push-6">
+      <div class="columns large-6">
         <h2>Jóga etikett</h2>
         <ul>
 
@@ -66,13 +55,4 @@
       </div>
     </div>
   </div>
-  <section class="photostripe">
-    <div class="photostripe__item">
-      <img src="http://placehold.it/1200x800/2a2a2a?text=hangulatfoto 1." alt="">
-      <img src="http://placehold.it/1200x800/333/?text=hangulatfoto 2." alt="">
-      <img src="http://placehold.it/1000x1000/e60376" alt="">
-      <img src="http://placehold.it/1200x800/000/?text=hangulatfotok" alt="">
-      <img src="http://placehold.it/1200x800?text=hangulatfoto 1." alt="">
-    </div>
-  </section>
 <?php endwhile; ?>

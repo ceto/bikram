@@ -1,7 +1,6 @@
-<?php get_template_part('templates/sticky', 'block'); ?>
 <?php get_template_part('templates/blog', 'header'); ?>
-
-<section class="minipostblock ps ps--narrow">
+<?php get_template_part('templates/sticky', 'block'); ?>
+<section class="minipostblock ps">
   <div class="row small-up-1 medium-up-2 large-up-3">
     <?php while (have_posts()) : the_post(); ?>
       <div class="column">

@@ -11,7 +11,7 @@
 ?>
 
 
-<section id="classes" class="classlist">
+<section id="classes" class="classlist ps">
   <header class="heading">
     <div class="row">
       <div class="columns">
@@ -19,8 +19,7 @@
         <a class="button heading__button" href="<?php the_permalink(42) ?>">Ugrás az órarendre</a>
           <hr>
         <!-- <h3 class="heading__subtitle">Lorem ipsum dolor sit amet</h3> -->
-        <p class="heading__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dicta nisi, cupiditate illum explicabo voluptates veniam tenetur sed quo ab, exercitationem sunt vero adipisci officiis. Sunt doloribus, enim impedit? Dolorem.</p>
-
+        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj. Válassz óráink közül, ha fogyni vagy erősödni szeretnél, ha fizikai panaszaid vannak, esetleg lelki nehézségkbe ütköztél.</p>
       </div>
     </div>
   </header>
@@ -33,6 +32,3 @@
   </div>
 </section>
 
-<section class="photostripe photostripe--narrow">
-  <div id="instafeed"></div>
-</section>

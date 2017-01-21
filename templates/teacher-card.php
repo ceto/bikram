@@ -5,5 +5,5 @@
     </a>
   </figure>
   <h3 class="tcard__name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-  <div class="tcard__text"><?php the_excerpt(); ?></div>
+  <div class="tcard__text">valami szép kis idézet vagy kivonat a szövegéből</div>
 </div>

@@ -12,6 +12,36 @@ $(document).foundation();
 
 $(document).ready(function() {
 
+
+
+    //********** Scroll Direction Check to Toggle Mobile Top bar *************//
+    var yScrollStatus = $(window).scrollTop();
+    var scrollDirection = 0;
+    $(window).on('scroll', function(e) {
+            var difi = ($(window).scrollTop() - yScrollStatus);
+            if (difi > 0 ) {
+              scrollDirection=(scrollDirection<0)?1:scrollDirection+1;
+            } else {
+              scrollDirection=(scrollDirection>0)?-1:scrollDirection-1;
+            }
+            //console.log(scrollDirection);
+            if(scrollDirection < 1) {
+              scrollDirection=0;
+              $('.banner').addClass('banner--show');
+            } else if (scrollDirection >= 1) {
+              scrollDirection=0;
+              $('.banner').removeClass('banner--show');
+            }
+            yScrollStatus=$(window).scrollTop();
+            if ( (yScrollStatus >= 96 )  )  {
+              $('.banner').addClass('banner--stucked');
+            } else {
+              $('.banner').removeClass('banner--stucked');
+            }
+
+        }
+    );
+
   $('.facts > li:odd()').fitText( 0.8 );
   $('.facts > li:even()').fitText( 1.2 );
 

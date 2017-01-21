@@ -1,20 +1,35 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleteacher'); ?>>
-  <header class="singleteacher__header">
+  <header class="singleteacher__header ps ps--dark ps--largetop">
     <div class="row">
-      <div class="columns medium-4 medium-centered">
-        <img src="http://placehold.it/600x600" alt="">
+
+      <div class="columns medium-4">
+        <img src="http://lorempixel.com/768/768/people" alt="">
+        <!-- <h1 class="singleteacher__title"><?php the_title(); ?></h1> -->
       </div>
-    </div>
-    <div class="row">
-      <div class="columns large-10 large-centered xlarge-9">
-        <h1 class="singleteacher__title"><?php the_title(); ?></h1>
+      <div class="columns medium-8">
+
+
+
+        <ul class="facts">
+          <?php if (have_rows('quote')): ?>
+          <?php while ( have_rows('quote') ) : the_row(); ?>
+            <li><?php the_sub_field('quote_row') ?></li>
+          <?php endwhile; ?>
+          <?php else: ?>
+            <li>Ha ebbe nem</li>
+            <li><em>haltam</em> bele</li>
+            <li>akkor már soha</li>
+            <li>semmibe se fogok</li>
+          <?php endif; ?>
+        </ul>
       </div>
     </div>
   </header>
-  <div class="singleteacher__content content">
+  <div class="singleteacher__content content ps ps--opaque">
     <div class="row">
-      <div class="columns large-10 large-centered xlarge-9">
+      <div class="columns large-6 xlarge-8">
+        <h1><?php the_title(); ?></h1>
         <div class="lead">
           <?php
           global $more; $more = 0;
@@ -22,6 +37,8 @@
           ?>
         </div>
         <?php $more=1; the_content('', TRUE); ?>
+      </div>
+      <div class="columns large-6 xlarge-4">
         <?php
         $args = array(
         'post_type'  => 'event',
@@ -35,7 +52,7 @@
         $the_events = new WP_Query( $args );
         ?>
         <section class="pagehead__schedule callout" role="marquee">
-          <h3><?php the_field('nick_name'); ?> soron következő órái</h3>
+          <h3><?php the_field('nick_name'); ?> következő órái</h3>
           <hr>
           <div class="calendar calendar--teacher">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>

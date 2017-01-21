@@ -63,7 +63,7 @@
       <div class="columns">
         <h2 class="heading__title">Jóga órák az Astorián</h2>
         <hr>
-        <p class="heading__lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dicta nisi, cupiditate illum explicabo voluptates veniam tenetur sed quo ab, exercitationem sunt vero adipisci officiis. Sunt doloribus, enim impedit? Dolorem.</p>
+        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj. Válassz óráink közül, ha fogyni vagy erősödni szeretnél, ha fizikai panaszaid vannak, esetleg lelki nehézségkbe ütköztél.</p>
       </div>
     </div>
   </header>

@@ -62,7 +62,7 @@
     font-weight: $global-weight-extrabold;
     line-height: 1.2;
 
-    margin: 0;
+    margin: .25rem 0 0;
     padding: 0 10% 0 0;
     //background-color: $dark-gray;
     color:$body-background;
@@ -71,7 +71,7 @@
 
     text-transform: uppercase;
 
-    > li {
+    > li, > span {
         display: block;
 
         margin: 0 0;

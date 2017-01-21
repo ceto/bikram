@@ -1,5 +1,5 @@
 <?php use Roots\Sage\Titles; ?>
-<header class="bloghead ps ps--narrow">
+<header class="bloghead ps ps--narrow ps--largetop">
   <div class="row">
     <div class="columns large-6">
       <h2 class="bloghead__title">
