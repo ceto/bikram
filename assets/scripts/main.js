@@ -42,8 +42,8 @@ $(document).ready(function() {
         }
     );
 
-  $('.facts > li:odd()').fitText( 0.8 );
-  $('.facts > li:even()').fitText( 1.2 );
+  $('.facts > *:odd()').fitText( 0.8 );
+  $('.facts > *:even()').fitText( 1.2 );
 
     if ($('#instafeed').length) {
       var feed = new Instafeed({
