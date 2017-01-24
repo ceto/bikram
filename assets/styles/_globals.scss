@@ -52,3 +52,21 @@ body {
   font-family: $sans-serif;
   font-weight: $global-weight-extrabold;
 }
+
+
+table {
+  font-family: $sans-serif;
+  line-height: 1.2;
+  font-size: .875rem;
+  @include breakpoint(medium) {
+    font-size: 1rem;
+  }
+  @include breakpoint(large) {
+    font-size: 1.125rem;
+  }
+
+  small {
+    font-weight: $global-weight-normal;
+    font-size: 87.5%;
+  }
+}

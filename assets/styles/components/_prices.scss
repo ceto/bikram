@@ -1,0 +1,45 @@
+table.pricetable {
+  border-spacing: 0 1px;
+  font-weight: $global-weight-bold;
+
+  border:0 solid #fff;
+  background-color: $body-background;
+
+  @include breakpoint(medium) {
+    border-width:1em;
+  }
+  @include breakpoint(tablet) {
+    border-width:1.5em;
+  }
+
+
+  thead {
+    background-color: #fff;
+
+  }
+  tbody tr {
+    &:hover, &:focus {
+      background-color: $body-background !important;
+    }
+  }
+  tbody tr:nth-child(even) {
+    background-color: transparent;
+  }
+  th {
+    font-weight: $global-weight-normal;
+    font-size: .875em;
+    padding-top: 2em;
+  }
+  th:nth-child(n+2) {
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  td:nth-child(n+2) {
+    font-weight: $global-weight-normal;
+    font-family: $serif;
+    font-style: italic;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
