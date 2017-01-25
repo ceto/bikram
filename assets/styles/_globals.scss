@@ -48,6 +48,11 @@ body {
   color:$body-background;
 }
 
+.ps--accent {
+  background-color: $primary-color;
+  color:$body-background;
+}
+
 .button {
   font-family: $sans-serif;
   font-weight: $global-weight-extrabold;
