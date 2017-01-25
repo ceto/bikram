@@ -4,39 +4,14 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-<?php //get_template_part('templates/page', 'header'); ?>
-<div class="ps">
+<?php get_template_part('templates/page', 'header'); ?>
+<div class="theprices">
   <div class="row">
-    <div class="columns">
-      <h1 class="heading__title"><?php the_title(); ?></h1>
-      <hr>
-      <h2>Tudnivalók</h2>
-      <ul>
-        <li>A bérletek az órák előtt vásárolhatók meg készpénzel, vagy bankkártyával.</li>
-        <li>Egy bérletet csak egy személy használhat!</li>
-        <li>A bérleteket nem áll módunkban meghosszabbítani!</li>
-        <li>Egy bérlettel a stúdió bármely óráját látogathatod.</li>
-      </ul>
-
-
-      <h2>Kedvezmények, akciók</h2>
-      <ul>
-        <li>Ha új bérleted az aktuális bérleted lejárta előtt megveszed, 20% árengedményt adunk neked!<br><small>A kedvezmény az összes bérletfajtára vonatkozik.</small></li>
-        <li>Hozd el 5 ismerősöd vagy barátod, és a következő bérleted árából 50% árengedményt adunk neked!<br><small>A kedvezmény csak a 10 alkalmas, 20 alkalmas és havi bérletekre vonatkozik.</small></li>
-        <li><span class="label">Újdonság</span>Születésnapod van? Ha ezen a napon vásárolsz nálunk bérletet, 50% árengedményt adunk neked!<br><small>A kedvezmény a 10 napos próbabérlet kivételével az összes bérletfajtára vonatkozik.</small></li>
-        <li>Ha 6 hónapnál régebben jártál nálunk, kezdd újra 7 napos visszatérő bérlettel!<br><small>A kedvezményes bérlet ára 4 000 Ft.</small></li>
-        <li>Hot mama: Kismamáink időkorlátozás nélkül használhatják fel a 10, illetve 20 alkalmas bérleteket.<br><small>Igényelhető: a várandósság 12. hetétől a gyermek 2 éves koráig.</small></li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="ps ps--narrow">
-  <div class="row">
-    <div class="columns tablet-10 tablet-centered large-8">
+    <div class="columns large-6">
       <table class="pricetable">
         <thead>
           <tr>
-            <th>&nbsp;</th>
+            <th>Árak</th>
             <th>Felnőtt ár</th>
             <th>Diák/Nyugdíjas</th>
           </tr>
@@ -121,6 +96,33 @@
       </tbody>
     </table>
   </div>
+  <div class="columns large-6">
+    <h2>Kedvezmények, akciók</h2>
+      <ul>
+        <li>Ha új bérleted az aktuális bérleted lejárta előtt megveszed, 20% árengedményt adunk neked!<br><small>A kedvezmény az összes bérletfajtára vonatkozik.</small></li>
+        <li>Hozd el 5 ismerősöd vagy barátod, és a következő bérleted árából 50% árengedményt adunk neked!<br><small>A kedvezmény csak a 10 alkalmas, 20 alkalmas és havi bérletekre vonatkozik.</small></li>
+        <li><span class="label">Újdonság</span>Születésnapod van? Ha ezen a napon vásárolsz nálunk bérletet, 50% árengedményt adunk neked!<br><small>A kedvezmény a 10 napos próbabérlet kivételével az összes bérletfajtára vonatkozik.</small></li>
+        <li>Ha 6 hónapnál régebben jártál nálunk, kezdd újra 7 napos visszatérő bérlettel!<br><small>A kedvezményes bérlet ára 4 000 Ft.</small></li>
+        <li>Hot mama: Kismamáink időkorlátozás nélkül használhatják fel a 10, illetve 20 alkalmas bérleteket.<br><small>Igényelhető: a várandósság 12. hetétől a gyermek 2 éves koráig.</small></li>
+      </ul>
+      <h2>Tudnivalók</h2>
+      <ul>
+        <li>A bérletek az órák előtt vásárolhatók meg készpénzel, vagy bankkártyával.</li>
+        <li>Egy bérletet csak egy személy használhat!</li>
+        <li>A bérleteket nem áll módunkban meghosszabbítani!</li>
+        <li>Egy bérlettel a stúdió bármely óráját látogathatod.</li>
+      </ul>
+      <h2>Kiegésztők bérelhetők, vásárolhatók</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam accusantium, exercitationem ex. Facere deserunt cumque ipsum quibusdam, perspiciatis ab repellendus eligendi quaerat. Assumenda animi sunt asperiores soluta consequuntur esse dicta!</p>
+  </div>
 </div>
 </div>
 <?php endwhile; ?>
+<section class="photostripe">
+    <div class="photostripe__item">
+      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
+      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
+      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
+      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
+    </div>
+  </section>

@@ -8,10 +8,15 @@ table.pricetable {
   @include breakpoint(medium) {
     border-width:1em;
   }
+
   @include breakpoint(tablet) {
     border-width:1.5em;
   }
-
+  @include breakpoint('large') {
+        margin-top: -6rem;
+        margin-top: calc(-6rem - 4vw);
+        box-shadow: 0 0 5rem 0 rgba(#000,.25);
+  }
 
   thead {
     background-color: #fff;
@@ -43,3 +48,13 @@ table.pricetable {
     text-align: right;
   }
 }
+
+.theprices {
+  position: relative;
+  //border-top:.5rem solid $primary-color;
+  background-color: $dark-gray;
+  color:$body-background;
+  padding: 3rem 0;
+  padding: calc(3rem + 2vw) 0;
+}
+

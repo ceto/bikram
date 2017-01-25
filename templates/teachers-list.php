@@ -7,19 +7,12 @@
   );
   $the_teachers = new WP_Query( $args );
 ?>
-<section class="teachers ps ps--opaque" id="teachers" data-magellan-target="teachers">
-  <div class="ps">
-    <div class="row">
-      <div class="columns">
-        <h2>Tanáraink</h2>
-      </div>
-    </div>
-    <div class="row medium-up-2 tablet-up-3 large-up-4">
+<section class="teachers ps" id="teachers" data-magellan-target="teachers">
+    <div class="row medium-up-2 tablet-up-3">
       <?php while ($the_teachers->have_posts()) : $the_teachers->the_post(); ?>
       <div class="column">
         <?php get_template_part('templates/teacher','card'); ?>
       </div>
       <?php endwhile; ?>
     </div>
-  </div>
 </section>

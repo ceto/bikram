@@ -4,8 +4,14 @@
 */
 ?>
 
-  <?php get_template_part('templates/schedule', 'header'); ?>
+  <?php //get_template_part('templates/schedule', 'header'); ?>
+  <?php get_template_part('templates/page', 'header'); ?>
 
+<!--   <div class="ps ps--dark ps--largetop">
+    <div class="row">
+      <div class="columns"><h1><?php the_title() ?></h1></div>
+    </div>
+  </div> -->
   <?php
     $args = array(
       'post_type'  => 'event',
@@ -19,7 +25,7 @@
   ?>
   <section class="ps thetimetable">
     <div class="row">
-      <div class="columns large-12 large-centered xxlarge-12">
+      <div class="columns large-10 large-centered">
         <div class="schedule schedule--all">
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
@@ -57,24 +63,14 @@
 ?>
 
 
-<section id="classes" class="classlist ps ps--opaque">
-  <header class="heading">
-    <div class="row">
-      <div class="columns">
-        <h2 class="heading__title">Jóga órák az Astorián</h2>
-        <hr>
-        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj. Válassz óráink közül, ha fogyni vagy erősödni szeretnél, ha fizikai panaszaid vannak, esetleg lelki nehézségkbe ütköztél.</p>
-      </div>
-    </div>
-  </header>
-  <div class="row large-up-2 ">
-    <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
-      <div class="column">
-        <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-      </div>
-    <?php endwhile; ?>
-  </div>
 
-</section>
 
 <?php get_template_part('templates/sticky', 'block'); ?>
+<section class="photostripe">
+    <div class="photostripe__item">
+      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
+      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
+      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
+      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
+    </div>
+</section>

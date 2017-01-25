@@ -91,7 +91,9 @@
   }
 }
 
-.single-class .pagehead__content {
+.single-class .pagehead__content,
+.page-template-tmpl-schedule .pagehead__content,
+.page-template-tmpl-prices .pagehead__content {
   @include breakpoint('large') {
     margin-bottom: 3rem;
     margin-bottom: calc(3rem + 2vw);
