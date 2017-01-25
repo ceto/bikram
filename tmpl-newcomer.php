@@ -33,9 +33,26 @@
       </div>
     </div>
   </div>
-  <div class="ps ps--opaque">
+  <div class="ps">
+    <div class="row">
+      <div class="columns"><h2>Egy menet az Astorián így néz ki</h2></div>
+    </div>
     <div class="row">
       <div class="columns large-6">
+        <ul>
+          <li>Érkezés, sorrend. regisztráció, recepció<br><small>A pihenő részben meleg teával várunk, hogy ráhangolódhass az órára</small></li>
+          <li>Vásárolhatsz és bérelhetsz dolgokat <br><small>Vehetsz vizet. Recepciónkon zuhanyzáshoz és jógázáshoz való professzionális törölközőt, matracot és kiegészítőket is vásárolhatsz vagy bérelhetsz. Hot jógához kifejlesztett <a target="_blank" href="http://dogdayswera.com">DogDays Yoga Wear</a> ruhákat is vásárolhatsz.</small></li>
+          <li>Öltöző, zuhanyzó stb <br><small>Tágas öltözőinkben zuhanyzásra is van lehetőséged, melyhez a tusfürdőt és a sampont biztosítjuk számodra.</small></li>
+          <li>Hányan vannak egy teremben, hogy férek el, helyfogalalás ...</li>
+          <li>Ha vége mi történik <br><small>Gyakorlás után pedig friss almát kínálunk, ahol megoszthatod élményeidet oktatóddal és a többi jógázóval.</small></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="ps ps--opaque">
+    <div class="row">
+      <div class="columns large-6 large-push-6">
         <h2>Jóga etikett</h2>
         <ul>
 
