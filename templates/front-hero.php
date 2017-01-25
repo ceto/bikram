@@ -8,9 +8,9 @@
     <div class="row">
       <div class="columns tablet-8">
         <ul class="facts">
-          <li>Készülj fel</li>
-          <li><em>izzadni</em> fogsz</li>
-          <li>úgy mint még soha</li>
+          <li><em>Készülj fel</em></li>
+          <li><em>izzadni fogsz</em></li>
+          <li><em>úgy mint még soha</em>/li>
         </ul>
         <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>
       </div>

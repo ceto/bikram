@@ -1,11 +1,27 @@
+<?php
+  $args = array(
+    'post_type'  => 'class',
+    'order' => 'ASC',
+    'orderby'  => 'menu_order',
+    'posts_per_page' => -1
+  );
+  $the_fclasses = new WP_Query( $args );
+?>
 <footer class="sitefooter">
   <div class="row">
-    <div class="columns tablet-6">
-      <div class="facts">
-        <span>Test nem</span>
-        <span>marad</span>
-        <span>szárazon</span>
+    <div class="columns large-9">
+      <div class="sitefooter__slogan">
+        <div class="sitefooter__slogan">
+          <small>Az Astorián</small>
+          <p>Test nem marad szárazon</p>
+        </div>
       </div>
+      <ul class="sitefooter__classes">
+        <?php while ($the_fclasses->have_posts()) : $the_fclasses->the_post(); ?>
+          <li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
+        <?php endwhile; ?>
+      </ul>
+
     </div>
   </div>
   <div class="row">

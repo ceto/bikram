@@ -65,7 +65,7 @@
     margin: .25rem 0 0;
     padding: 0 10% 0 0;
     //background-color: $dark-gray;
-    color:$body-background;
+    color: $medium-gray;
 
     list-style-type: none;
 
@@ -79,7 +79,7 @@
     }
 
     em {
-      color:get-color(primary);
+      color:$light-gray;
       font-style: normal;
     }
 }

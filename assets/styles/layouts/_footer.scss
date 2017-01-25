@@ -9,3 +9,42 @@
     border-width:.25rem;
   }
 }
+
+.sitefooter__slogan {
+  line-height: 1;
+  color:$medium-gray;
+  margin-bottom: 3rem;
+  > small {
+    //color:$primary-color;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom:.25em;
+    text-transform: uppercase;
+  }
+  > p {
+    margin:0;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: $global-weight-extrabold;
+  }
+}
+.sitefooter__classes {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  //text-transform: uppercase;
+  font-weight: $global-weight-bold;
+  line-height: 1;
+  font-size: 1.125rem;
+  > li {
+    display: inline-block;
+    padding:0 1.25em .75em 0;
+    a {
+      white-space: nowrap;
+      color:inherit;
+      &:hover, &:focus {
+        color:$light-gray;
+      }
+    }
+  }
+}

@@ -44,6 +44,7 @@ $(document).ready(function() {
 
   $('.facts > *:odd()').fitText( 0.8 );
   $('.facts > *:even()').fitText( 1.2 );
+  $('.sitefooter__slogan > p').fitText( 1.2 );
 
     if ($('#instafeed').length) {
       var feed = new Instafeed({
