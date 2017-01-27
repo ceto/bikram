@@ -55,7 +55,7 @@ body {
 
 .button {
   font-family: $sans-serif;
-  font-weight: $global-weight-extrabold;
+  font-weight: $global-weight-bold;
 }
 
 
@@ -74,5 +74,34 @@ table {
   small {
     font-weight: $global-weight-normal;
     font-size: 87.5%;
+  }
+}
+
+//Typography
+
+li {
+  margin-bottom: $paragraph-margin-bottom/3*2;
+}
+
+.content {
+  p, ul, ol, figure, blockquote {
+    + h2, + h3, + h4, + h4, + h6 {
+      margin-top: 2rem;
+      margin-top: calc(2rem + .5em);
+    }
+  }
+
+
+  li {
+    //text-indent: 2em;
+    &:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      height:.666em;
+      width:.666em;
+      background-color: $primary-color;
+      transform: translateX(-1.5rem) translateY(.333em);
+    }
   }
 }

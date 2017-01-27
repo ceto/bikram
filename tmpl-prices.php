@@ -35,8 +35,8 @@
             <td>15 500,-</td>
           </tr>
           <tr>
-            <td><span class="label">Akció</span> Take it easy honey (10 alkalmas)<br>
-            <small>Matrac- és 2 db törölköző használattal.</small>
+            <td>Take it easy honey (10 alkalmas)<br>
+            <small>Alkalmanként matrac- és 2 db törölköző használattal.</small>
           </td>
           <td>26 000,-</td>
           <td>18 000,-</td>
@@ -79,41 +79,30 @@
           <td>190 000,-</td>
           <td>125 000,-</td>
         </tr>
-        <tr>
-          <td>Kombinált havi bérlet<br>
-            <small>Astória és Buda stúdióban is érvényes</small>
-          </td>
-          <td>32 000,-</td>
-          <td>22 000,-</td>
-        </tr>
-        <tr>
-          <td>Kombinált éves bérlet<br>
-            <small>Astória és Buda stúdióban is érvényes</small>
-          </td>
-          <td>248 000,-</td>
-          <td>162 000,-</td>
-        </tr>
       </tbody>
     </table>
   </div>
   <div class="columns large-6">
-    <h2>Kedvezmények, akciók</h2>
+    <div class="content pricess__content">
+      <h2>Kedvezmények, akciók</h2>
       <ul>
         <li>Ha új bérleted az aktuális bérleted lejárta előtt megveszed, 20% árengedményt adunk neked!<br><small>A kedvezmény az összes bérletfajtára vonatkozik.</small></li>
         <li>Hozd el 5 ismerősöd vagy barátod, és a következő bérleted árából 50% árengedményt adunk neked!<br><small>A kedvezmény csak a 10 alkalmas, 20 alkalmas és havi bérletekre vonatkozik.</small></li>
-        <li><span class="label">Újdonság</span>Születésnapod van? Ha ezen a napon vásárolsz nálunk bérletet, 50% árengedményt adunk neked!<br><small>A kedvezmény a 10 napos próbabérlet kivételével az összes bérletfajtára vonatkozik.</small></li>
+        <li>Születésnapod van? Ha ezen a napon vásárolsz nálunk bérletet, 50% árengedményt adunk neked!<br><small>A kedvezmény a 10 napos próbabérlettre és a 7 napos visszatérőre nem vonatkozik</small></li>
         <li>Ha 6 hónapnál régebben jártál nálunk, kezdd újra 7 napos visszatérő bérlettel!<br><small>A kedvezményes bérlet ára 4 000 Ft.</small></li>
         <li>Hot mama: Kismamáink időkorlátozás nélkül használhatják fel a 10, illetve 20 alkalmas bérleteket.<br><small>Igényelhető: a várandósság 12. hetétől a gyermek 2 éves koráig.</small></li>
       </ul>
-      <h2>Tudnivalók</h2>
+      <h2>Bérlet vásárlásról</h2>
       <ul>
-        <li>A bérletek az órák előtt vásárolhatók meg készpénzel, vagy bankkártyával.</li>
-        <li>Egy bérletet csak egy személy használhat!</li>
+        <li>A bérletek megvásárlására az órakezdések előtti, illetve utáni fél órában van lehetőség.</li>
+        <li>Stúdiónkban <strong>készpénzzel,</strong> illetve <strong>SZÉP kártyával</strong> tudsz fizetni.</li>
+        <li>Bérleteink névre szólóak, csak egy személy használhatja!</li>
         <li>A bérleteket nem áll módunkban meghosszabbítani!</li>
         <li>Egy bérlettel a stúdió bármely óráját látogathatod.</li>
       </ul>
-      <h2>Kiegésztők bérelhetők, vásárolhatók</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam accusantium, exercitationem ex. Facere deserunt cumque ipsum quibusdam, perspiciatis ab repellendus eligendi quaerat. Assumenda animi sunt asperiores soluta consequuntur esse dicta!</p>
+      <h2>Matrac, törölköző és kiegészítők</h2>
+      <p>Jógamatracot első alkalommal ingyenesen biztosítunk számodra. További alkalmakkor 200 Ft-ért tudsz bérelni. Természetesen, ha van sajátod azon is gyakorolhatsz.</p><p>Stúdiónkban törölköző bérlésre is van lehetőséged, valamint ásványvízet és kókuszvízet is vásárolhatsz. Ha saját kiegészítőket szeretnél, akkor jógamatrac, professzionális jógatörölköző és DogDays Yoga Wear ruhák széles kínálatával várunk.</p>
+    </div>
   </div>
 </div>
 </div>

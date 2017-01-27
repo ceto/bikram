@@ -10,7 +10,7 @@
         <ul class="facts">
           <li><em>Készülj fel</em></li>
           <li><em>izzadni fogsz</em></li>
-          <li><em>úgy mint még soha</em>/li>
+          <li><em>úgy mint még soha</em></li>
         </ul>
         <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>
       </div>

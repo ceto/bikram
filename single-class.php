@@ -24,14 +24,16 @@
               <?php endwhile; ?>
             </div>
           </section>
-          <a href="<?= get_the_permalink(42) ?>" class="button small">Mutasd mindet</a><a href="<?= get_the_permalink(42) ?>" class="button small secondary">Órarend</a>
           <?php wp_reset_query(); ?>
         </div>
-
+        <div class="text-center">
+        <br><br><br>
+        <a href="<?= get_the_permalink(42) ?>" class="button large">Mutasd a teljes órarendet</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="singleclass__content content ps">
+  <div class="ps ps--dark">
     <div class="row">
       <div class="columns large-6">
         <ul class="facts">
@@ -48,10 +50,12 @@
         </div>
       </div>
       <div class="columns large-6">
-        <h2>Az óra részletei</h2>
-        <?php $more=1; the_content('', TRUE); ?>
-        <br>
-        <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
+        <div class="content">
+          <h2>Az óra részletei</h2>
+          <?php $more=1; the_content('', TRUE); ?>
+          <br>
+          <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
+        </div>
       </div>
     </div>
   </div>

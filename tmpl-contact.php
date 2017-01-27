@@ -22,7 +22,7 @@
         H-1075 Budapest,<br>
         Károly krt. 1.<br>
       Félemelet 3</p>
-      <p><strong>Kapunyitás és bérletvásárlás:</strong><br>Fél órával az <a href="<?php the_permalink(42); ?>">órák</a> kezdete előtt</p>
+      <p><strong>Kapunyitás</strong><br>Fél órával az <a href="<?php the_permalink(42); ?>">órák</a> kezdete előtt</p>
     </div>
     <div class="columns medium-6 large-3">
       <h3>Hívj vagy írj</h3>

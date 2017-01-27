@@ -8,9 +8,6 @@
         <!-- <h1 class="singleteacher__title"><?php the_title(); ?></h1> -->
       </div>
       <div class="columns medium-8">
-
-
-
         <ul class="facts">
           <?php if (have_rows('quote')): ?>
           <?php while ( have_rows('quote') ) : the_row(); ?>
