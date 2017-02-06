@@ -1,14 +1,12 @@
 <?php use Roots\Sage\Titles; ?>
-<header class="bloghead ps ps--narrow ps--largetop">
+<header class="ps ps--dark ps--largetop">
   <div class="row">
-    <div class="columns large-6">
-      <h2 class="bloghead__title">
-        <a href="<?php the_permalink(42); ?>">
+    <div class="columns text-center">
+      <h1>
           <?= Titles\title(); ?>
-        </a>
-      </h2>
+      </h1>
     </div>
-    <div class="columns large-text-right large-6">
+<!--     <div class="columns large-text-right large-6">
       <?php
         $args = array(
           'post_type'  => 'class',
@@ -24,9 +22,6 @@
           <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         <?php endwhile; ?>
       </ul>
-    </div>
-  </div>
-  <div class="row">
-    <div class="columns"><hr></div>
+    </div> -->
   </div>
 </header>

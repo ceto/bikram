@@ -49,9 +49,10 @@
   small {
     font-size: 100%;
     //text-transform: uppercase;
+    color:$primary-color;
     &:before {
       content:' • ';
-      color:$primary-color;
+      //color:$primary-color;
     }
   }
 }

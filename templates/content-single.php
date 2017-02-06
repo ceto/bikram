@@ -12,7 +12,7 @@
           <h1 class="singlepost__title"><?php the_title(); ?></h1>
           <?php get_template_part('templates/entry-meta'); ?>
         <?php endif; ?>
-        <div class="lead">
+        <div class="heading__lead">
           <?php
           global $more; $more = 0;
           the_excerpt();
@@ -21,7 +21,7 @@
       </div>
     </div>
   </header>
-  <div class="singlepost__content content ps ps--narrow">
+  <div class="singlepost__content content ps ps--halftop">
     <div class="row">
       <div class="columns large-10 large-centered xlarge-9">
         <?php if ( has_post_thumbnail() ) : ?>

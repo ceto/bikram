@@ -34,9 +34,14 @@
 .minical-carousel {
   .owl-nav {
     position: absolute;
-    left:-20%;
-    right:-20%;
-    top:50%;
+    left:0;
+    right:0;
+    top:0;
+    @include breakpoint(large) {
+      left:-20%;
+      right:-20%;
+      top:50%;
+    }
   }
   .owl-dots {
     position: absolute;

@@ -70,7 +70,7 @@ $(document).ready(function() {
     loop:false,
     items:1,
     nav:true,
-    dots:true,
+    dots:false,
     slideBy:1,
     navText: ['‹', '›'],
     responsiveClass:true,

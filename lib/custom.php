@@ -24,10 +24,10 @@
   function bikram_body_class_slugs($classes) {
       global $wp_query, $wpdb;
 
-      if ( is_search() || is_singular('aapost') || is_page_template('tmpl-classes.php') || is_page_template('tmpl-contact.php') ) {
+      if ( is_search() || is_home() || is_archive() || is_singular('post') || is_page_template('tmpl-classes.php') || is_page_template('tmpl-contact.php') || is_page_template('atmpl-schedule.php') ) {
           $classes[] = 'no-hero';
       }
-      if ( is_archive() || is_home() || is_singular('post') ) {
+      if ( is_archive() || is_singular('post') || is_page_template('atmpl-schedule.php') ) {
           $classes[] = 'light-hero';
       }
 

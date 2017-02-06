@@ -1,9 +1,10 @@
 .stickypost {
-  color: $body-background;
-  background-color: $body-font-color;
+  //color: $primary-color;
+  background-color: #fff;
   //margin-bottom: 1rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  box-shadow: 0 0 .5rem -.25rem rgba(black,.25);
   .button {
     margin:.333rem 0 0;
   }

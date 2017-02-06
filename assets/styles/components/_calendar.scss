@@ -196,7 +196,7 @@
   text-transform: uppercase;
   //line-height: 1;
   text-align: center;
-  margin:0 0 3rem;
+  margin:0 0 2rem;
   small {
     font-size: 50%;
     line-height: .5;
@@ -213,11 +213,11 @@
 }
 .thetimetable {
   position: relative;
-  border-top:.5rem solid $dark-gray;
+  border-top:.5rem solid $primary-color;
 
   //background-color: $dark-gray;
-  padding: 3rem 0;
-  padding: calc(3rem + 2vw) 0;
+  //padding: 3rem 0;
+  //padding: calc(3rem + 2vw) 0;
   // background-image: url('../images/ketember.jpg');
   // background-size: cover;
   // background-attachment: fixed;
@@ -236,11 +236,11 @@
   //   }
 
   .schedule {
-
-    //box-shadow: 0 0 10rem 0 rgba(#000,.75);
+    margin-top: -8rem;
+    //margin-top: calc(-2rem - 2vw);
     @include breakpoint('large') {
         margin-top: -6rem;
-        margin-top: calc(-6rem - 4vw);
+        margin-top: calc(-6rem - 1.5vw);
     }
 
     .aday {

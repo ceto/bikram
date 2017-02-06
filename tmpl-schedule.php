@@ -4,14 +4,9 @@
 */
 ?>
 
-  <?php //get_template_part('templates/schedule', 'header'); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/schedule', 'header'); ?>
+  <?php //get_template_part('templates/page', 'header'); ?>
 
-<!--   <div class="ps ps--dark ps--largetop">
-    <div class="row">
-      <div class="columns"><h1><?php the_title() ?></h1></div>
-    </div>
-  </div> -->
   <?php
     $args = array(
       'post_type'  => 'event',
@@ -23,7 +18,8 @@
     );
     $the_events = new WP_Query( $args );
   ?>
-  <section class="ps thetimetable">
+  <section class="ps thetimetable aps--accent aaaps--notop">
+
     <div class="row">
       <div class="columns large-10 large-centered">
         <div class="schedule schedule--all">
