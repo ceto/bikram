@@ -175,8 +175,23 @@ body.no-hero {
     }
 }
 
+.eventsmodal.reveal {
+    padding:0 1.25rem;
+    background-color: $primary-color;
+    color:#fff;
+
+    .close-button {
+        color:#fff;
+        font-size: 3em;
+    }
+}
+.eventsmodal__inner {
+    margin:4rem auto 0;
+    max-width: 36rem;
+}
 .menumodal.reveal {
     background-color: $dark-gray;
+    color:$primary-color;
 
     .close-button {
         color:$primary-color;

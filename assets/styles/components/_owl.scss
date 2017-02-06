@@ -1,0 +1,47 @@
+.owl-nav {
+  > div {
+    font-weight: $global-weight-bold;
+    font-size:4rem;
+    line-height: 1;
+    width:1em;
+    float:left;
+    &.owl-next {
+      float:right;
+      text-align: right;
+    }
+    &:hover {
+      color:#000;
+    }
+  }
+
+}
+.owl-dots {
+  text-align: center;
+}
+.owl-dot {
+  height:.5rem;
+  width:.5rem;
+  display: inline-block;
+  background-color: #000;
+  margin: 0 .125rem;
+  &.active {
+    background-color: #fff;
+  }
+  > span {
+
+  }
+}
+.minical-carousel {
+  .owl-nav {
+    position: absolute;
+    left:-20%;
+    right:-20%;
+    top:50%;
+  }
+  .owl-dots {
+    position: absolute;
+    left:0%;
+    right:0;
+    top:calc(5rem + 1vw);
+  }
+}

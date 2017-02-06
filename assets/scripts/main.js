@@ -72,7 +72,7 @@ $(document).ready(function() {
     nav:true,
     dots:true,
     slideBy:1,
-    //navText: ['<i class="icon icon--chevron-left" /><--', '--><i class="icon icon--chevron-right" />'],
+    navText: ['‹', '›'],
     responsiveClass:true,
     responsive:{
         0:{

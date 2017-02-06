@@ -181,20 +181,29 @@
 }
 
 .minical {
-  //background-color: #fff;
+  .callout {
+  }
+  .calendar {
+    margin: .5rem auto;
+
+  }
 }
 .minical__daytitle {
+  color:#fff;
+  font-size: 2.5rem;
+  font-size: calc(2rem + 1vw);
+  line-height: 1.5;
   text-transform: uppercase;
   //line-height: 1;
-  //text-align: center;
+  text-align: center;
+  margin:0 0 3rem;
   small {
-    font-size: .75em;
+    font-size: 50%;
+    line-height: .5;
     display: block;
     color:inherit;
-    margin-top: .5em;
-    font-weight: $global-weight-normal;
+    //font-weight: $global-weight-normal;
     text-transform: none;
-
   }
 }
 
@@ -239,3 +248,5 @@
     }
   }
 }
+
+
