@@ -1,34 +1,38 @@
 <?php get_template_part('templates/front', 'hero'); ?>
 <?php  get_template_part('templates/sticky', 'block'); ?>
-<?php
-  $args = array(
-    'post_type'  => 'class',
-    'order' => 'ASC',
-    'orderby'  => 'menu_order',
-    'posts_per_page' => -1
-  );
-  $the_classes = new WP_Query( $args );
-?>
-
-
-<section id="classes" class="classlist ps">
-  <header class="heading">
-    <div class="row">
-      <div class="columns">
-        <h2 class="heading__title">Jóga órák az Astorián</h2>
-        <a class="button heading__button" href="<?php the_permalink(42) ?>">Ugrás az órarendre</a>
-          <hr>
-        <!-- <h3 class="heading__subtitle">Lorem ipsum dolor sit amet</h3> -->
-        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj. Válassz óráink közül, ha fogyni vagy erősödni szeretnél, ha fizikai panaszaid vannak, esetleg lelki nehézségkbe ütköztél.</p>
-      </div>
+<div class="ps">
+  <div class="row">
+    <div class="columns tablet-6 large-7 xlarge-8">
+      <h2>Bikram Jóga Központ</h2>
+      <p class="lead">Stúdiónkban <a href="<?php the_permalink(206); ?>">többféle jóga típus</a> közül választhatsz és bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj.</p>
+      <p>Akár fizikai panaszaid vannak, akár fogyni vagy erősödni szeretnél, esetleg lelki nehézségkbe ütköztél, a legjobb helyen jársz. Készülj fel, hogy nálunk izzadni fogsz úgy, mint még soha, olyan izmaidat is megérzed, amikről eddig fogalmad sem volt, de legfőképpen megismered a tested és megtanulod értékelni önmagad.
+      </p>
+      </p>Ha kilépnél a nyüzsgő belvárosból és egy kis nyugalomra, feltőtődésre vágynál, várunk tágas, napfényes termünkben az Astorián.</p>
+      <br>
+      <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>
+      <a href="<?php the_permalink(206); ?>" class="button secondary">Jóga típusok</a>
     </div>
-  </header>
-  <div class="row large-up-2 ">
-    <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
-      <div class="column">
-        <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-      </div>
-    <?php endwhile; ?>
+    <div class="columns tablet-6 large-5 xlarge-4">
+      <?php
+        $args = array(
+        'post_type'  => 'event',
+        'posts_per_page' => 6,
+        'meta_query' => array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' )
+        );
+        $the_events = new WP_Query( $args );
+        ?>
+        <section class="pagehead__schedule callout" role="marquee">
+        <h4>Közelgő órák a stúdióban</h4>
+          <div class="calendar calendar--teacher">
+            <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
+              <?php get_template_part('templates/calendar','entryteacher'); ?>
+            <?php endwhile; ?>
+          </div>
+          <br>
+          <a href="<?php the_permalink(42); ?>" class="button large expanded">Teljes órarend</a>
+        </section>
+
+    </div>
   </div>
-</section>
+</div>
 

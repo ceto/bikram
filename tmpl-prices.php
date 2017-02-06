@@ -107,11 +107,3 @@
 </div>
 </div>
 <?php endwhile; ?>
-<section class="photostripe">
-    <div class="photostripe__item">
-      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
-      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
-      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
-      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
-    </div>
-  </section>

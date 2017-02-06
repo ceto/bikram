@@ -30,7 +30,7 @@
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <?php
-              $thisday = date('Y. F d.', strtotime(get_field('starts')));
+              $thisday = date('F d.', strtotime(get_field('starts')));
               $nameoftheday = date('l', strtotime(get_field('starts')));
             ?>
             <?php if ( ($prevday!='') && ($thisday != $prevday)  ) : ?></div></div><?php endif; ?>
@@ -66,11 +66,3 @@
 
 
 <?php get_template_part('templates/sticky', 'block'); ?>
-<section class="photostripe">
-    <div class="photostripe__item">
-      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
-      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
-      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
-      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
-    </div>
-</section>

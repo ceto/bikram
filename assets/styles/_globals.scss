@@ -40,6 +40,17 @@ body {
   padding-top: 8rem;
   padding-top: calc(8rem + 2vw);
 }
+.ps--largebottom {
+  padding-bottom: 8rem;
+  padding-bottom: calc(8rem + 2vw);
+}
+.ps--notop {
+  padding-top: 0;
+}
+.ps--nobottom {
+  padding-bottom: 0;
+}
+
 .ps--opaque {
   background-color: $white;
 }
@@ -79,6 +90,13 @@ table {
 
 //Typography
 
+// h1, h2, h3, h4, h5, h6 {
+//   small {
+//     text-transform: uppercase;
+//     display: block;
+//     line-height: inherit;
+//   }
+// }
 li {
   margin-bottom: $paragraph-margin-bottom/3*2;
 }

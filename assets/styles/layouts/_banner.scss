@@ -53,7 +53,6 @@ body.no-hero {
 }
 
 .banner__brand,
-.banner__nav,
 .banner__actions {
     display: table-cell;
 
@@ -85,6 +84,12 @@ body.no-hero {
 }
 
 .banner__nav {
+    display: none;
+    @include breakpoint(large) {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
     .menu {
         float: right;
     }
@@ -104,7 +109,7 @@ body.no-hero {
     margin: 0 auto;
 }
 
-.menu {
+.menu--main {
     > li {
         > a {
             font-family: $sans-serif;
@@ -133,6 +138,27 @@ body.no-hero {
     }
 }
 
+.menu--mobile {
+    > li {
+        > a {
+            font-family: $sans-serif;
+            font-weight: $global-weight-bold;
+            font-size: 1.5rem;
+
+            text-transform: uppercase;
+            //color: #fff;
+
+            color: $body-background;
+        }
+    }
+    > li.active {
+        > a {
+            color: get-color(primary);
+        }
+    }
+}
+
+
 
 .menutoggle,
 .eventstoggle {
@@ -146,5 +172,23 @@ body.no-hero {
     &:focus {
         color: $white;
         background-color: $black;
+    }
+}
+
+.menumodal.reveal {
+    background-color: $dark-gray;
+
+    .close-button {
+        color:$primary-color;
+        font-size: 3em;
+    }
+    .mobilenav {
+     padding:3rem;
+     position: absolute;
+     left:0;
+     top:50%;
+     width:100%;
+     transform:translateY(-50%);
+
     }
 }

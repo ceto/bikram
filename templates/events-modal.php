@@ -17,17 +17,19 @@
   <br>
     <div class="owl-carousel minical-carousel">
       <?php while ($the_dayevents->found_posts>0): ?>
-        <div class="item minical">
-          <h3 class="minical__daytitle">
-            <?= date_i18n('l' , strtotime($soday) ); ?>
-            <small><?= date_i18n('Y. F d.', strtotime($soday) ); ?></small>
-          </h3>
-          <hr>
-          <div class="calendar calendar--mini">
-            <?php while ($the_dayevents->have_posts()) : $the_dayevents->the_post(); ?>
-              <?php get_template_part('templates/calendar','entry'); ?>
-              <?php get_template_part('templates/calendar','entry'); ?>
-            <?php endwhile; ?>
+        <div class="item">
+          <div class="minical acallout">
+            <h3 class="minical__daytitle">
+              <?= date_i18n('l' , strtotime($soday) ); ?>
+              <small><?= date_i18n('Y. F d.', strtotime($soday) ); ?></small>
+            </h3>
+            <hr>
+            <div class="calendar calendar--mini">
+              <?php while ($the_dayevents->have_posts()) : $the_dayevents->the_post(); ?>
+                <?php get_template_part('templates/calendar','entry'); ?>
+                <?php get_template_part('templates/calendar','entry'); ?>
+              <?php endwhile; ?>
+            </div>
           </div>
         </div>
         <?php

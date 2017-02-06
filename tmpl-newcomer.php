@@ -11,12 +11,11 @@
     <div class="columns large-6">
       <ul class="facts">
         <li>Első alkalommal</li>
-        <li><em>10</em> napos</li>
-        <li>próbabérlet <em>2&nbsp500</em>  Ft-ért</li>
-        <li>vásárolhatsz</li>
+        <li><em>10</em> napos próbabérlet</li>
+        <li><em>2&nbsp500</em> Ft </li>
       </ul>
       <div class="classleader__lead">
-        <p>Próbabérlettel kipróbálhatod az összes jóga fajtát, megismerheted az oktatókat és találkozhatsz, ismerkedhetsz a többi jógázóval és a környezettel. Semmilyen előképzettség vagy jógás múlt nem szükséges</p>
+        <p>Próbabérlettel kipróbálhatod az <a href="<?php the_permalink(206); ?>">összes jóga fajtát,</a> megismerheted az <a href="<?php the_permalink(76); ?>">oktatókat</a> és találkozhatsz, ismerkedhetsz a többi jógázóval és a környezettel. Semmilyen előképzettség vagy jógás múlt nem szükséges</p>
       </div>
     </div>
     <div class="columns large-6 content">

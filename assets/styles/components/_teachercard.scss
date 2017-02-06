@@ -1,29 +1,28 @@
 .tcard {
-  //text-align: center;
+  text-align: center;
   @include clearfix();
-  margin: 0 auto 3rem;
-  padding:0 0 3rem;
-  border-bottom: 1px solid $body-background;
+  margin: 0 auto 2rem;
+  padding:0 0 2rem;
+  border-bottom: 1px solid $light-gray;
 
 
 }
 
 .tcard__photo {
   margin:0 auto;
-  width: 27.5%;
-  margin:0 2.5% 0 0;
-  float:left;
-  @include breakpoint(tablet) {
-    width: 22.5%;
-  }
+  margin:0 0 1rem 0;
+
 
   a {
     display: block;
     //border-radius: 50%;
-    border:.5rem solid $body-background;
+    border:.5rem solid #fff;
+    max-width: 12rem;
+    margin:0 auto 0 auto;
     &:hover, &:focus {
-      border-color: $medium-gray;
+      border-color: $light-gray;
     }
+
   }
 
 
@@ -35,15 +34,12 @@
 
 .tcard__header {
 
-  @include breakpoint(tablet) {
-    float:right;
-    width:75%;
-  }
 
-  }
+}
+
 .tcard__name {
-  font-size: 1.75rem;
-  margin: 0;
+  font-size: 1.25rem;
+  margin: 0 0 .5em;
   a {
     color:inherit;
     &:hover, &:focus {
@@ -53,12 +49,12 @@
 }
 
 .tcard__quote {
-  //font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: .875rem;
+  line-height: 1.2;
   font-weight: $global-weight-bold;
   font-family: $sans-serif;
   text-transform: uppercase;
-  margin:0;
+  margin:0 0 .5em;
   //color:$medium-gray;
 
 }
@@ -70,7 +66,7 @@
 
 .tcard__more  {
   line-height: 1;
-  font-size: .875rem;
+  font-size: .75rem;
   //font-weight: $global-weight-bold;
   font-family: $sans-serif;
   //text-transform: uppercase;

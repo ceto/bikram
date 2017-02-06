@@ -9,6 +9,7 @@
           <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--main']); ?>
         </nav>
         <div class="banner__actions">
+          <a class="hide-for-large button small menutoggle" data-open="menumodal">Menü</a>
           <a class="button small eventstoggle" data-open="eventsmodal">Órarend</a>
         </div>
       </div>
@@ -16,11 +17,9 @@
   </div>
 </section>
 
-<div class="reveal large menumodal fast" id="menumodal" data-reveal data-animation-in="slide-in-down" data-animation-out="slide-out-up">
-  <img src="http://placehold.it/300x300" alt="">
-  <p class="lead">Jóga jóga és métöbb jóga.</p>
-  <nav class="primarynav">
-    <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--main']); ?>
+<div class="reveal full menumodal fast" id="menumodal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+  <nav class="mobilenav">
+    <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu vertical menu--mobile']); ?>
   </nav>
   <button class="close-button" data-close aria-label="Close modal" type="button">
   <span aria-hidden="true">&times;</span>
