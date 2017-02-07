@@ -50,3 +50,42 @@
     top:calc(5rem + 1vw);
   }
 }
+
+
+.teacher-carousel {
+  .owl-dots {
+    text-align: right;
+    position: absolute;
+    left:0;
+    right:.5rem;
+    top:.25rem;
+  }
+  .owl-dot {
+    background-color: $light-gray;
+    //width:.75rem;
+    //height:.75rem;
+    //margin:0 .125rem;
+    &.active {
+      background-color: $medium-gray;
+    }
+  }
+}
+
+.class-carousel {
+  .owl-dots {
+    text-align: left;
+    position: absolute;
+    left:-.125rem;
+    right:0;
+    bottom:1.25rem;
+  }
+  .owl-dot {
+    background-color: $medium-gray;
+    width:.75rem;
+    height:.75rem;
+    margin:0 .125rem;
+    &.active {
+      background-color: $primary-color;
+    }
+  }
+}

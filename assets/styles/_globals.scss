@@ -29,6 +29,7 @@ body {
   padding-bottom: 2rem;
   padding-bottom: calc(2rem + 5vh);
 }
+
 .ps--narrow {
   padding-top: .5rem;
   padding-top: calc(.5rem + 1vh);
@@ -62,6 +63,23 @@ body {
 .ps--accent {
   background-color: $primary-color;
   color:$body-background;
+}
+
+.ps--bgleft {
+  color:#fff;
+   background-image:
+      linear-gradient(-75deg, $primary-color 0, $primary-color 56%, transparent 56%),
+            url('../images/emberek.jpg');
+  background-size: auto, auto 100%;
+  background-position: left top, left 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed, fixed;
+
+}
+.ps--bgright {
+  //color:#fff;
+   background-image:
+      linear-gradient(75deg, $body-background 0, $body-background 56%, $dark-gray 56%);
 }
 
 .button {

@@ -79,7 +79,7 @@ $(document).ready(function() {
             items:1,
             margin:24
         },
-        540:{
+        640:{
             items:1,
             margin:24
         },
@@ -96,7 +96,85 @@ $(document).ready(function() {
             margin:32
         }
     }
-});
+  });
+
+  var classcarousel = $('.class-carousel').owlCarousel({
+    //margin:32,
+    smartSpeed:500,
+    //autoWidth:true,
+    // mouseDrag:false,
+    // touchDrag:false,
+    // pullDrag:false,
+    autoHeight:true,
+    loop:false,
+    items:1,
+    nav:false,
+    dots:true,
+    slideBy:1,
+    navText: ['‹', '›'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:24
+        },
+        640:{
+            items:1,
+            margin:24
+        },
+        768:{
+            items:1,
+            margin:32
+        },
+        1024:{
+            items:1,
+            margin:32
+        },
+        1200:{
+            items:1,
+            margin:32
+        }
+    }
+  });
+
+    var teachercarousel = $('.teacher-carousel').owlCarousel({
+    //margin:32,
+    smartSpeed:500,
+    //autoWidth:true,
+    // mouseDrag:false,
+    // touchDrag:false,
+    // pullDrag:false,
+    autoHeight:true,
+    loop:false,
+    items:1,
+    nav:false,
+    dots:true,
+    slideBy:1,
+    navText: ['‹', '›'],
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:2,
+            margin:24
+        },
+        640:{
+            items:3,
+            margin:24
+        },
+        768:{
+            items:1,
+            margin:32
+        },
+        1024:{
+            items:1,
+            margin:32
+        },
+        1200:{
+            items:1,
+            margin:32
+        }
+    }
+  });
 
   // setTimeout(function() {
   //  minicalcarousel.trigger('refresh.owl.carousel');

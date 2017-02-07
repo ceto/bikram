@@ -1,6 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class('singleclass'); ?>>
-  <?php get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/class', 'header'); ?>
   <div class="classleader">
     <div class="row">
       <div class="columns large-10 large-centered">
@@ -68,31 +68,61 @@
   <?php //comments_template('/templates/comments.php'); ?>
 </article>
 <?php
-wp_reset_query();
-$args = array(
-'post_type'  => 'class',
-'order' => 'ASC',
-'orderby'  => 'menu_order',
-'posts_per_page' => -1,
-'post__not_in' => array($post->ID)
-);
-$the_classes = new WP_Query( $args );
+  wp_reset_query();
+  $args = array(
+    'post_type'  => 'teacher',
+    'order' => 'ASC',
+    'orderby'  => 'menu_order',
+    'posts_per_page' => -1,
+    'post__not_in' => array($post->ID)
+  );
+  $the_teachers = new WP_Query( $args );
 ?>
-<section id="classes" class="ps classlist ps--opaque">
-  <header class="heading">
-    <div class="row">
-      <div class="columns">
-        <h2 class="heading__title">További órák az Astorián</h2>
-        <hr>
+<div class="ps">
+  <div class="row">
+    <div class="columns large-9 large-centered">
+      <div class="row">
+        <div class="columns tablet-4">
+          <section id="teachers">
+            <h5 class="text-center">Az órát tartják&hellip;</h5>
+            <br>
+            <div class="owl-carousel teacher-carousel">
+              <?php while ($the_teachers->have_posts()) : $the_teachers->the_post(); ?>
+              <div class="item">
+                <?php get_template_part('templates/teacher','card'); ?>
+              </div>
+              <?php endwhile; ?>
+            </div>
+          </section>
+        </div>
+        <div class="columns tablet-8">
+          <?php
+            wp_reset_query();
+            $args = array(
+              'post_type'  => 'class',
+              'order' => 'ASC',
+              'orderby'  => 'menu_order',
+              'posts_per_page' => -1,
+              'post__not_in' => array($post->ID)
+            );
+            $the_classes = new WP_Query( $args );
+          ?>
+          <section id="classes">
+            <h5>Ismerd meg a többi órát is&hellip;</h5>
+            <br>
+            <div class="owl-carousel class-carousel">
+              <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
+              <div class="item">
+                <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+              </div>
+              <?php endwhile; ?>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
-  </header>
-  <div class="row large-up-3">
-    <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
-    <div class="column">
-      <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-    </div>
-    <?php endwhile; ?>
   </div>
-</section>
+
+</div>
+
 <?php endwhile; ?>

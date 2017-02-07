@@ -30,7 +30,7 @@
     </div>
   </div>
 </div>
-<div class="ps">
+<div class="ps ps--bgright">
   <div class="row">
     <div class="columns">
       <div class="content">
@@ -46,7 +46,7 @@
     </div>
   </div>
 </div>
-<div class="ps ps--opaque">
+<div class="ps ps--bgleft">
   <div class="row">
     <div class="columns large-6 large-push-6">
       <div class="content">

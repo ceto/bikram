@@ -1,4 +1,16 @@
 .miniclass {
-  margin-bottom: 2rem;
-  margin-bottom: calc(2rem + 2vh);
+  margin-bottom: 3rem;
+  margin-bottom: calc(3rem + 2vh);
+}
+.miniclass__title {
+  a {
+    //color:inherit;
+  }
+}
+.miniclass__more {
+    //margin:1rem auto 0;
+    font-size: .875rem;
+    line-height: 1;
+    //color:$body-font-color;
+    font-family: $sans-serif;
 }

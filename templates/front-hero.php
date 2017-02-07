@@ -1,8 +1,6 @@
 <section class="hero hero--front">
   <div class="hero__pics">
-    <div class="hero__pics__inner">
       <?php the_post_thumbnail(full); ?>
-    </div>
   </div>
   <div class="hero__content">
     <div class="row">

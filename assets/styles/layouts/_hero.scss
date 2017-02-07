@@ -1,27 +1,20 @@
 .hero {
   @extend .pagehead;
-  &:after {
-    background-image: linear-gradient(45deg, rgba(#000, .875) 0, rgba(#000, .333) 33.333%, transparent 66.666%);
-  }
 }
 
 .hero__pics {
   @extend .pagehead__pics;
 
   @include breakpoint('medium') {
-    padding-bottom: 50%;
+    //height:56.25vw;
   }
 }
 
-.hero__pics__inner {
-  @extend .pagehead__pics__inner;
-
-}
 .hero__content {
   @extend .pagehead__content;
   text-align: left;
   @include breakpoint('medium') {
-    bottom:16%;
+    //bottom:16%;
   }
   .button {
     margin-top: .5rem;
@@ -29,9 +22,9 @@
 }
 
 .hero__title {
-  line-height: 1.2;
+  //line-height: 1.2;
 }
 
 .hero__subtitle {
-  line-height: 1.2;
+  //line-height: 1.2;
 }
