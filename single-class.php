@@ -17,7 +17,7 @@
           $the_events = new WP_Query( $args );
           ?>
           <section role="marquee">
-            <h3>Ezekre még odaérsz</h3>
+            <h3><?php the_title(); ?> órarend</h3>
             <div class="calendar calendar--full">
               <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryclass'); ?>
@@ -33,7 +33,7 @@
       </div>
     </div>
   </div>
-  <div class="ps ps--dark">
+  <div class="ps ps--dark ps--largebottom">
     <div class="row">
       <div class="columns large-6">
         <ul class="facts">
@@ -42,6 +42,8 @@
           <li>40 <em>C&deg;</em> hőségben</li>
           <li>nincs házifeladat</li>
         </ul>
+      </div>
+      <div class="columns large-6">
         <div class="classleader__lead">
           <?php
           global $more; $more = 0;
@@ -49,7 +51,11 @@
           ?>
         </div>
       </div>
-      <div class="columns large-6">
+    </div>
+  </div>
+  <footer class="singleclass__footer ps">
+    <div class="row">
+      <div class="columns tablet-8">
         <div class="content">
           <h2>Az óra részletei</h2>
           <?php $more=1; the_content('', TRUE); ?>
@@ -57,32 +63,18 @@
           <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
         </div>
       </div>
-    </div>
-  </div>
-  <footer class="singleclass__footer">
-    <div class="row">
-      <div class="columns">
-      </div>
-    </div>
-  </footer>
-  <?php //comments_template('/templates/comments.php'); ?>
-</article>
-<?php
-  wp_reset_query();
-  $args = array(
-    'post_type'  => 'teacher',
-    'order' => 'ASC',
-    'orderby'  => 'menu_order',
-    'posts_per_page' => -1,
-    'post__not_in' => array($post->ID)
-  );
-  $the_teachers = new WP_Query( $args );
-?>
-<div class="ps">
-  <div class="row">
-    <div class="columns large-9 large-centered">
-      <div class="row">
-        <div class="columns tablet-4">
+      <div class="columns tablet-4">
+        <?php
+          wp_reset_query();
+          $args = array(
+            'post_type'  => 'teacher',
+            'order' => 'ASC',
+            'orderby'  => 'menu_order',
+            'posts_per_page' => -1,
+            'post__not_in' => array($post->ID)
+          );
+          $the_teachers = new WP_Query( $args );
+        ?>
           <section id="teachers">
             <h5 class="text-center">Az órát tartják&hellip;</h5>
             <br>
@@ -95,34 +87,39 @@
             </div>
           </section>
         </div>
-        <div class="columns tablet-8">
-          <?php
-            wp_reset_query();
-            $args = array(
-              'post_type'  => 'class',
-              'order' => 'ASC',
-              'orderby'  => 'menu_order',
-              'posts_per_page' => -1,
-              'post__not_in' => array($post->ID)
-            );
-            $the_classes = new WP_Query( $args );
-          ?>
-          <section id="classes">
-            <h5>Ismerd meg a többi órát is&hellip;</h5>
-            <br>
-            <div class="owl-carousel class-carousel">
-              <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
-              <div class="item">
-                <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-              </div>
-              <?php endwhile; ?>
-            </div>
-          </section>
+    </div>
+  </footer>
+  <?php //comments_template('/templates/comments.php'); ?>
+</article>
+
+<div class="ps ps--opaque">
+  <div class="row">
+
+    <div class="columns">
+      <?php
+        wp_reset_query();
+        $args = array(
+          'post_type'  => 'class',
+          'order' => 'ASC',
+          'orderby'  => 'menu_order',
+          'posts_per_page' => -1,
+          'post__not_in' => array($post->ID)
+        );
+        $the_classes = new WP_Query( $args );
+      ?>
+      <section id="classes">
+        <h5>Ismerd meg a többi órát is&hellip;</h5>
+        <br>
+        <div class="owl-carousel class-carousel">
+          <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
+          <div class="item">
+            <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+          </div>
+          <?php endwhile; ?>
         </div>
-      </div>
+      </section>
     </div>
   </div>
-
 </div>
 
 <?php endwhile; ?>

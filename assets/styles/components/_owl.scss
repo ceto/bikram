@@ -54,19 +54,19 @@
 
 .teacher-carousel {
   .owl-dots {
-    text-align: right;
-    position: absolute;
-    left:0;
-    right:.5rem;
-    top:.25rem;
+    // text-align: right;
+    // position: absolute;
+    // left:0;
+    // right:.5rem;
+    // top:.25rem;
   }
   .owl-dot {
-    background-color: $light-gray;
+    background-color: $medium-gray;
     //width:.75rem;
     //height:.75rem;
     //margin:0 .125rem;
     &.active {
-      background-color: $medium-gray;
+      background-color: $primary-color;
     }
   }
 }

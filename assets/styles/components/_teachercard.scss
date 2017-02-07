@@ -1,9 +1,9 @@
 .tcard {
   @include clearfix();
   text-align: center;
-  background-color: #fff;
+  //background-color: #fff;
   margin: 0 auto 2rem;
-  padding:2rem 1rem;
+  //padding:2rem 1rem;
   //border: 1px solid $light-gray;
   //box-shadow: 0 0 1rem 0 rgba(#000,.125);
 
@@ -18,7 +18,7 @@
   a {
     display: block;
     border-radius: 50%;
-    border:.5rem solid $body-background;
+    border:.5rem solid #fff;
     max-width: 7rem;
     width:50%;
     margin:0 auto 0 auto;

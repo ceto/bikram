@@ -123,15 +123,15 @@ $(document).ready(function() {
             margin:24
         },
         768:{
-            items:1,
+            items:2,
             margin:32
         },
         1024:{
-            items:1,
+            items:2,
             margin:32
         },
         1200:{
-            items:1,
+            items:2,
             margin:32
         }
     }
