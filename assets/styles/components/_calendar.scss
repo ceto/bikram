@@ -213,9 +213,16 @@
 }
 .thetimetable {
   position: relative;
-  border-top:.5rem solid $primary-color;
+  border-top:.25rem solid $primary-color;
+  border-bottom:.25rem solid $primary-color;
 
-  //background-color: $dark-gray;
+  background-color: $dark-gray;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url(../images/szurkefal.jpg);
+
   //padding: 3rem 0;
   //padding: calc(3rem + 2vw) 0;
   // background-image: url('../images/ketember.jpg');

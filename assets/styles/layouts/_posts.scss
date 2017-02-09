@@ -1,16 +1,27 @@
 .stickypost {
   color: $body-background;
   background-color: $body-font-color;
+  background-position: center;
+  background-size: cover;
+  //background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url(../images/szurkefal.jpg);
+  box-shadow: inset 0 0 1rem 0 rgba(#000,.875);
+  //border-top:.25rem solid $primary-color;
+  border-top:.125rem solid #000;
+  border-bottom:.125rem solid #000;
+
   //margin-bottom: 1rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  box-shadow: 0 0 .5rem -.25rem rgba(black,.25);
   .button {
     margin:.333rem 0 0;
+    box-shadow: 0 0 1rem 0 rgba(#000,.75);
   }
 }
 .stickypost__header {
   //margin-top: .333rem;
+  text-shadow: 0 0 .5rem rgba(#000,.875);
   .updated {
     padding:0;
     background-color: none;

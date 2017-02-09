@@ -18,7 +18,7 @@
     );
     $the_events = new WP_Query( $args );
   ?>
-  <section class="ps thetimetable aps--accent aaaps--notop">
+  <section class="ps thetimetable">
 
     <div class="row">
       <div class="columns large-10 large-centered">
@@ -46,19 +46,3 @@
       </div>
     </div>
   </section>
-
-
-<?php
-  $args = array(
-    'post_type'  => 'class',
-    'order' => 'ASC',
-    'orderby'  => 'menu_order',
-    'posts_per_page' => -1
-  );
-  $the_classes = new WP_Query( $args );
-?>
-
-
-
-
-<?php get_template_part('templates/sticky', 'block'); ?>
