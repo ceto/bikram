@@ -3,7 +3,7 @@
   <div class="row">
     <div class="columns text-center">
       <h1>
-          <?= Titles\title(); ?>
+          <?= Titles\title(); ?><br><small>Nincs bejelentkezés. Bármelyik órára jöhetsz</small>
       </h1>
     </div>
 <!--     <div class="columns large-text-right large-6">

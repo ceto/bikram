@@ -35,6 +35,8 @@
       </header>
       <div class="twocolumnblock">
         <?php $more=1; the_content('', TRUE); ?>
+        <h4>Csak lazán</h4>
+        <p>Legyél türelmes és őszinte magadhoz. A testednek szüksége van pár alkalomra, amíg megszokja ezt az új környezetet. Nyugodtan ülj le és pihenj egy picit óra alatt, ha úgy érzed szükséges.</p>
       </div>
       <br><br>
       <a href="<?php the_permalink(206); ?>" class="button large">Válassz óránk közül!</a>
@@ -64,11 +66,11 @@
         <h2>Jóga etikett</h2>
         <ul>
           <li><strong>Kérjük érkezz időben!</strong> A későket, a többi jógázó és az oktatóra való tekintettel, sajnos nem áll módunkban beengedni.</li>
-          <li>Mobiltelefonodat hagyd az öltöző szekrényben lehalkítva, hogy senkit se zavarjon. A terembe bevinni szigorúan tilos! Ha mégis elfeledkeztél róla, oktatód kiviszi a recepcióra, ahol biztonságban lesz az óra alatt.</li>
-          <li>Kerüld az erős illatok, mentolos bemelegítő krémek használatát. Ha úgy érzed szükséges, nyugodtan zuhanyozz le óra előtt.</li>
-          <li>Kérjük, a teremben lévő fűtőtestekhez ne nyúlj hozzá és ne kapcsold ki őket. Bízz az oktatódban, hogy tudja, milyen hőmérséklet szükséges ahhoz, hogy biztonságosan kihozd a maximumot a gyakorlásodból. Ha valamelyik fűtőtest mégis zavarna, jelezd oktatódnak és megoldja a helyzetet.</li>
-          <li>Próbálj meg végig bent maradni a teremben. Ha mégis ki kellene menned a mosdóba, azt a gyakorlatok közti rövid szünetben tedd.</li>
-          <li>Ha beteg vagy, adj időt magadnak a teljes gyógyulásra és csak utána térj vissza gyakorolni.</li>
+          <li><strong>Mobiltelefonodat hagyd az öltöző szekrényben</strong> lehalkítva, hogy senkit se zavarjon. A terembe bevinni szigorúan tilos! Ha mégis elfeledkeztél róla, oktatód kiviszi a recepcióra, ahol biztonságban lesz az óra alatt.</li>
+          <li><strong>Kerüld az erős illatokat.</strong> Mellőzd a mentolos bemelegítő krémek használatát. Ha úgy érzed szükséges, nyugodtan zuhanyozz le óra előtt.</li>
+          <li>Kérjük, a teremben lévő <strong>fűtőtestekhez ne nyúlj</strong> hozzá és ne kapcsold ki őket. Bízz az oktatódban, hogy tudja, milyen hőmérséklet szükséges ahhoz, hogy biztonságosan kihozd a maximumot a gyakorlásodból. Ha valamelyik fűtőtest mégis zavarna, jelezd oktatódnak és megoldja a helyzetet.</li>
+          <li>Próbálj meg <strong>végig bent maradni</strong> a teremben. Ha mégis ki kellene menned a mosdóba, azt a gyakorlatok közti rövid szünetben tedd.</li>
+          <li>Ha beteg vagy, <strong>adj időt magadnak a teljes gyógyulásra</strong> és csak utána térj vissza gyakorolni.</li>
         </ul>
       </div>
     </div>

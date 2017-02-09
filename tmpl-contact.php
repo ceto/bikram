@@ -10,7 +10,7 @@
     <div class="columns">
       <h1 class="heading__title"><?php the_title(); ?></h1>
       <hr>
-      <div class="heading__lead"><?php the_content(); ?></div>
+      <!-- <div class="heading__lead"><?php the_content(); ?></div> -->
     </div>
   </div>
 </div>
@@ -36,7 +36,7 @@
       <div class="columns large-6">
             <h3>Megközelítés</h3>
             <p><strong>Tömegközlekedéssel:</strong> M2-es metróval, 7, 78, 9-es busszal, 47-49-es villamossal leszállás az Astoria megállónál, illetve pár perc séta a Deák tértől.</p>
-            <p><strong>Autóval:</strong> Paroklási lehetősé a lorem ipsumban van. 2 óra parkolás 800Ft. vagy megállhatsz a kisutcákban, ahol lorem ipsum dolor sit amet. Onnan 4 perc séta a.</p>
+            <p><strong>Autóval:</strong> Paroklási lehetőség a közeli utcákban, vagy a Dohány utca elején található parkoló udvarban.</p>
             <p><a href="#">útvonaltervezés&hellip;</a></p>
           </div>
         </div>

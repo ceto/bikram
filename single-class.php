@@ -17,7 +17,7 @@
           $the_events = new WP_Query( $args );
           ?>
           <section role="marquee">
-            <h3><?php the_title(); ?> órarend</h3>
+            <h3><?php the_title(); ?> időpontok</h3>
             <div class="calendar calendar--full">
               <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryclass'); ?>

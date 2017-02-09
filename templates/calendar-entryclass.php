@@ -1,6 +1,6 @@
   <div <?php post_class('calentry'); ?>>
   <div class="calcol calentry__title">
-    <?= date_i18n('l', strtotime( get_field('starts') ) ) ?> &middot; <?= date_i18n('F d.', strtotime( get_field('starts') ) ) ?>
+    <?= date_i18n('l', strtotime( get_field('starts') ) ) ?> &middot; <?= date_i18n('F&\nb\sp;d.', strtotime( get_field('starts') ) ) ?>
     <small><?= get_field('note')?get_field('note'):''; ?></small>
   </div>
   <div class="calcol calentry__title calentry__starttime">

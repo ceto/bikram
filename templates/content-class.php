@@ -5,5 +5,5 @@
   <div class="miniclass__summary">
     <?php the_excerpt(); ?>
   </div>
-  <a href="<?php the_permalink(); ?>" class="miniclass__more">Közelgő órák és részletek&hellip;</a>
+  <a href="<?php the_permalink(); ?>" class="miniclass__more">Időpontok és részletek&hellip;</a>
 </article>

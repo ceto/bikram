@@ -7,7 +7,7 @@
    <?= date_i18n('l', strtotime( get_field('starts') ) ) ?> &middot; <?= date_i18n('H:i', strtotime( get_field('starts') ) ) ?>
 
 
-    <small> <?= date_i18n('F d.', strtotime( get_field('starts') ) ) ?></small>
+    <small> <?= date_i18n('F&\nb\sp;d.', strtotime( get_field('starts') ) ) ?></small>
   </div>
   <div class="calcol calentry__actions">
     <a href="#" class="button small secondary">Beírom</a>

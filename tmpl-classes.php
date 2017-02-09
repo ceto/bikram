@@ -21,9 +21,9 @@
   <header class="heading">
     <div class="row">
       <div class="columns">
-        <h2 class="heading__title">Jóga órák az Astorián</h2>
+        <h2 class="heading__title">Jóga óráink</h2>
           <hr>
-        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Érkezz bárhonnan, bármilyen múlttal vagy jelennel, segítünk, hogy testileg és lelkileg is kiegyensúlyozottabbá és erősebbé válj. Válassz óráink közül, ha fogyni vagy erősödni szeretnél, ha fizikai panaszaid vannak, esetleg lelki nehézségkbe ütköztél.</p>
+        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Akár fizikai panaszaid vannak, akár fogyni vagy erősödni szeretnél, esetleg lelki nehézségkbe ütköztél, a legjobb helyen jársz. Készülj fel, hogy nálunk izzadni fogsz úgy, mint még soha, olyan izmaidat is megérzed, amikről eddig fogalmad sem volt, de legfőképpen megismered a tested és megtanulod értékelni önmagad.</p>
       </div>
     </div>
   </header>

@@ -101,7 +101,7 @@
         <li>Egy bérlettel a stúdió bármely óráját látogathatod.</li>
       </ul>
       <h2>Matrac, törölköző és kiegészítők</h2>
-      <p>Jógamatracot első alkalommal ingyenesen biztosítunk számodra. További alkalmakkor 200 Ft-ért tudsz bérelni. Természetesen, ha van sajátod azon is gyakorolhatsz.</p><p>Stúdiónkban törölköző bérlésre is van lehetőséged, valamint ásványvízet és kókuszvízet is vásárolhatsz. Ha saját kiegészítőket szeretnél, akkor jógamatrac, professzionális jógatörölköző és DogDays Yoga Wear ruhák széles kínálatával várunk.</p>
+      <p>Jógamatracot első alkalommal ingyenesen biztosítunk számodra. További alkalmakkor 200 Ft-ért tudsz bérelni. Természetesen, ha van sajátod azon is gyakorolhatsz.</p><p>Stúdiónkban törölköző bérlésre is van lehetőséged, valamint ásványvízet és kókuszvízet is vásárolhatsz. Ha saját kiegészítőket szeretnél, akkor jógamatrac, professzionális jógatörölköző és <a target="_blank" href="http://dogdayswera.com">DogDays Yoga Wear</a> ruhák széles kínálatával várunk.</p>
     </div>
   </div>
 </div>
