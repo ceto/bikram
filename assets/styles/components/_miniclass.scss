@@ -1,6 +1,8 @@
 .miniclass {
   margin-bottom: 3rem;
-  margin-bottom: calc(3rem + 2vh);
+  @include breakpoint(large) {
+    margin-bottom: calc(3rem + 2vh);
+  }
 }
 .miniclass__title {
   a {
@@ -9,8 +11,11 @@
 }
 .miniclass__more {
     //margin:1rem auto 0;
-    font-size: .875rem;
+    //font-size: .875rem;
     line-height: 1;
     //color:$body-font-color;
     font-family: $sans-serif;
+    font-weight: $global-weight-bold;
+    //color:inherit;
+
 }

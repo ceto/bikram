@@ -161,17 +161,18 @@ add_action( 'init', 'bikram_custom_post_types', 0 );
 
 add_filter('manage_event_posts_columns', 'bikram_event_table_head');
 function bikram_event_table_head( $defaults ) {
+    unset($defaults['date']);
     $defaults['event_date']  = 'Event Date';
     $defaults['event_teacher'] = 'Teacher';
     return $defaults;
 }
 
 
-add_action( 'manage_event_posts_custom_column', 'bikramr_event_table_content', 10, 2 );
+add_action( 'manage_event_posts_custom_column', 'bikram_event_table_content', 10, 2 );
 
-function bikramr_event_table_content( $column_name, $post_id ) {
+function bikram_event_table_content( $column_name, $post_id ) {
     if ($column_name == 'event_date') {
-      echo get_field('starts') .' - ' .get_field('ends') ;
+      echo date_i18n('l H:i', strtotime( get_field('starts') ) ) .' (' . date_i18n('m/d', strtotime( get_field('starts') ) ).')' ;
     }
 
     if ($column_name == 'event_teacher') {
@@ -182,13 +183,13 @@ function bikramr_event_table_content( $column_name, $post_id ) {
 
 // Event list is always ascending by date and starts
 function bikram_event_order( $query ) {
-    if ( ( ! is_admin() ) && ($query->query['post_type']=='event') ) {
+    if ( /*( ! is_admin() ) &&*/ ($query->query['post_type']=='event') ) {
 
         $query->set( 'order', 'ASC');
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'meta_key', 'starts');
         $query->set( 'meta_type', 'DATETIME');
-        if ($query->is_main_query()) {
+        if ($query->is_main_query() && ( ! is_admin() ) ) {
             $query->set( 'meta_query', array( 'relation'=>'AND', array('key' => 'starts', 'compare' => '>=', 'value'=> date('Y-m-d H:i:s'), type => 'DATETIME' ) ) );
             $query->set('posts_per_page', '-1');
         }
@@ -213,7 +214,9 @@ function bikram_set_event_title ($post_id) {
 
     global $wpdb;
 
-    $title = get_the_title( get_field('class') ) . ' | ' . get_field('starts') .' - ' . get_field('ends') . ' | ' .  get_the_title( get_field('teacher') ) ;
+    $teacher=get_field('teacher');
+
+    $title = mb_strtoupper(date_i18n('m.d. l H:i', strtotime( get_field('starts') ) ), 'UTF-8') . ' | ' . get_the_title( get_field('class') ) . ' - ' .  get_field('nick_name', $teacher->ID) ;
     $where = array( 'ID' => $post_id );
     $wpdb->update( $wpdb->posts, array( 'post_title' => $title ), $where );
 }

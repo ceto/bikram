@@ -1,6 +1,11 @@
 html {
+  //overflow-y: scroll;
   background-color: $dark-gray;
+  @media screen and (min-width: 120em) {
+    font-size: 112.5%;
+  }
 }
+
 body {
 
 }
@@ -8,6 +13,9 @@ body {
 .row {
   @include breakpoint(medium) {
     max-width: 97%;
+    & & {
+      max-width: $global-width;
+    }
   }
   @include breakpoint(xlarge) {
     max-width: 87%;
@@ -16,34 +24,56 @@ body {
     max-width: 85%;
   }
   @media screen and (min-width: 120em) {
-    max-width: $global-width;
-  }
-  .row {
-    max-width: $global-width;
+     max-width: rem-calc(1440);
   }
 }
 
+
 .ps {
-  padding-top: 2rem;
-  padding-top: calc(2rem + 5vh);
-  padding-bottom: 2rem;
-  padding-bottom: calc(2rem + 5vh);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @include breakpoint(large) {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
 }
 
 .ps--narrow {
-  padding-top: .5rem;
-  padding-top: calc(.5rem + 1vh);
-  padding-bottom: .5rem;
-  padding-bottom: calc(.5rem + 1vh);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include breakpoint(large) {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
 }
+
+
+.ps--notop {
+  padding-top: 0;
+  @include breakpoint(large) {
+    padding-top: 0;
+  }
+}
+
+.ps--nobottom {
+  padding-bottom: 0;
+  @include breakpoint(large) {
+    padding-bottom: 0;
+  }
+}
+
 
 .ps--largetop {
   padding-top: 8rem;
-  padding-top: calc(8rem + 2vw);
+  @include breakpoint(large) {
+    padding-top: calc(8rem + 2vw);
+  }
 }
 .ps--largebottom {
   padding-bottom: 8rem;
-  padding-bottom: calc(8rem + 2vw);
+  @include breakpoint(large) {
+    padding-bottom: calc(8rem + 2vw);
+  }
 }
 .ps--notop {
   padding-top: 0;
