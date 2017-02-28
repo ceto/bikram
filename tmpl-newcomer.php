@@ -35,30 +35,12 @@
       </header>
       <div class="twocolumnblock">
         <?php $more=1; the_content('', TRUE); ?>
-        <h4>Csak lazán</h4>
-        <p>Legyél türelmes és őszinte magadhoz. A testednek szüksége van pár alkalomra, amíg megszokja ezt az új környezetet. Nyugodtan ülj le és pihenj egy picit óra alatt, ha úgy érzed szükséges.</p>
       </div>
       <br><br>
       <a href="<?php the_permalink(206); ?>" class="button large">Válassz óránk közül!</a>
     </div>
   </div>
 </div>
-<!-- <div class="ps ps--opaque">
-  <div class="row">
-    <div class="columns">
-      <div class="content">
-        <h2>Egy menet az Astorián így néz ki</h2>
-        <ul>
-          <li>Érkezés, sorrend. regisztráció, recepció<br><small>A pihenő részben meleg teával várunk, hogy ráhangolódhass az órára</small></li>
-          <li>Vásárolhatsz és bérelhetsz dolgokat <br><small>Vehetsz vizet. Recepciónkon zuhanyzáshoz és jógázáshoz való professzionális törölközőt, matracot és kiegészítőket is vásárolhatsz vagy bérelhetsz. Hot jógához kifejlesztett <a target="_blank" href="http://dogdayswera.com">DogDays Yoga Wear</a> ruhákat is vásárolhatsz.</small></li>
-          <li>Öltöző, zuhanyzó stb <br><small>Tágas öltözőinkben zuhanyzásra is van lehetőséged, melyhez a tusfürdőt és a sampont biztosítjuk számodra.</small></li>
-          <li>Hányan vannak egy teremben, hogy férek el, helyfogalalás ...</li>
-          <li>Ha vége mi történik <br><small>Gyakorlás után pedig friss almát kínálunk, ahol megoszthatod élményeidet oktatóddal és a többi jógázóval.</small></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> -->
 <div class="ps ps--opaque">
   <div class="row">
     <div class="columns tablet-8 tablet-centered xxlarge-6 xxlarge-uncentered">

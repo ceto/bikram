@@ -7,13 +7,14 @@
   hr {
     border-color: $primary-color;
     border-width:.25rem;
+    margin-top: .25rem;
   }
 }
 
 .sitefooter__slogan {
   line-height: 1;
   color:$medium-gray;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   > small {
     //color:$primary-color;
     display: block;
@@ -35,15 +36,33 @@
   //text-transform: uppercase;
   font-weight: $global-weight-bold;
   line-height: 1;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   > li {
     display: inline-block;
-    padding:0 1.25em .75em 0;
+    padding:.25em .875em .5em 0;
     a {
       white-space: nowrap;
       color:inherit;
       &:hover, &:focus {
         color:$light-gray;
+      }
+    }
+  }
+}
+
+.sitefooter__socials {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+  font-size: 1.5rem;
+  text-align: right;
+  > li {
+    display: inline-block;
+    padding:0 0 0 .25em;
+    a {
+      color: inherit;
+      &:hover, &:focus {
+        color: $primary-color;
       }
     }
   }

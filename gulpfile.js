@@ -20,6 +20,12 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 
+var rename       = require('gulp-rename');
+var svgstore     = require('gulp-svgstore');
+var svgmin       = require('gulp-svgmin');
+var inject       = require('gulp-inject');
+
+
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
 
@@ -208,6 +214,37 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream());
 });
 
+
+//SVG fonts inject
+gulp.task('svginline', function () {
+  var svgs = gulp
+        .src('assets/icons/*.svg')
+        .pipe(rename({prefix: 'icon--'}))
+        .pipe(svgmin())
+        .pipe(svgstore({ inlineSvg: true }));
+
+  function fileContents (filePath, file) {
+      return file.contents.toString();
+  }
+
+  return gulp
+      .src('templates/svg-icons.php')
+      .pipe(inject(svgs, { transform: fileContents }))
+      .pipe(gulp.dest('templates'))
+      .pipe(browserSync.stream());
+});
+
+//svg icon sprite
+gulp.task('svgstore', function () {
+    return gulp
+        .src('assets/icons/*.svg')
+        .pipe(rename({prefix: 'icon--'}))
+        .pipe(svgmin())
+        .pipe(svgstore())
+        .pipe(gulp.dest(path.dist + 'images'))
+        .pipe(browserSync.stream());
+});
+
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {
@@ -255,6 +292,7 @@ gulp.task('watch', function() {
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
+  gulp.watch([path.source + 'icons/**/*.svg'], ['svginline', 'svgstore']);
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
@@ -264,7 +302,7 @@ gulp.task('watch', function() {
 gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
-              ['fonts', 'images'],
+              ['fonts', 'images', 'svginline', 'svgstore'],
               callback);
 });
 

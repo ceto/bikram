@@ -178,6 +178,10 @@ body.no-hero {
 .eventsmodal.reveal {
     padding:0 1.25rem;
     background-color: $body-font-color;
+      background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/szurkefal.jpg);
     color:#fff;
 
     .close-button {

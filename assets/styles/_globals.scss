@@ -180,6 +180,13 @@ li {
   }
 }
 
+
+.icon {
+  display: inline-block;
+  height: 1.125em;
+  fill:currentColor;
+}
+
 .twocolumnblock {
   @include breakpoint(tablet) {
     columns: auto 2;
