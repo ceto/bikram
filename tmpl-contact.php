@@ -4,49 +4,57 @@
 */
 ?>
 <?php while (have_posts()) : the_post(); ?>
-<?php //get_template_part('templates/page', 'header'); ?>
 <div class="ps">
   <div class="row">
     <div class="columns">
       <h1 class="heading__title"><?php the_title(); ?></h1>
       <hr>
-      <!-- <div class="heading__lead"><?php the_content(); ?></div> -->
+    </div>
+  </div>
+  <?php the_content(); ?>
+</div>
+<div class="ps ps--opaque aps--notop">
+  <div class="row">
+    <div class="columns">
+      <div class="mapcanvas" id="mapcanvas"></div>
     </div>
   </div>
 </div>
-<div class="ps ps--narrow">
-  <div class="row">
-    <div class="columns medium-6 large-3">
-      <h3>Helyszín</h3>
-      <p><strong>Bikram Jóga Központ</strong><br>
-        H-1075 Budapest,<br>
-        Károly krt. 1.<br>
-      Félemelet 3</p>
-      <p><strong>Kapunyitás</strong><br>Fél órával az <a href="<?php the_permalink(42); ?>">órák</a> kezdete előtt</p>
-    </div>
-    <div class="columns medium-6 large-3">
-      <h3>Hívj vagy írj</h3>
-      <p><strong>Telefon:</strong><br>
-        <a href="tel:+3613280774">+36 (1) 328 0774</a></p>
-        <p><strong>E-mail:</strong><br>
-          <a href="mailto:info@bikram.hu">info@bikram.hu</a></p>
-          <p><strong>És még:</strong><br>
-            <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
-      </div>
-      <div class="columns large-6">
-            <h3>Megközelítés</h3>
-            <p><strong>Tömegközlekedéssel:</strong> M2-es metróval, 7, 78, 9-es busszal, 47-49-es villamossal leszállás az Astoria megállónál, illetve pár perc séta a Deák tértől.</p>
-            <p><strong>Autóval:</strong> Paroklási lehetőség a közeli utcákban, vagy a Dohány utca elején található parkoló udvarban.</p>
-            <p><a href="#">útvonaltervezés&hellip;</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="row ps">
-        <div class="columns">
-          <img src="http://placehold.it/1600x500/?text=googlemaps" alt="">
-        </div>
-      </div>
-      <?php endwhile; ?>
 
 
+<!-- Google MAps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT99lOn79TnwKX53VjwYSfmFvz97OYpwA"></script>
+<script>
+  function initialize() {
+    var mapOptions = {
+      center: new google.maps.LatLng(47.494974, 19.060063),
+      zoom: 16,
+      zoomControl: true,
+      zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT,},
+      disableDoubleClickZoom: false,
+      mapTypeControl: true,
+      mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,},
+      scaleControl: true,
+      scrollwheel: false,
+      streetViewControl: true,
+      draggable: true,
+      overviewMapControl: true,
+      overviewMapControlOptions: {opened: false,},
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      styles: [{featureType: "landscape",stylers: [{saturation: -100}, {lightness: 65}, {visibility: "on"}]}, {featureType: "poi",stylers: [{saturation: -100}, {lightness: 51}, {visibility: "simplified"}]}, {featureType: "road.highway",stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "road.arterial",stylers: [{saturation: -100}, {lightness: 30}, {visibility: "on"}]}, {featureType: "road.local",stylers: [{saturation: -100}, {lightness: 40}, {visibility: "on"}]}, {featureType: "transit",stylers: [{saturation: -100}, {visibility: "simplified"}]}, {featureType: "administrative.province",stylers: [{visibility: "off"}]/** /},{featureType: "administrative.locality",stylers: [{ visibility: "off" }]},{featureType: "administrative.neighborhood",stylers: [{ visibility: "on" }]/**/}, {featureType: "water",elementType: "labels",stylers: [{visibility: "on"}, {lightness: -25}, {saturation: -100}]}, {featureType: "water",elementType: "geometry",stylers: [{hue: "#ffff00"}, {lightness: -25}, {saturation: -97}]}],
+    }
+    map = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
+    //var image = '<?php echo get_stylesheet_directory_uri(); ?>/assets/img/flag.png';
+    var myLatLng = new google.maps.LatLng(47.494974, 19.060063);
+    var officeMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      //icon: image,
+      animation: google.maps.Animation.DROP,
+    });
+    //officeMarker.setAnimation(google.maps.Animation.BOUNCE);
+   }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<?php endwhile; ?>
 <?php get_template_part('templates/sticky', 'block'); ?>

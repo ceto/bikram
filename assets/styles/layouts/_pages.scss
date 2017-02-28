@@ -7,3 +7,12 @@
 .thetimetable {
   //border-bottom: .5rem solid #000;
 }
+
+.mapcanvas {
+  min-height:15rem;
+  border:.25rem solid $light-gray;
+  @include breakpoint(large) {
+    height: 60vh;
+    border:.75rem solid $light-gray;
+  }
+}
