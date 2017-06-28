@@ -1,10 +1,11 @@
 <?php while (have_posts()) : the_post(); ?>
+<?php $avatar = get_field('avatar'); ?>
 <article <?php post_class('singleteacher'); ?>>
   <header class="singleteacher__header ps ps--dark ps--largetop">
     <div class="row">
 
       <div class="columns medium-4">
-        <img src="http://lorempixel.com/768/768/people" alt="">
+        <?= wp_get_attachment_image($avatar[ID], 'medium_Large' ); ?>
         <!-- <h1 class="singleteacher__title"><?php the_title(); ?></h1> -->
       </div>
       <div class="columns medium-8">

@@ -118,13 +118,14 @@
   text-align: center;
   img {
     max-width: 2rem;
+    border-radius:50%;
   }
   figcaption {
     font-family: $serif;
-    font-size: .75rem;
+    font-size: .666rem;
     font-style: italic;
 
-    padding: .25em 0 0;
+    padding: .5em 0 0;
     a {
       color: inherit;
       &:hover, &:focus {
