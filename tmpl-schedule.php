@@ -5,7 +5,6 @@
 ?>
 
   <?php get_template_part('templates/schedule', 'header'); ?>
-  <?php //get_template_part('templates/page', 'header'); ?>
 
   <?php
     $args = array(
@@ -37,7 +36,6 @@
                 </h3>
                 <div class="calendar calendar--day">
             <?php endif; ?>
-            <?php get_template_part('templates/calendar','entry'); ?>
             <?php get_template_part('templates/calendar','entry'); ?>
           <?php endwhile; ?>
           <?php if ( ($thisday == $prevday)  ) : ?></div></div><?php endif; ?>

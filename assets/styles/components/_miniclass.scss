@@ -4,10 +4,25 @@
     margin-bottom: calc(3rem + 2vh);
   }
 }
+.miniclass__header{
+  margin-bottom: .5rem;
+}
 .miniclass__title {
+  text-transform: uppercase;
+  //display: inline;
+  margin:0;
   a {
     //color:inherit;
   }
+}
+.miniclass__subtitle {
+  font-weight: $global-weight-normal
+  // margin:.333em 0 0;
+  // padding: .333em 0 0;
+  // border-top: .25em solid $medium-gray;
+  //display: inline;
+  //font-size: 1.25rem;
+  //color:$medium-gray;
 }
 .miniclass__more {
     //margin:1rem auto 0;

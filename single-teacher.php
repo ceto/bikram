@@ -29,12 +29,9 @@
       <div class="columns large-6 xlarge-8">
         <h1><?php the_title(); ?></h1>
         <div class="lead">
-          <?php
-          global $more; $more = 0;
-          the_excerpt();
-          ?>
+          <?php the_excerpt(); ?>
         </div>
-        <?php $more=1; the_content('', TRUE); ?>
+        <?php the_content(); ?>
       </div>
       <div class="columns large-6 xlarge-4">
         <?php

@@ -36,19 +36,17 @@
   <div class="ps ps--dark ps--largebottom">
     <div class="row">
       <div class="columns large-6">
+        <?php if (have_rows('quote')): ?>
         <ul class="facts">
-          <li>korhatár nélkül</li>
-          <li>90 perces óra</li>
-          <li>40 <em>C&deg;</em> hőségben</li>
-          <li>nincs házifeladat</li>
+          <?php while ( have_rows('quote') ) : the_row(); ?>
+            <li><?php the_sub_field('quote_row') ?></li>
+          <?php endwhile; ?>
         </ul>
+      <?php endif; ?>
       </div>
       <div class="columns large-6">
         <div class="classleader__lead">
-          <?php
-          global $more; $more = 0;
-          the_excerpt();
-          ?>
+          <?php the_excerpt(); ?>
         </div>
       </div>
     </div>
@@ -57,8 +55,7 @@
     <div class="row">
       <div class="columns tablet-8">
         <div class="content">
-          <h2>Az óra részletei</h2>
-          <?php $more=1; the_content('', TRUE); ?>
+          <?php the_content(); ?>
           <br>
           <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
         </div>

@@ -86,7 +86,7 @@ function bikram_custom_post_types() {
     'label'                 => __( 'Teacher', 'bikram' ),
     'description'           => __( 'Teacher Description', 'bikram' ),
     'labels'                => $labels,
-    'supports'              => array('title', 'editor', 'thumbnail', 'page-attributes'),
+    'supports'              => array('title', 'editor', 'excerpt', 'thumbnail', 'page-attributes'),
     'taxonomies'            => array(),
     'hierarchical'          => false,
     'public'                => true,

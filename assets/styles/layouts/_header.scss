@@ -24,6 +24,9 @@
   }
 }
 
+.pagehead--narrow {
+  text-align: left;
+}
 
 .pagehead__title {
   text-transform: uppercase;
@@ -32,6 +35,11 @@
   text-shadow: 0 0 8px rgba(#000,.5);
   @include breakpoint('large') {
     font-size: calc(3rem + 3vw);
+  }
+  .pagehead--narrow & {
+    @include breakpoint('large') {
+      font-size: calc(1rem + 3vw);
+    }
   }
 }
 .pagehead__subtitle {
@@ -57,39 +65,16 @@
   @include breakpoint('medium') {
     height: 40vw;
   }
-  // @include breakpoint('tablet') {
-  //   height: 40vw;
-  // }
-  // @include breakpoint('large') {
-  //   height: 40vw;
-  // }
-  // @include breakpoint('xlarge') {
-  //   height: 40vw;
-  // }
-  // @include breakpoint('xxlarge') {
-  //   height: 40vw;
-  // }
 
-
+  .pagehead--narrow & {
+     height:12rem;
+     @include breakpoint('medium') {
+      height: 25vw;
+    }
+  }
 }
 
-// .pagehead__pics__inner {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
 
-//   overflow: hidden;
-
-//   width: 100%;
-//   height: 100%;
-
-//   img {
-//     display: block;
-//     width:100%;
-//     height:100%;
-//     object-fit: cover;
-//   }
-// }
 
 .pagehead__content {
 
@@ -136,12 +121,16 @@
 
 
 .heading {
+
+  @include clearfix();
   padding-top: 2rem;
   padding-top: calc(2rem + 2vh);
   padding-bottom: 2rem;
   padding-bottom: calc(2rem + 2vh);
 
-  @include clearfix();
+  .content & {
+    padding-bottom: 0;
+  }
 }
 .heading__title {
   //text-align: center;

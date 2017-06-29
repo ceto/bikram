@@ -4,10 +4,8 @@
       <?php the_post_thumbnail(full); ?>
   </div>
   <div class="pagehead__content">
-    <div class="row">
-      <div class="columns">
+    <div class="row column">
         <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
-      </div>
     </div>
   </div>
 </header>

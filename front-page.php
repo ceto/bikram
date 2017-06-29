@@ -2,18 +2,13 @@
 <?php  get_template_part('templates/sticky', 'block'); ?>
 <div class="ps">
   <div class="row">
-    <div class="columns tablet-6 large-7 xlarge-8">
+    <div class="columns tablet-6 large-7 xlarge-8 content">
       <header class="heading">
-      <h2 class="heading__title">Bikram Jóga Központ</h2>
+      <h2 class="heading__title"><?php the_title(); ?></h2>
       <hr>
-      <p class="heading__lead">Stúdiónkban <a href="<?php the_permalink(206); ?>">többféle jóga típus</a> közül választhatsz. Nincs előre bejelentkezés, bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. </p>
+      <div class="heading__lead"><?php the_excerpt(); ?></div>
       </header>
-      <p>Központunk 2008-ban nyitotta meg kapuit a belváros szívében, az Astorián. 250 m<sup>2</sup> alapterületen kapott helyet a 125 m<sup>2</sup>-es tágas, napfényes jógaterem, melyben állandó légcserével, friss levegő befúvással biztosítjuk a kényelmes gyakorlást.</p>
-      <p>A pihenő részben meleg teával várunk, hogy ráhangolódhass az órára, gyakorlás után pedig friss almát kínálunk, ahol megoszthatod élményeidet oktatóddal és a többi jógázóval. Tágas öltözőinkben zuhanyzásra is van lehetőséged, melyhez a tusfürdőt és a sampont biztosítjuk számodra.</p>
-      <p>Ha kilépnél a nyüzsgő belvárosból és egy kis nyugalomra, feltőtődésre vágynál, várunk tágas, napfényes termünkben az Astorián.</p>
-      <br>
-      <a href="<?php the_permalink(128); ?>" class="button">Tudnivalók kezdőknek</a>
-      <a href="<?php the_permalink(206); ?>" class="button secondary">Jóga típusok</a>
+      <?php the_content(); ?>
     </div>
     <div class="columns tablet-6 large-5 xlarge-4">
       <?php

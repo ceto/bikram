@@ -1,14 +1,11 @@
 <?php use Roots\Sage\Titles; ?>
-<header class="pagehead">
+<header class="pagehead pagehead--narrow">
   <div class="pagehead__pics">
       <?php the_post_thumbnail(full); ?>
   </div>
   <div class="pagehead__content">
-    <div class="row">
-      <div class="columns">
+    <div class="row column">
         <h1 class="pagehead__title"><?= Titles\title(); ?></h1>
-        <h2 class="pagehead__subtitle"><?php the_field('subtitle'); ?></h2>
-      </div>
     </div>
   </div>
 </header>

@@ -84,24 +84,7 @@
   </div>
   <div class="columns large-6">
     <div class="content pricess__content">
-      <h2>Kedvezmények, akciók</h2>
-      <ul>
-        <li>Ha új bérleted az aktuális bérleted lejárta előtt megveszed, 20% árengedményt adunk neked!<br><small>A kedvezmény az összes bérletfajtára vonatkozik.</small></li>
-        <li>Hozd el 5 ismerősöd vagy barátod, és a következő bérleted árából 50% árengedményt adunk neked!<br><small>A kedvezmény csak a 10 alkalmas, 20 alkalmas és havi bérletekre vonatkozik.</small></li>
-        <li>Születésnapod van? Ha ezen a napon vásárolsz nálunk bérletet, 50% árengedményt adunk neked!<br><small>A kedvezmény a 10 napos próbabérlettre és a 7 napos visszatérőre nem vonatkozik</small></li>
-        <li>Ha 6 hónapnál régebben jártál nálunk, kezdd újra 7 napos visszatérő bérlettel!<br><small>A kedvezményes bérlet ára 4 000 Ft.</small></li>
-        <li>Hot mama: Kismamáink időkorlátozás nélkül használhatják fel a 10, illetve 20 alkalmas bérleteket.<br><small>Igényelhető: a várandósság 12. hetétől a gyermek 2 éves koráig.</small></li>
-      </ul>
-      <h2>Bérlet vásárlásról</h2>
-      <ul>
-        <li>A bérletek megvásárlására az órakezdések előtti, illetve utáni fél órában van lehetőség.</li>
-        <li>Stúdiónkban <strong>készpénzzel,</strong> illetve <strong>SZÉP kártyával</strong> tudsz fizetni.</li>
-        <li>Bérleteink névre szólóak, csak egy személy használhatja!</li>
-        <li>A bérleteket nem áll módunkban meghosszabbítani!</li>
-        <li>Egy bérlettel a stúdió bármely óráját látogathatod.</li>
-      </ul>
-      <h2>Matrac, törölköző és kiegészítők</h2>
-      <p>Jógamatracot első alkalommal ingyenesen biztosítunk számodra. További alkalmakkor 200 Ft-ért tudsz bérelni. Természetesen, ha van sajátod azon is gyakorolhatsz.</p><p>Stúdiónkban törölköző bérlésre is van lehetőséged, valamint ásványvízet és kókuszvízet is vásárolhatsz. Ha saját kiegészítőket szeretnél, akkor jógamatrac, professzionális jógatörölköző és <a target="_blank" href="http://dogdayswera.com">DogDays Yoga Wear</a> ruhák széles kínálatával várunk.</p>
+      <?php the_content(); ?>
     </div>
   </div>
 </div>

@@ -11,7 +11,8 @@
     "owl.carousel": "owl-carousel2#^2.1.6",
     "motion-ui": "~1.2.2",
     "FitText.js": "^1.2.0",
-    "instafeed.js": "^1.4.1"
+    "instafeed.js": "^1.4.1",
+    "flickity": "~2.0.8"
   },
   "overrides": {
     "owl.carousel": {
@@ -21,7 +22,7 @@
       ]
     },
     "instafeed.js": {
-      "main" : [
+      "main": [
         "instafeed.min.js"
       ]
     },

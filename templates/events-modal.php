@@ -28,7 +28,6 @@
               <div class="calendar calendar--mini">
                 <?php while ($the_dayevents->have_posts()) : $the_dayevents->the_post(); ?>
                   <?php get_template_part('templates/calendar','entry'); ?>
-                  <?php get_template_part('templates/calendar','entry'); ?>
                 <?php endwhile; ?>
               </div>
             </div>

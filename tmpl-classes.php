@@ -19,12 +19,10 @@
 ?>
 <div class="ps ps--narrow">
   <header class="heading">
-    <div class="row">
-      <div class="columns">
+    <div class="row column">
         <h2 class="heading__title">Jóga óráink</h2>
-          <hr>
-        <p class="heading__lead">Bármelyik órán részt vehetsz függetlenül attól, hogy jógáztál-e már vagy sem. Akár fizikai panaszaid vannak, akár fogyni vagy erősödni szeretnél, esetleg lelki nehézségkbe ütköztél, a legjobb helyen jársz. Készülj fel, hogy nálunk izzadni fogsz úgy, mint még soha, olyan izmaidat is megérzed, amikről eddig fogalmad sem volt, de legfőképpen megismered a tested és megtanulod értékelni önmagad.</p>
-      </div>
+        <hr>
+        <div class="heading__lead"><?php the_excerpt(); ?></div>
     </div>
   </header>
   <div class="row large-up-2">
