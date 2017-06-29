@@ -3,10 +3,8 @@
 <article <?php post_class('singleteacher'); ?>>
   <header class="singleteacher__header ps ps--dark ps--largetop">
     <div class="row">
-
       <div class="columns medium-4">
-        <?= wp_get_attachment_image($avatar[ID], 'medium_Large' ); ?>
-        <!-- <h1 class="singleteacher__title"><?php the_title(); ?></h1> -->
+        <?= wp_get_attachment_image($avatar[ID], 'medium_Large', false, array('class'=>'singleteacher__avatar') ); ?>
       </div>
       <div class="columns medium-8">
         <ul class="facts">
@@ -24,7 +22,7 @@
       </div>
     </div>
   </header>
-  <div class="singleteacher__content content ps ps--opaque">
+  <div class="singleteacher__content content ps">
     <div class="row">
       <div class="columns large-6 xlarge-8">
         <h1><?php the_title(); ?></h1>
@@ -46,7 +44,7 @@
         );
         $the_events = new WP_Query( $args );
         ?>
-        <section class="pagehead__schedule callout" role="marquee">
+        <section class="singleteacher__schedule callout" role="marquee">
           <h3><?php the_field('nick_name'); ?> következő órái</h3>
           <hr>
           <div class="calendar calendar--teacher">
