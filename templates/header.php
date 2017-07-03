@@ -9,8 +9,17 @@
           <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--main']); ?>
         </nav>
         <div class="banner__actions">
-          <a class="hide-for-large button small menutoggle" data-open="menumodal">Menü</a>
-          <a class="button small eventstoggle" data-open="eventsmodal">Órarend</a>
+          <a class="hide-for-large menutoggle" data-open="menumodal">
+          <svg viewBox="0 0 20 20" class="icon icon--hamburger">
+            <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--hamburger"></use>
+          </svg><br>
+          Menü</a>
+          <a class="eventstoggle" data-open="eventsmodal">
+            <svg viewBox="0 0 20 20" class="icon icon--calendar">
+            <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--calendar"></use>
+          </svg><br>
+          Órarend
+          </a>
         </div>
       </div>
     </div>

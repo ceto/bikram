@@ -46,19 +46,6 @@ $(document).ready(function() {
   $('.facts > *:even()').fitText( 1.2 );
   $('.sitefooter__slogan > p').fitText( 1.2 );
 
-    if ($('#instafeed').length) {
-      var feed = new Instafeed({
-        get: 'location',
-        locationId: '3576608',
-        accessToken: '306843849.ba4c844.edc12d767da4449092c3eaefc7d94056',
-        template: '<a class="photostripe__item" target="_blank" href="{{link}}"><img src="{{image}}" alt="{{caption}}"></a>',
-        sortBy: 'most-liked',
-        limit: 10,
-        resolution: 'standard_resolution'
-      });
-      feed.run();
-    }
-
   var minicalcarousel = $('.minical-carousel').owlCarousel({
     //margin:32,
     smartSpeed:500,
@@ -175,6 +162,26 @@ $(document).ready(function() {
         }
     }
   });
+
+
+    $('.owl-bupapslider').owlCarousel({
+      autoWidth:true,
+      loop:true,
+      nav: true,
+      navText: ['‹', '›'],
+      responsive:{
+        0:{
+            items:1,
+
+        },
+        768: {
+            items:2,
+        },
+        1240: {
+          items:3,
+        }
+      }
+    });
 
   // setTimeout(function() {
   //  minicalcarousel.trigger('refresh.owl.carousel');

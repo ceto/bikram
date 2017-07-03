@@ -25,8 +25,8 @@
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <?php
-              $thisday = date('F d.', strtotime(get_field('starts')));
-              $nameoftheday = date('l', strtotime(get_field('starts')));
+              $thisday = date_i18n('F d.', strtotime(get_field('starts')));
+              $nameoftheday = date_i18n('l', strtotime(get_field('starts')));
             ?>
             <?php if ( ($prevday!='') && ($thisday != $prevday)  ) : ?></div></div><?php endif; ?>
             <?php if ( $thisday != $prevday ) : ?>

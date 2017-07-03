@@ -1,5 +1,6 @@
-<?php get_template_part('templates/front', 'hero'); ?>
-<?php  get_template_part('templates/sticky', 'block'); ?>
+<?php while (have_posts()) : the_post(); ?>
+<?php get_template_part( 'templates/hero'); ?>
+<?php get_template_part('templates/sticky', 'block'); ?>
 <div class="ps">
   <div class="row">
     <div class="columns tablet-6 large-7 xlarge-8 content">
@@ -34,15 +35,5 @@
     </div>
   </div>
 </div>
-    <section class="photostripe photostripe--narrow">
-    <div class="photostripe__item">
-      <img src="http://placehold.it/1200x800/2a2a2a?text=studiofoto 1." alt="">
-      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
-      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
-      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
-      <img src="http://placehold.it/1200x800/333/?text=studiofoto 2." alt="">
-      <img src="http://placehold.it/1200x800/000/?text=studiofotok" alt="">
-      <img src="http://placehold.it/1200x800?text=studiofoto 1." alt="">
-    </div>
-  </section>
-
+<?php get_template_part('templates/widegallery'); ?>
+<?php endwhile; ?>
