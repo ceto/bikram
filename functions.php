@@ -18,7 +18,8 @@ $sage_includes = [
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
   'lib/customposts.php', // Custom post Types
-  'lib/custom.php'     // Custom code by ceto
+  'lib/custom.php',     // Custom code by ceto
+  'lib/wp_ics.php'     // Dl ics code by ceto
 
 ];
 

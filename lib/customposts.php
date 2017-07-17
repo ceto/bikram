@@ -47,9 +47,10 @@ function bikram_custom_post_types() {
     'show_in_nav_menus'     => true,
     'can_export'            => true,
     'has_archive'           => false,
+    'rewrite'               => array('feeds' => true),
     'exclude_from_search'   => true,
     'publicly_queryable'    => true,
-    'capability_type'       => 'page',
+    'capability_type'       => 'post',
   );
   register_post_type( 'event', $args );
 

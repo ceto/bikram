@@ -22,7 +22,7 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
-    <a href="#" class="button small secondary">Beírom</a>
+    <a href="<?php echo get_feed_link('calendar'); ?>&id=<?php echo get_the_ID(); ?>" class="button small secondary">+ Cal</a>
   </div>
 </div>
 
