@@ -19,7 +19,7 @@
       <div class="twocolumnblock">
        <?php the_content(); ?>
       </div>
-      <a href="<?php the_permalink(206); ?>" class="button">Válassz óránk közül!</a>
+      <a href="<?php the_permalink(206); ?>" class="button">Válassz óráink közül!</a>
     </div>
   </div>
 </div>

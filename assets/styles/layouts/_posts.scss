@@ -18,6 +18,11 @@
     margin:.333rem 0 0;
     box-shadow: 0 0 1rem 0 rgba(#000,.75);
   }
+
+  .blog &, .archive & {
+    margin-bottom: 4rem;
+  }
+
 }
 .stickypost__header {
   //margin-top: .333rem;

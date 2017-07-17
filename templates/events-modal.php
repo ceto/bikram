@@ -49,7 +49,7 @@
         ?>
       <?php endwhile; ?>
     </div>
-    <a href="<?= get_the_permalink(42) ?>" class="button expanded large">Ugrok a teljes órarendre</a>
+    <a href="<?= get_the_permalink(42) ?>" class="button expanded large">Teljes órarend</a>
   </aside>
 </div>
   <button class="close-button" data-close aria-label="Close modal" type="button">

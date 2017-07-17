@@ -31,6 +31,7 @@
           <br>
           <a href="<?php the_permalink(42); ?>" class="button large expanded">Teljes órarend</a>
         </section>
+        <?php wp_reset_postdata(); ?>
 
     </div>
   </div>

@@ -61,14 +61,14 @@
         </div>
       </div>
       <div class="columns tablet-4">
+
         <?php
-          wp_reset_query();
+          $currclass=get_the_ID();
           $args = array(
             'post_type'  => 'teacher',
             'order' => 'ASC',
             'orderby'  => 'menu_order',
             'posts_per_page' => -1,
-            'post__not_in' => array($post->ID)
           );
           $the_teachers = new WP_Query( $args );
         ?>
@@ -77,12 +77,21 @@
             <br>
             <div class="owl-carousel teacher-carousel">
               <?php while ($the_teachers->have_posts()) : $the_teachers->the_post(); ?>
-              <div class="item">
+              <?php
+              $tcs = get_field('classes');
+              $yessheteaches=false;
+              foreach ( $tcs as $key => $tpost) {
+                  $yessheteaches = $yessheteaches || ( $tpost->ID === $currclass);
+                }
+              if ($yessheteaches) : ?>
+                <div class="item">
                 <?php get_template_part('templates/teacher','card'); ?>
-              </div>
+                </div>
+              <?php endif; ?>
               <?php endwhile; ?>
             </div>
           </section>
+          <?php wp_reset_postdata(); ?>
         </div>
     </div>
   </footer>
