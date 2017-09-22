@@ -3,51 +3,49 @@
   <?php
     $soday=date('Y-m-d');
     $eoday=date('Y-m-d', strtotime($soday.' +1 day'));
-    $dayargs = array(
-      'post_type'  => 'event',
-      'posts_per_page' => -1,
-      'meta_query' => array(
-      'relation'=>'AND',
-        array('key' => 'starts', 'compare' => '>=', 'value'=> $soday, type => 'DATE' ),
-        array('key' => 'starts', 'compare' => '<', 'value'=> $eoday, type => 'DATE' )
-      )
-    );
-    $the_dayevents = new WP_Query( $dayargs );
   ?>
 
   <aside role="marquee">
     <div class="owl-carousel minical-carousel">
-      <?php while ($the_dayevents->found_posts>0): ?>
+      <?php for ($i=1; $i<=8; $i++): ?>
         <div class="item">
+          <?php
+            $dayargs = array(
+              'post_type'  => 'event',
+              'posts_per_page' => -1,
+              'meta_query' => array(
+              'relation'=>'AND',
+                array('key' => 'starts', 'compare' => '>=', 'value'=> $soday, type => 'DATE' ),
+                array('key' => 'starts', 'compare' => '<', 'value'=> $eoday, type => 'DATE' )
+              )
+            );
+            $the_dayevents = new WP_Query( $dayargs );
+          ?>
           <div class="minical">
             <h3 class="minical__daytitle">
               <?= date_i18n('l' , strtotime($soday) ); ?>
               <small><?= date_i18n('Y. F d.', strtotime($soday) ); ?></small>
             </h3>
             <div class="callout">
-              <div class="calendar calendar--mini">
-                <?php while ($the_dayevents->have_posts()) : $the_dayevents->the_post(); ?>
-                  <?php get_template_part('templates/calendar','entry'); ?>
-                <?php endwhile; ?>
-              </div>
+              <?php if (($the_dayevents->found_posts)>0) : ?>
+                <div class="calendar calendar--mini">
+                  <?php while ($the_dayevents->have_posts()) : $the_dayevents->the_post(); ?>
+                    <?php get_template_part('templates/calendar','entry'); ?>
+                  <?php endwhile; ?>
+                </div>
+              <?php else: ?>
+                <h4>Ezen a napon nincs meghirdetve óra.</h4>
+                <hr>
+                <p>Ne add fel! Más napokon biztos találsz kedvedre valót. Lapozz tovább vagy nézd meg a <a href="<?= get_the_permalink(42) ?>">teljes órarendet.</a></p>
+              <?php endif; ?>
             </div>
           </div>
         </div>
         <?php
           $soday=date('Y-m-d', strtotime($soday.' +1 day'));
           $eoday=date('Y-m-d', strtotime($soday.' +1 day'));
-          $dayargs = array(
-            'post_type'  => 'event',
-            'posts_per_page' => -1,
-            'meta_query' => array(
-            'relation'=>'AND',
-              array('key' => 'starts', 'compare' => '>=', 'value'=> $soday, type => 'DATE' ),
-              array('key' => 'starts', 'compare' => '<', 'value'=> $eoday, type => 'DATE' )
-            )
-          );
-          $the_dayevents = new WP_Query( $dayargs );
         ?>
-      <?php endwhile; ?>
+      <?php endfor; ?>
     </div>
     <a href="<?= get_the_permalink(42) ?>" class="button expanded large">Teljes órarend</a>
   </aside>
