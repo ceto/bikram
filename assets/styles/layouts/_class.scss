@@ -40,6 +40,7 @@
 }
 
 .classleader__naptar {
+    position: relative;
     //max-width: 40rem;
     margin: 0 auto;
     padding: 2rem 5% 2rem 5%;
@@ -57,6 +58,39 @@
     //filter:invert(.835);
     .calendar {
         //background-color: transparent;
+    }
+}
+
+.classleader__naptar .calentry:nth-of-type(4) .calcol  {
+    border-bottom: none;
+}
+.classleader__naptar.showfull .calentry:nth-of-type(4) .calcol  {
+    border-bottom: 1px solid $light-gray;
+}
+
+.classleader__naptar .calentry:nth-of-type(n+5)  {
+    display: none
+}
+
+.classleader__naptar.showfull .calentry:nth-of-type(n+5)  {
+    display: table-row;
+}
+
+.classleader__naptar__more {
+    margin:1.5rem 0 0 ;
+    font-size: .875rem;
+    //font-style: italic;
+    color:$primary-color;
+    display: inline-block;
+    font-family: $header-font-family;
+    .icon {
+        font-size: .875em;
+        transform: translateY(.125em);
+        margin-left: .25em;
+    }
+
+    &.activated {
+        display: none;
     }
 }
 

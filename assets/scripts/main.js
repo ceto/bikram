@@ -12,6 +12,11 @@ $(document).foundation();
 
 $(document).ready(function() {
 
+    $('.classleader__naptar__more').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('activated');
+        $('.classleader__naptar').toggleClass('showfull');
+    });
 
 
     //********** Scroll Direction Check to Toggle Mobile Top bar *************//

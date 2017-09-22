@@ -17,16 +17,23 @@
           $the_events = new WP_Query( $args );
           ?>
           <section role="marquee">
-            <h3><?php the_title(); ?> időpontok</h3>
+            <h3>Következő időpontok</h3>
             <div class="calendar calendar--full">
               <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryclass'); ?>
               <?php endwhile; ?>
             </div>
           </section>
+          <?php if ($the_events->found_posts>4) : ?>
+          <a href="#" class="classleader__naptar__more">
+            Mutasd mindet <svg viewBox="0 0 20 20" class="icon icon--arrow-down">
+            <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--arrow-down"></use>
+            </svg>
+          </a>
+        <?php endif; ?>
           <?php wp_reset_query(); ?>
         </div>
-        <div class="text-center">
+      <div class="text-center">
         <br><br><br>
         <a href="<?= get_the_permalink(42) ?>" class="button large">Mutasd a teljes órarendet</a>
         </div>
