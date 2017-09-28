@@ -11,6 +11,7 @@
 .bloghead__catlist {
   list-style-type: none;
   padding:0;
+  margin-left:0;
   > li {
     display: inline-block;
     a {
@@ -28,6 +29,9 @@
       color:inherit;
     }
   }
+  @include breakpoint(medium) {
+    margin-top: .75rem;
+  }
   @include breakpoint(large) {
     margin-top: 1.875rem;
   }
@@ -36,8 +40,11 @@
 .bloghead__title {
   margin:0;
   // font-size: 1.25rem;
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     margin-top: .125em;
+    font-size: 1.5rem;
+  }
+  @include breakpoint(large) {
     font-size: 2.5rem;
   }
   a {

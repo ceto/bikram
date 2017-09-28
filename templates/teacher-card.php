@@ -2,7 +2,7 @@
 <div class="tcard">
   <figure class="tcard__photo">
     <a href="<?php the_permalink(); ?>">
-      <?= wp_get_attachment_image($avatar[ID], 'small' ); ?>
+      <?= wp_get_attachment_image($avatar[ID], 'thumbnail' ); ?>
     </a>
   </figure>
   <header class="tcard__header">

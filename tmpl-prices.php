@@ -86,6 +86,7 @@
         </tr>
       </tbody>
     </table>
+    <p class="pricetablediscl">Diák áraink csak érvényes magyar diákigazolvánnyal vehetők igénybe.</p>
   </div>
   <div class="columns large-6">
     <div class="content prices__content">

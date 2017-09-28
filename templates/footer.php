@@ -53,7 +53,7 @@
     <div class="columns tablet-6">
       &copy; <?= date(Y) ?> Bikram Jóga Központ &middot; All rights reserved
     </div>
-    <div class="columns tablet-6 large-text-right">
+    <div class="columns tablet-6 tablet-text-right">
       Designed with care by <a taqget="_blank" href="http://hydrogene.hu">Hydrogene</a> &middot; Photo <a target="_blank" href="http://g2foto.hu/">G2Foto</a>
     </div>
   </div>

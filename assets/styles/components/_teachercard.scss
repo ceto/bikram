@@ -41,14 +41,22 @@
 }
 
 .tcard__name {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   margin: 0 0 .333em;
+  @include breakpoint(large) {
+    font-size: 1.25rem;
+  }
+
+  @include breakpoint(xlarge) {
+    font-size: 1.5rem;
+  }
   a {
     color:inherit;
     &:hover, &:focus {
       color: $primary-color;
     }
   }
+
 }
 
 .tcard__quote {

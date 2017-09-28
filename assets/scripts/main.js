@@ -111,7 +111,7 @@ $(document).ready(function() {
             margin:24
         },
         640:{
-            items:1,
+            items:2,
             margin:24
         },
         768:{
@@ -119,11 +119,11 @@ $(document).ready(function() {
             margin:32
         },
         1024:{
-            items:2,
+            items:3,
             margin:32
         },
         1200:{
-            items:2,
+            items:3,
             margin:32
         }
     }

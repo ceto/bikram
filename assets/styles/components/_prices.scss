@@ -5,7 +5,7 @@ table.pricetable {
   border:0 solid #fff;
   background-color: $body-background;
   margin-top: -5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   @include breakpoint(medium) {
     border-width:1em 2em 1em 1em;
@@ -69,4 +69,11 @@ table.pricetable {
     max-width: 31%;
     margin-right: 2%;
   }
+}
+
+.pricetablediscl {
+  font-size: .875rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  padding:0 0;
 }

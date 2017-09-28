@@ -38,7 +38,7 @@
 </div>
 <div class="ps ps--dark">
   <div class="row">
-    <div class="columns xlarge-8 content">
+    <div class="columns xlarge-9 content">
             <?php
         $args = array(
           'post_type'  => 'class',
@@ -57,9 +57,9 @@
   </div>
       <?php wp_reset_postdata(); ?>
     </div>
-    <div class="columns xlarge-4">
+    <div class="columns xlarge-3">
         <div class="row">
-          <div class="columns tablet-6 xlarge-12 tablet-centered">
+          <div class="columns small-10 medium-6 tablet-4 large-3 xlarge-12 tablet-centered">
             <img src="<?= get_template_directory_uri().'/dist/images/AYCM_ELFOGADOHELY.jpg'  ?>" alt="AYMC elfogadóhely">
           </div>
         </div>

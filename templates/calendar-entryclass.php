@@ -12,7 +12,7 @@
   <?php $teacher=get_field('teacher'); ?>
   <figure class="calcol calentry__teacherpic">
     <a href="<?= get_the_permalink(get_field('teacher')); ?>">
-      <?= wp_get_attachment_image($avatar[ID],'small' ); ?>
+      <?= wp_get_attachment_image($avatar[ID],'thumbnail' ); ?>
     </a>
     <figcaption>
       <a href="<?= get_the_permalink(get_field('teacher')); ?>">
@@ -21,6 +21,8 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
-    <a href="#" class="button small secondary">Beírom</a>
+    <a href="#" class="button small secondary">
+      +iCal
+    </a>
   </div>
 </div>

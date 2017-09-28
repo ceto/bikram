@@ -7,6 +7,6 @@
       </header>
     </div>
     <div class="columns medium-4 medium-text-right">
-      <a href="<?php the_permalink(); ?>" class="button"><?php _e('Click for details','bikram'); ?> &hellip;</a>
+      <a href="<?php the_permalink(); ?>" class="button"><?php _e('Click for details','bikram'); ?>&hellip;</a>
     </div>
   </article>
