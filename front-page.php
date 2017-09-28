@@ -61,10 +61,8 @@
         <div class="row">
           <div class="columns tablet-6 xlarge-12 tablet-centered">
             <img src="<?= get_template_directory_uri().'/dist/images/AYCM_ELFOGADOHELY.jpg'  ?>" alt="AYMC elfogadóhely">
-
           </div>
         </div>
-
     </div>
   </div>
 </div>

@@ -7,7 +7,7 @@
 <?php get_template_part( 'templates/hero'); ?>
 <div class="ps">
   <div class="row">
-    <div class="columns content">
+    <div class="columns tablet-8 tablet-centered xxlarge-uncentered content">
       <header class="heading">
         <h2 class="heading__title"><?php the_title(); ?></h2>
         <hr>
@@ -16,10 +16,11 @@
         <br>
       </div>
       </header>
-      <div class="twocolumnblock">
+      <div class="atwocolumnblock">
        <?php the_content(); ?>
       </div>
       <a href="<?php the_permalink(206); ?>" class="button">Válassz óráink közül!</a>
+
     </div>
   </div>
 </div>

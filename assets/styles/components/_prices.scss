@@ -4,18 +4,21 @@ table.pricetable {
 
   border:0 solid #fff;
   background-color: $body-background;
+  margin-top: -5rem;
+  margin-bottom: 2rem;
 
   @include breakpoint(medium) {
-    border-width:1em;
+    border-width:1em 2em 1em 1em;
   }
 
   @include breakpoint(tablet) {
-    border-width:1.5em;
+    border-width: 1.5em 1.5em 3.5em 1.5em;
   }
   @include breakpoint('large') {
         margin-top: -6rem;
         margin-top: calc(-6rem - 4vw);
         box-shadow: 0 0 5rem 0 rgba(#000,.25);
+        border-width: 1.5em 1.5em 4.5em 1.5em;
   }
 
   thead {
@@ -59,3 +62,11 @@ table.pricetable {
   padding: calc(3rem + 2vw) 0;
 }
 
+.prices__cards {
+  margin-top: 2rem;
+  img {
+    width:15rem;
+    max-width: 31%;
+    margin-right: 2%;
+  }
+}
