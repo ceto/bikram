@@ -1,39 +1,353 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-09-28 09:28+0000\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco - https://localise.biz/"
 
-#: 404.php:4
-msgid "Sorry, but the page you were trying to view does not exist."
-msgstr ""
-
-#: base.php:14
+#: base.php:11
 msgid ""
-"You are using an <strong>outdated</strong> browser. Please <a href=\"http://"
-"browsehappy.com/\">upgrade your browser</a> to improve your experience."
+"You are using an <strong>outdated</strong> browser. Please <a href=\"http:"
+"//browsehappy.com/\">upgrade your browser</a> to improve your experience."
 msgstr ""
 
-#: functions.php:22
+#: functions.php:28
+#, php-format
 msgid "Error locating %s for inclusion"
 msgstr ""
 
-#: index.php:5 search.php:5
+#: index.php:4 search.php:7
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: lib/extras.php:31
-msgid "Continued"
+#: single-teacher.php:62 templates/content-page.php:6
+#: templates/content-single.php:40
+msgid "Pages:"
 msgstr ""
 
-#: lib/setup.php:30
+#. Name of the template
+msgid "Classes List Template"
+msgstr ""
+
+#. Name of the template
+msgid "Contact Template With Google Map"
+msgstr ""
+
+#. Name of the template
+msgid "New Comer Template with FAQ"
+msgstr ""
+
+#. Name of the template
+msgid "Prices Template with Pricelist"
+msgstr ""
+
+#. Name of the template
+msgid "Schedule"
+msgstr ""
+
+#. Name of the template
+msgid "Studio Template With Teachers' List"
+msgstr ""
+
+#: lib/customposts.php:8
+msgctxt "Event General Name"
+msgid "Events"
+msgstr ""
+
+#: lib/customposts.php:9
+msgctxt "Event Singular Name"
+msgid "Event"
+msgstr ""
+
+#: lib/customposts.php:10
+msgid "Timetable"
+msgstr ""
+
+#: lib/customposts.php:11 lib/customposts.php:35
+msgid "Event"
+msgstr ""
+
+#: lib/customposts.php:12
+msgid "Event Archives"
+msgstr ""
+
+#: lib/customposts.php:13
+msgid "Parent Event:"
+msgstr ""
+
+#: lib/customposts.php:14
+msgid "Events"
+msgstr ""
+
+#: lib/customposts.php:15
+msgid "Add New Event"
+msgstr ""
+
+#: lib/customposts.php:16 lib/customposts.php:68 lib/customposts.php:118
+msgid "Add New"
+msgstr ""
+
+#: lib/customposts.php:17
+msgid "New Event"
+msgstr ""
+
+#: lib/customposts.php:18
+msgid "Edit Event"
+msgstr ""
+
+#: lib/customposts.php:19
+msgid "Update Event"
+msgstr ""
+
+#: lib/customposts.php:20
+msgid "View Event"
+msgstr ""
+
+#: lib/customposts.php:21
+msgid "Search Event"
+msgstr ""
+
+#: lib/customposts.php:22 lib/customposts.php:74 lib/customposts.php:124
+msgid "Not found"
+msgstr ""
+
+#: lib/customposts.php:23 lib/customposts.php:75 lib/customposts.php:125
+msgid "Not found in Trash"
+msgstr ""
+
+#: lib/customposts.php:24
+msgid "Event Photo"
+msgstr ""
+
+#: lib/customposts.php:25
+msgid "Set Event photo"
+msgstr ""
+
+#: lib/customposts.php:26
+msgid "Remove Event photo"
+msgstr ""
+
+#: lib/customposts.php:27
+msgid "Use as Event photo"
+msgstr ""
+
+#: lib/customposts.php:28
+msgid "Insert into Event"
+msgstr ""
+
+#: lib/customposts.php:29
+msgid "Uploaded to this Event"
+msgstr ""
+
+#: lib/customposts.php:30
+msgid "Events list"
+msgstr ""
+
+#: lib/customposts.php:31
+msgid "Events list navigation"
+msgstr ""
+
+#: lib/customposts.php:32
+msgid "Filter Events list"
+msgstr ""
+
+#: lib/customposts.php:36
+msgid "Event Description"
+msgstr ""
+
+#: lib/customposts.php:60
+msgctxt "Teacher General Name"
+msgid "Teachers"
+msgstr ""
+
+#: lib/customposts.php:61
+msgctxt "Teacher Singular Name"
+msgid "Teacher"
+msgstr ""
+
+#: lib/customposts.php:62 lib/customposts.php:66
+msgid "Teachers"
+msgstr ""
+
+#: lib/customposts.php:63 lib/customposts.php:87
+msgid "Teacher"
+msgstr ""
+
+#: lib/customposts.php:64
+msgid "Teacher Archives"
+msgstr ""
+
+#: lib/customposts.php:65
+msgid "Parent Teacher:"
+msgstr ""
+
+#: lib/customposts.php:67
+msgid "Add New Teacher"
+msgstr ""
+
+#: lib/customposts.php:69
+msgid "New Teacher"
+msgstr ""
+
+#: lib/customposts.php:70
+msgid "Edit Teacher"
+msgstr ""
+
+#: lib/customposts.php:71
+msgid "Update Teacher"
+msgstr ""
+
+#: lib/customposts.php:72
+msgid "View Teacher"
+msgstr ""
+
+#: lib/customposts.php:73
+msgid "Search Teacher"
+msgstr ""
+
+#: lib/customposts.php:76
+msgid "Teacher Photo"
+msgstr ""
+
+#: lib/customposts.php:77
+msgid "Set Teacher photo"
+msgstr ""
+
+#: lib/customposts.php:78
+msgid "Remove Teacher photo"
+msgstr ""
+
+#: lib/customposts.php:79
+msgid "Use as Teacher photo"
+msgstr ""
+
+#: lib/customposts.php:80
+msgid "Insert into Teacher"
+msgstr ""
+
+#: lib/customposts.php:81
+msgid "Uploaded to this Teacher"
+msgstr ""
+
+#: lib/customposts.php:82
+msgid "Teachers list"
+msgstr ""
+
+#: lib/customposts.php:83
+msgid "Teachers list navigation"
+msgstr ""
+
+#: lib/customposts.php:84
+msgid "Filter Teachers list"
+msgstr ""
+
+#: lib/customposts.php:88
+msgid "Teacher Description"
+msgstr ""
+
+#: lib/customposts.php:110
+msgctxt "Class General Name"
+msgid "Class"
+msgstr ""
+
+#: lib/customposts.php:111
+msgctxt "Class Singular Name"
+msgid "Class"
+msgstr ""
+
+#: lib/customposts.php:112 lib/customposts.php:116 lib/customposts.php:137
+msgid "Classes"
+msgstr ""
+
+#: lib/customposts.php:113
+msgid "Class"
+msgstr ""
+
+#: lib/customposts.php:114
+msgid "Class Archives"
+msgstr ""
+
+#: lib/customposts.php:115
+msgid "Parent Class:"
+msgstr ""
+
+#: lib/customposts.php:117
+msgid "Add New Class"
+msgstr ""
+
+#: lib/customposts.php:119
+msgid "New Class"
+msgstr ""
+
+#: lib/customposts.php:120
+msgid "Edit Class"
+msgstr ""
+
+#: lib/customposts.php:121
+msgid "Update Class"
+msgstr ""
+
+#: lib/customposts.php:122
+msgid "View Class"
+msgstr ""
+
+#: lib/customposts.php:123
+msgid "Search Class"
+msgstr ""
+
+#: lib/customposts.php:126
+msgid "Class Photo"
+msgstr ""
+
+#: lib/customposts.php:127
+msgid "Set Class photo"
+msgstr ""
+
+#: lib/customposts.php:128
+msgid "Remove Class photo"
+msgstr ""
+
+#: lib/customposts.php:129
+msgid "Use as Class photo"
+msgstr ""
+
+#: lib/customposts.php:130
+msgid "Insert into Class"
+msgstr ""
+
+#: lib/customposts.php:131
+msgid "Uploaded to this Class"
+msgstr ""
+
+#: lib/customposts.php:132
+msgid "Classes list"
+msgstr ""
+
+#: lib/customposts.php:133
+msgid "Classes list navigation"
+msgstr ""
+
+#: lib/customposts.php:134
+msgid "Filter classes list"
+msgstr ""
+
+#: lib/customposts.php:138
+msgid "Class Description"
+msgstr ""
+
+#: lib/setup.php:34
 msgid "Primary Navigation"
 msgstr ""
 
-#: lib/setup.php:57
+#: lib/setup.php:62
 msgid "Primary"
 msgstr ""
 
-#: lib/setup.php:66
+#: lib/setup.php:71
 msgid "Footer"
 msgstr ""
 
@@ -41,63 +355,65 @@ msgstr ""
 msgid "Latest Posts"
 msgstr ""
 
-#: lib/titles.php:18
+#: lib/titles.php:20
+#, php-format
 msgid "Search Results for %s"
 msgstr ""
 
-#: lib/titles.php:20
+#: lib/titles.php:22
 msgid "Not Found"
 msgstr ""
 
-#: templates/comments.php:9
+#: templates/blog-header.php:13
+msgid "All"
+msgstr ""
+
+#: templates/comments.php:10
+#, php-format
 msgctxt "comments title"
 msgid "One response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/comments.php:19
+#: templates/comments.php:18
 msgid "&larr; Older comments"
 msgstr ""
 
-#: templates/comments.php:22
+#: templates/comments.php:21
 msgid "Newer comments &rarr;"
 msgstr ""
 
-#: templates/comments.php:31
+#: templates/comments.php:29
 msgid "Comments are closed."
 msgstr ""
 
-#: templates/content-page.php:2 templates/content-single.php:11
-msgid "Pages:"
+#: templates/content-sticky.php:10
+msgid "Click for details"
 msgstr ""
 
-#: templates/entry-meta.php:2
-msgid "By"
+#: templates/content.php:17
+msgid "Read more"
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Sage Starter Theme"
+#. Name of the theme
+msgid "Bikram Theme"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://roots.io/sage/"
-msgstr ""
-
-#. Description of the plugin/theme
+#. Description of the theme
 msgid ""
-"Sage is a WordPress starter theme. <a href=\"https://github.com/roots/sage"
-"\">Contribute on GitHub</a>"
+"Bikram is a custom WordPress theme. Built with Foundation for Sites <a "
+"href=\"https://github.com/ceto/bikram\">Contribute on GitHub</a>"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "Roots"
+#. URI of the theme
+msgid "https://github.com/ceto/bikram"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "https://roots.io/"
+#. Author of the theme
+msgid "Hydrogene"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Custom Template"
+#. Author URI of the theme
+msgid "http://hydrogene.hu/"
 msgstr ""

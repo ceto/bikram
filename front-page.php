@@ -36,5 +36,38 @@
     </div>
   </div>
 </div>
+<div class="ps ps--dark">
+  <div class="row">
+    <div class="columns xlarge-8 content">
+            <?php
+        $args = array(
+          'post_type'  => 'class',
+          'order' => 'ASC',
+          'orderby'  => 'menu_order',
+          'posts_per_page' => -1
+        );
+        $the_classes = new WP_Query( $args );
+      ?>
+      <div class="row tablet-up-2">
+    <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>
+      <div class="column">
+        <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+      </div>
+    <?php endwhile; ?>
+  </div>
+      <?php wp_reset_postdata(); ?>
+    </div>
+    <div class="columns xlarge-4">
+        <div class="row">
+          <div class="columns tablet-6 xlarge-12 tablet-centered">
+            <img src="<?= get_template_directory_uri().'/dist/images/AYCM_ELFOGADOHELY.jpg'  ?>" alt="AYMC elfogadóhely">
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
 <?php get_template_part('templates/widegallery'); ?>
 <?php endwhile; ?>
