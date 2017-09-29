@@ -5,7 +5,7 @@ msgstr ""
 "POT-Creation-Date: 2017-09-28 09:31+0000\n"
 "Language: hu-HU\n"
 "Plural-Forms: nplurals=2; plural=n != 1\n"
-"PO-Revision-Date: 2017-09-28 09:34+0000\n"
+"PO-Revision-Date: 2017-09-29 16:11+0000\n"
 "X-Generator: Loco - https://localise.biz/\n"
 "Project-Id-Version: Bikram Theme\n"
 "Report-Msgid-Bugs-To: \n"
@@ -368,10 +368,6 @@ msgstr ""
 msgid "Not Found"
 msgstr ""
 
-#: templates/blog-header.php:13
-msgid "All"
-msgstr "Mind"
-
 #: templates/comments.php:10
 #, php-format
 msgctxt "comments title"
@@ -391,14 +387,6 @@ msgstr ""
 #: templates/comments.php:29
 msgid "Comments are closed."
 msgstr ""
-
-#: templates/content-sticky.php:10
-msgid "Click for details"
-msgstr "Klikk a részletekért"
-
-#: templates/content.php:17
-msgid "Read more"
-msgstr "Olvasd tovább"
 
 #. Name of the theme
 msgid "Bikram Theme"
@@ -421,3 +409,15 @@ msgstr ""
 #. Author URI of the theme
 msgid "http://hydrogene.hu/"
 msgstr ""
+
+#: templates/blog-header.php:13
+msgid "All"
+msgstr "Mind"
+
+#: templates/content-sticky.php:10
+msgid "Click for details"
+msgstr "Részletek"
+
+#: templates/content.php:17
+msgid "Read more"
+msgstr "Olvasd tovább"
