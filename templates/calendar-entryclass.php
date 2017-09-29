@@ -21,8 +21,6 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
-    <a href="#" class="button small secondary">
-      +iCal
-    </a>
+    <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="button small secondary">+Cal</a>
   </div>
 </div>

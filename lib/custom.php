@@ -34,3 +34,16 @@
       return $classes;
 
   }
+
+  function the_gcaladdlink($event) {
+    //mintaurl:https://www.google.com/calendar/event?action=TEMPLATE&text=Szecesszi%C3%B3+%C3%A9s+divat+2017.11.25.+10%3A00+Czingel+Sz.&dates=20171125T100000/20171125T120000&details&location&trp=false&sprop=website:https://setamuhely.hu&ctz=Atlantic%2FAzores
+    $class=get_field('class',$event);
+    $teacher=get_field('teacher', $event);
+    $gcalbase='https://www.google.com/calendar/event?action=TEMPLATE';
+    $gcalparameters='&text='.urlencode(get_the_title($class));
+    $gcalparameters.='&dates='.date('Ymd\THis', strtotime( get_field('starts',$event) ) ).'/'.date('Ymd\THis', strtotime( get_field('starts',$event).' '.get_field('tract',$event).' minutes' ) ) ;
+    $gcalparameters.='&details='.urlencode('Tanár: '.get_the_title($teacher));
+    $gcalparameters.='&location='.urlencode('Bikram Jóga Központ - H-1075 Budapest, Károly krt. 1.');
+    $gcalparameters.='&trp=false&ctz='.urlencode('Europe/Budapest');
+    return $gcalbase.$gcalparameters;
+  }

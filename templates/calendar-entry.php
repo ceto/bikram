@@ -4,7 +4,6 @@
 <div <?php post_class('calentry'); ?>>
   <div class="calcol calentry__starttime">
     <?= date('H:i', strtotime( get_field('starts') ) ) ?>
-    <!-- <small>60 perc</small> -->
   </div>
   <div class="calcol calentry__title">
     <a href="<?= get_the_permalink(get_field('class')); ?>"><?= get_the_title(get_field('class')); ?></a>
@@ -22,7 +21,7 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
-    <a href="<?php echo get_feed_link('calendar'); ?>&id=<?php echo get_the_ID(); ?>" class="button small secondary">+iCal</a>
+    <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="button small secondary">+Cal</a>
   </div>
 </div>
 

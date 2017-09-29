@@ -21,7 +21,7 @@
       </div>
     </div>
   </header>
-  <div class="singlepost__content content ps ps--halftop">
+  <div class="singlepost__content content ps ps--notop">
     <div class="row">
       <div class="columns large-10 large-centered xlarge-9">
         <?php if ( has_post_thumbnail() ) : ?>
