@@ -8,6 +8,30 @@
 <div class="theprices">
   <div class="row">
     <div class="columns large-6">
+      <?php if( have_rows('pricetable') ): ?>
+      <table class="pricetable">
+        <thead>
+          <tr>
+            <th>Árak</th>
+            <th>Felnőtt ár</th>
+            <th>Diák/Nyugdíjas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php while ( have_rows('pricetable') ) : the_row(); ?>
+            <tr>
+              <td><?php the_sub_field('type'); ?><?= get_sub_field('comment')?'<br><small>'.get_sub_field('comment').'</small>':''; ?></td>
+              <td><?= number_format(get_sub_field('price_full'),0,'','&nbsp;'); ?>,-</td>
+              <td><?= number_format(get_sub_field('price_reduced'),0,'','&nbsp;'); ?>,-</td>
+            </tr>
+          <?php endwhile; ?>
+        </tbody>
+      </table>
+      <?php endif; ?>
+      <?php if ( get_field('pricedisclaimer') ) : ?>
+        <p class="pricetablediscl"><?php the_field('pricedisclaimer') ?></p>
+      <?php endif; ?>
+      <hr><hr><hr><hr><hr><hr>
       <table class="pricetable">
         <thead>
           <tr>
@@ -85,21 +109,23 @@
           <td>125 000,-</td>
         </tr>
       </tbody>
-    </table>
-    <p class="pricetablediscl">Diák áraink csak érvényes magyar diákigazolvánnyal vehetők igénybe.</p>
+      </table>
+      <p class="pricetablediscl">Diák áraink csak érvényes magyar diákigazolvánnyal vehetők igénybe.</p>
+
+
+
   </div>
   <div class="columns large-6">
     <div class="content prices__content">
       <?php the_content(); ?>
+      <div class="prices__cards">
+        <img src="<?= get_template_directory_uri().'/dist/images/aycm_card.png'  ?>" alt="AYMC kártya elfogadóhely"> <img src="<?= get_template_directory_uri().'/dist/images/szep_kartya_3.gif'  ?>" alt="SZÉP kártya elfogadóhely">
+      </div>
     </div>
 
   </div>
 </div>
-  <div class="row">
-      <div class="columns large-6 large-push-6 prices__cards">
-        <img src="<?= get_template_directory_uri().'/dist/images/aycm_card.png'  ?>" alt="AYMC kártya elfogadóhely"> <img src="<?= get_template_directory_uri().'/dist/images/szep_kartya_3.gif'  ?>" alt="SZÉP kártya elfogadóhely">
-      </div>
-  </div>
+
 </div>
 <?php endwhile; ?>
 
