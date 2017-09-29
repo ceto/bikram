@@ -10,10 +10,10 @@
     <small> <?= date_i18n('F&\nb\sp;d.', strtotime( get_field('starts') ) ) ?></small>
   </div>
   <div class="calcol calentry__actions">
-    <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="button small secondary">+Cal
-      <!-- <svg viewBox="0 0 20 20" class="icon icon--calendar-plus">
+    <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="addtocalbtn">
+      <svg viewBox="0 0 512 640" class="icon icon--calendar-plus">
             <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--calendar-plus"></use>
-      </svg> -->
+      </svg>
     </a>
   </div>
 

@@ -84,6 +84,13 @@ acf_add_local_field_group(array (
         ),
         array (
             array (
+                'param' => 'page_template',
+                'operator' => '==',
+                'value' => 'tmpl-newcomer.php',
+            ),
+        ),
+        array (
+            array (
                 'param' => 'page_type',
                 'operator' => '==',
                 'value' => 'front_page',

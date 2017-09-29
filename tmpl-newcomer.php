@@ -16,14 +16,11 @@
         <br>
       </div>
       </header>
-      <div class="atwocolumnblock">
        <?php the_content(); ?>
-      </div>
-      <a href="<?php the_permalink(206); ?>" class="button">Válassz óráink közül!</a>
-
     </div>
   </div>
 </div>
+<?php get_template_part('templates/widegallery'); ?>
 <div class="ps ps--opaque">
   <div class="row">
     <div class="columns tablet-8 tablet-centered xxlarge-6 xxlarge-uncentered">
@@ -33,4 +30,5 @@
     </div>
   </div>
 </div>
+
 <?php endwhile; ?>
