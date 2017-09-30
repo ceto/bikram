@@ -6,6 +6,10 @@
   overflow: hidden;
   height:12rem;
   display: none;
+  .page-template-tmpl-newcomer &, .page-template-tmpl-studio & {
+    display: block;
+  }
+
   @include breakpoint(tablet) {
     display: block;
     height:20rem;
