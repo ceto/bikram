@@ -196,6 +196,11 @@ body.no-hero {
     color:$primary-color;
 }
 
+
+html.is-reveal-open, html.is-reveal-open body {
+    position: relative;
+}
+
 .eventsmodal.reveal {
     padding:0 1.25rem;
     background-color: $body-font-color;
@@ -211,24 +216,24 @@ body.no-hero {
     }
 }
 .eventsmodal__inner {
-    margin:4rem auto 0;
+    margin:3rem auto 0;
     max-width: 36rem;
+    min-height: 38rem;
+    //background-color: red;
 }
 .menumodal.reveal {
-    background-color: $dark-gray;
     color:$primary-color;
+    background-color: $dark-gray;
+    padding:0;
 
     .close-button {
         color:$primary-color;
         font-size: 3em;
     }
-    .mobilenav {
-     padding:3rem;
-     position: absolute;
-     left:0;
-     top:50%;
-     width:100%;
-     transform:translateY(-50%);
 
+    .mobilenav {
     }
+}
+.menumodal__inner {
+    padding:20vh 1rem 1rem 1rem;
 }

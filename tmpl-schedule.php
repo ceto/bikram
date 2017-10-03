@@ -22,6 +22,9 @@
     <div class="row">
       <div class="columns large-10 large-centered">
         <div class="schedule schedule--all">
+          <div class="aday aday--nopad">
+            <img src="<?= get_template_directory_uri().'/dist/images/orarend.jpg' ?> " alt="Órarend áttekintő">
+          </div>
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
             <?php

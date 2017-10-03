@@ -1,3 +1,14 @@
+<div class="reveal full menumodal fast" id="menumodal" data-overlay="false" data-v-offset="0" data-show-delay="0" data-hide-delay="0" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+  <div class="menumodal__inner">
+    <nav class="mobilenav">
+      <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu vertical menu--mobile']); ?>
+    </nav>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
 <div class="reveal eventsmodal full fast" id="eventsmodal" data-overlay="false" data-v-offset="0" data-show-delay="0" data-hide-delay="0" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
 <div class="eventsmodal__inner">
   <?php

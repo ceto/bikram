@@ -26,11 +26,4 @@
   </div>
 </section>
 
-<div class="reveal full menumodal fast" id="menumodal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
-  <nav class="mobilenav">
-    <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu vertical menu--mobile']); ?>
-  </nav>
-  <button class="close-button" data-close aria-label="Close modal" type="button">
-  <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+
