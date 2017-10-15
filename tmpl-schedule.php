@@ -23,7 +23,12 @@
       <div class="columns large-10 large-centered">
         <div class="schedule schedule--all">
           <div class="aday aday--nopad">
-            <img src="<?= get_template_directory_uri().'/dist/images/orarend.jpg' ?> " alt="Órarend áttekintő">
+            <?php if (get_field('schimage')) :?>
+              <?php $schimage = get_field('schimage'); ?>
+              <img src="<?php echo $schimage['url']; ?>" alt="<?php echo $schimage['alt']; ?>" />
+            <?php else:  ?>
+              <img src="<?= get_template_directory_uri().'/dist/images/orarend.jpg' ?> " alt="Órarend áttekintő">
+            <?php endif; ?>
           </div>
           <?php $prevday=''; ?>
           <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
