@@ -12,9 +12,9 @@
       <table class="pricetable">
         <thead>
           <tr>
-            <th>Árak</th>
-            <th>Felnőtt ár</th>
-            <th>Diák/Nyugdíjas</th>
+            <th><?= __('Árak','bikram') ?></th>
+            <th><?= __('Felnőtt ár','bikram') ?></th>
+            <th><?= __('Diák/Nyugdíjas','bikram') ?></th>
           </tr>
         </thead>
         <tbody>

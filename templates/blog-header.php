@@ -10,7 +10,7 @@
     <div class="columns medium-text-right medium-6">
       <ul class="bloghead__catlist">
         <li class="cat-item cat-item-all <?= is_home()?'current-cat':'' ?>">
-          <a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>"><?php _e('All','bikram') ?></a>
+          <a href="<?php the_permalink(get_option( 'page_for_posts' )); ?>"><?= __('Mind','bikram') ?></a>
         </li>
         <?php wp_list_categories( array(
         'style' => 'list',

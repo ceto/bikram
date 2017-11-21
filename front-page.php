@@ -22,14 +22,14 @@
         ?>
         <br><br>
         <section class="pagehead__schedule callout" role="marquee">
-          <h4>Közelgő órák a stúdióban</h4>
+          <h4><?= __('Közelgő órák a stúdióban','bikram') ?></h4>
           <div class="calendar calendar--teacher">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryteacher'); ?>
             <?php endwhile; ?>
           </div>
           <br>
-          <a href="<?php the_permalink(42); ?>" class="button large expanded">Teljes órarend</a>
+          <a href="<?php the_permalink(42); ?>" class="button large expanded"><?= __('Teljes órarend','bikram') ?></a>
         </section>
         <?php wp_reset_postdata(); ?>
 

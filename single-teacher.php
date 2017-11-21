@@ -45,7 +45,7 @@
         $the_events = new WP_Query( $args );
         ?>
         <section class="singleteacher__schedule callout" role="marquee">
-          <h3><?php the_field('nick_name'); ?> következő órái</h3>
+          <h3><?php the_field('nick_name'); ?> <?= __('következő órái','bikram') ?></h3>
           <hr>
           <div class="calendar calendar--teacher">
             <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>

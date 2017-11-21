@@ -17,7 +17,7 @@
           $the_events = new WP_Query( $args );
           ?>
           <section role="marquee">
-            <h3>Következő időpontok</h3>
+            <h3><?= __('Következő időpontok','bikram') ?></h3>
             <div class="calendar calendar--full">
               <?php while ($the_events->have_posts()) : $the_events->the_post(); ?>
               <?php get_template_part('templates/calendar','entryclass'); ?>
@@ -35,7 +35,7 @@
         </div>
         <div class="text-center">
           <br><br><br>
-          <a href="<?= get_the_permalink(42) ?>" class="button large">Mutasd a teljes órarendet</a>
+          <a href="<?= get_the_permalink(42) ?>" class="button large"><?= __('Mutasd a teljes órarendet','bikram') ?></a>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
         <div class="content">
           <?php the_content(); ?>
           <br>
-          <a class="button" href="<?php the_permalink(120) ?>">Térkép és megközelítés</a>
+          <a class="button" href="<?php the_permalink(120) ?>"><?= __('Térkép és megközelítés','bikram') ?></a>
         </div>
       </div>
     </div>
@@ -90,7 +90,7 @@
       $the_classes = new WP_Query( $args );
       ?>
       <section id="classes">
-        <h5>Ismerd meg a többi órát is&hellip;</h5>
+        <h5><?= __('Ismerd meg a többi órát is','bikram') ?>&hellip;</h5>
         <br>
         <div class="owl-carousel class-carousel">
           <?php while ($the_classes->have_posts()) : $the_classes->the_post(); ?>

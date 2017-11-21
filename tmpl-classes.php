@@ -20,7 +20,7 @@
 <div class="ps ps--narrow">
   <header class="heading">
     <div class="row column">
-        <h2 class="heading__title">Jóga óráink</h2>
+        <h2 class="heading__title"><?= __('Jóga óráink','bikram') ?></h2>
         <hr>
         <div class="heading__lead"><?php the_excerpt(); ?></div>
     </div>

@@ -1,13 +1,17 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2017-11-21 16:52+0000\n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: Loco - https://localise.biz/"
+"POT-Creation-Date: 2017-11-21 16:53+0000\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"PO-Revision-Date: 2017-11-21 17:00+0000\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"Project-Id-Version: Bikram Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Szabó Gábor <szabogabi@gmail.com>\n"
+"Language-Team: English (United States)\n"
+"MIME-Version: 1.0"
 
 #: base.php:11
 msgid ""
@@ -17,11 +21,11 @@ msgstr ""
 
 #: front-page.php:25
 msgid "Közelgő órák a stúdióban"
-msgstr ""
+msgstr "Upcoming classes at the studio"
 
 #: front-page.php:32 templates/events-modal.php:61
 msgid "Teljes órarend"
-msgstr ""
+msgstr "Weekly schedule"
 
 #: functions.php:28
 #, php-format
@@ -34,19 +38,19 @@ msgstr ""
 
 #: single-class.php:20
 msgid "Következő időpontok"
-msgstr ""
+msgstr "Upcoming classes"
 
 #: single-class.php:38
 msgid "Mutasd a teljes órarendet"
-msgstr ""
+msgstr "Show weekly schedule"
 
 #: single-class.php:71
 msgid "Térkép és megközelítés"
-msgstr ""
+msgstr "Map and contact"
 
 #: single-class.php:93
 msgid "Ismerd meg a többi órát is"
-msgstr ""
+msgstr "More classes"
 
 #: single-teacher.php:48
 msgid "következő órái"
@@ -63,7 +67,7 @@ msgstr ""
 
 #: tmpl-classes.php:23
 msgid "Jóga óráink"
-msgstr ""
+msgstr "Classes"
 
 #. Name of the template
 msgid "Contact Template With Google Map"
@@ -79,15 +83,15 @@ msgstr ""
 
 #: tmpl-prices.php:15
 msgid "Árak"
-msgstr ""
+msgstr "Prices"
 
 #: tmpl-prices.php:16
 msgid "Felnőtt ár"
-msgstr ""
+msgstr "Adult"
 
 #: tmpl-prices.php:17
 msgid "Diák/Nyugdíjas"
-msgstr ""
+msgstr "Student"
 
 #. Name of the template
 msgid "Schedule"
@@ -410,12 +414,12 @@ msgstr ""
 
 #: templates/blog-header.php:13
 msgid "Mind"
-msgstr ""
+msgstr "All"
 
 #: templates/calendar-entry.php:10 templates/calendar-entryclass.php:7
 #: templates/calendar-entryteacher.php:4
 msgid "perc"
-msgstr ""
+msgstr "minutes"
 
 #: templates/comments.php:10
 #, php-format
@@ -443,11 +447,11 @@ msgstr ""
 
 #: templates/content-sticky.php:10
 msgid "Részletek"
-msgstr ""
+msgstr "Details"
 
 #: templates/content.php:17
 msgid "Olvasd tovább"
-msgstr ""
+msgstr "Read more"
 
 #: templates/events-modal.php:48
 msgid "Ezen a napon nincs meghirdetve óra."
@@ -465,23 +469,23 @@ msgstr ""
 
 #: templates/footer.php:15
 msgid "Az Astorián"
-msgstr ""
+msgstr "At Astoria"
 
 #: templates/footer.php:16
 msgid "Test nem marad szárazon"
-msgstr ""
+msgstr "Hot body cool mind"
 
 #: templates/header.php:16
 msgid "Menü"
-msgstr ""
+msgstr "Menu"
 
 #: templates/header.php:21
 msgid "Órarend"
-msgstr ""
+msgstr "Schedule"
 
 #: templates/schedule-header.php:6
 msgid "Nincs előre bejelentkezés, bármelyik órára jöhetsz."
-msgstr ""
+msgstr "No prior registration, you can attend any classes."
 
 #: templates/teacher-card.php:17
 msgid "órái és bemutakozása"

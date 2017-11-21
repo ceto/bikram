@@ -45,9 +45,9 @@
                   <?php endwhile; ?>
                 </div>
               <?php else: ?>
-                <h4>Ezen a napon nincs meghirdetve óra.</h4>
+                <h4><?= __('Ezen a napon nincs meghirdetve óra.','bikram') ?></h4>
                 <hr>
-                <p>Ne add fel! Más napokon biztos találsz kedvedre valót. Lapozz tovább vagy nézd meg a <a href="<?= get_the_permalink(42) ?>">teljes órarendet.</a></p>
+                <p><?= __('Ne add fel! Más napokon biztos találsz kedvedre valót. Lapozz tovább vagy nézd meg a','bikram') ?> <a href="<?= get_the_permalink(42) ?>"><?= __('teljes órarendet.','bikram') ?></a></p>
               <?php endif; ?>
             </div>
           </div>
@@ -58,7 +58,7 @@
         ?>
       <?php endfor; ?>
     </div>
-    <a href="<?= get_the_permalink(42) ?>" class="button expanded large">Teljes órarend</a>
+    <a href="<?= get_the_permalink(42) ?>" class="button expanded large"><?= __('Teljes órarend','bikram') ?></a>
   </aside>
 </div>
   <button class="close-button" data-close aria-label="Close modal" type="button">

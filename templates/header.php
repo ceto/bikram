@@ -13,12 +13,12 @@
           <svg viewBox="0 0 20 20" class="icon icon--hamburger">
             <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--hamburger"></use>
           </svg><br>
-          Menü</a>
+          <?= __('Menü','bikram') ?></a>
           <a class="eventstoggle" data-open="eventsmodal">
             <svg viewBox="0 0 20 20" class="icon icon--calendar">
             <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--calendar"></use>
           </svg><br>
-          Órarend
+          <?= __('Órarend','bikram') ?>
           </a>
         </div>
       </div>

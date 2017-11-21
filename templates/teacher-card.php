@@ -14,6 +14,6 @@
       <?php endwhile; ?>
 
     </p>
-    <a class="tcard__more" href="<?php the_permalink(); ?>"><?php the_field('nick_name'); ?> órái és bemutakozása &hellip;</a>
+    <a class="tcard__more" href="<?php the_permalink(); ?>"><?php the_field('nick_name'); ?> <?= __('órái és bemutakozása','bikram') ?>&hellip;</a>
   </header>
 </div>

@@ -12,8 +12,8 @@
     <div class="columns large-7">
       <div class="sitefooter__slogan">
         <div class="sitefooter__slogan">
-          <small>Az Astorián</small>
-          <p>Test nem marad szárazon</p>
+          <small><?= __('Az Astorián','bikram') ?></small>
+          <p><?= __('Test nem marad szárazon','bikram') ?></p>
         </div>
       </div>
     </div>
