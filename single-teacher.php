@@ -33,13 +33,14 @@
       </div>
       <div class="columns large-6 xlarge-4">
         <?php
+        $origid=apply_filters( 'wpml_object_id', $post->ID, 'teacher', true, 'hu' );
         $args = array(
         'post_type'  => 'event',
         'posts_per_page' => -1,
         'meta_query' => array(
         'relation'=>'AND',
         array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
-        array('key' => 'teacher', 'compare' => '=', 'value' => $post->ID)
+        array('key' => 'teacher', 'compare' => '=', 'value' => $origid)
         )
         );
         $the_events = new WP_Query( $args );

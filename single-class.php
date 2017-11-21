@@ -5,14 +5,16 @@
     <div class="row">
       <div class="columns large-10 large-centered">
         <div class="classleader__naptar">
+
           <?php
+          $origid=apply_filters( 'wpml_object_id', $post->ID, 'class', true, 'hu' );
           $args = array(
           'post_type'  => 'event',
           'posts_per_page' => -1,
           'meta_query' => array(
           'relation'=>'AND',
           array('key' => 'starts', 'compare' => '>=', 'value' => date('Y-m-d'), type => 'DATE' ),
-          array('key' => 'class', 'compare' => '=', 'value' => $post->ID)
+          array('key' => 'class', 'compare' => '=', 'value' => $origid)
           ));
           $the_events = new WP_Query( $args );
           ?>
@@ -26,7 +28,7 @@
           </section>
           <?php if ($the_events->found_posts>4) : ?>
           <a href="#" class="classleader__naptar__more">
-            Mutasd mindet <svg viewBox="0 0 20 20" class="icon icon--arrow-down">
+            <?= __('Mutasd mindet','bikram') ?> <svg viewBox="0 0 20 20" class="icon icon--arrow-down">
               <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--arrow-down"></use>
             </svg>
           </a>

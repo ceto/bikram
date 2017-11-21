@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2017-11-21 16:52+0000\n"
+"POT-Creation-Date: 2017-11-21 17:32+0000\n"
 "Language: \n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -32,27 +32,31 @@ msgstr ""
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: single-class.php:20
+#: single-class.php:22
 msgid "Következő időpontok"
 msgstr ""
 
-#: single-class.php:38
+#: single-class.php:31
+msgid "Mutasd mindet"
+msgstr ""
+
+#: single-class.php:40
 msgid "Mutasd a teljes órarendet"
 msgstr ""
 
-#: single-class.php:71
+#: single-class.php:73
 msgid "Térkép és megközelítés"
 msgstr ""
 
-#: single-class.php:93
+#: single-class.php:95
 msgid "Ismerd meg a többi órát is"
 msgstr ""
 
-#: single-teacher.php:48
+#: single-teacher.php:49
 msgid "következő órái"
 msgstr ""
 
-#: single-teacher.php:62 templates/content-page.php:6
+#: single-teacher.php:63 templates/content-page.php:6
 #: templates/content-single.php:40
 msgid "Pages:"
 msgstr ""
