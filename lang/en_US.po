@@ -3,10 +3,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2017-11-21 17:32+0000\n"
-"Language: en-US\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
-"PO-Revision-Date: 2017-11-21 17:33+0000\n"
-"X-Generator: Loco - https://localise.biz/\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"PO-Revision-Date: 2018-03-08 15:12+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
 "Project-Id-Version: Bikram Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: Szabó Gábor <szabogabi@gmail.com>\n"
@@ -398,7 +398,7 @@ msgstr ""
 
 #: templates/content-class.php:9
 msgid "Időpontok és részletek"
-msgstr ""
+msgstr "More info"
 
 #: templates/events-modal.php:48
 msgid "Ezen a napon nincs meghirdetve óra."
