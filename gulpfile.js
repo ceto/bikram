@@ -240,15 +240,23 @@ gulp.task('svgstore', function () {
 
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
-gulp.task('images', function() {
-  return gulp.src(globs.images)
-    .pipe(imagemin({
-      progressive: true,
-      interlaced: true,
-      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
-    }))
-    .pipe(gulp.dest(path.dist + 'images'))
-    .pipe(browserSync.stream());
+gulp.task("images", function() {
+    return gulp
+        .src(globs.images)
+        .pipe(
+            imagemin([
+                imagemin.mozjpeg({ progressive: true }),
+                imagemin.gifsicle({ interlaced: true }),
+                imagemin.svgo({
+                    plugins: [
+                        { removeUnknownsAndDefaults: false },
+                        { cleanupIDs: false }
+                    ]
+                })
+            ])
+        )
+        .pipe(gulp.dest(path.dist + "images"))
+        .pipe(browserSync.stream());
 });
 
 // ### JSHint
@@ -272,7 +280,7 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // `manifest.config.devUrl`. When a modification is made to an asset, run the
 // build step for that asset and inject the changes into the page.
 // See: http://www.browsersync.io
-gulp.task('watch', function() {
+gulp.task("watch", ["build"], function() {
   browserSync.init({
     files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
@@ -292,7 +300,7 @@ gulp.task('watch', function() {
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
-gulp.task('build', function(callback) {
+gulp.task("build", ["clean"], function(callback) {
   runSequence('styles',
               'scripts',
               ['fonts', 'images', 'svginline', 'svgstore'],

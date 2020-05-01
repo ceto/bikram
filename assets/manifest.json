@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://bikram.dev"
+    "devUrl": "http://bikram.localhost"
   }
 }

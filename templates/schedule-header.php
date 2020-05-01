@@ -3,7 +3,7 @@
   <div class="row">
     <div class="columns text-center">
       <h1>
-          <?= Titles\title(); ?><br><small><?= __('Nincs előre bejelentkezés, bármelyik órára jöhetsz.','bikram') ?></small>
+          <?= Titles\title(); ?><br><small><?php //_e('Nincs előre bejelentkezés, bármelyik órára jöhetsz.','bikram') ?></small>
       </h1>
       <?php the_excerpt(); ?>
     </div>

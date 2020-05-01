@@ -51,7 +51,7 @@
   </div>
   <div class="row">
     <div class="columns tablet-6">
-      &copy; <?= date(Y) ?> Bikram Jóga Központ &middot; All rights reserved &middot; <a href="https://bikram.hu/adatvedelmi-es-adatkezelesi-elvek/">Adatkezelés</a>
+		&copy; <?= date(Y) ?> Bikram Jóga Központ &middot; All rights reserved &middot; <a href="https://bikram.hu/adatvedelmi-es-adatkezelesi-elvek/">Adatkezelés</a> &middot; <a href="<?php the_permalink(2444); ?>">ÁSZF</a>
     </div>
     <div class="columns tablet-6 tablet-text-right">
       Designed with care by <a taqget="_blank" href="http://hydrogene.hu">Hydrogene</a> &middot; Photo <a target="_blank" href="http://g2foto.hu/">G2Foto</a>
