@@ -5,7 +5,6 @@
     <div class="row">
       <div class="columns large-10 large-centered">
         <div class="classleader__naptar">
-
           <?php
           $origid=apply_filters( 'wpml_object_id', $post->ID, 'class', true, 'hu' );
           $args = array(

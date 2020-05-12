@@ -78,6 +78,21 @@
   }
 }
 
+.onlinelabel, .offlinelabel {
+    display: inline-block;
+    font-size: .5666em;
+    line-height: 1;
+    padding:.25em .5em;
+    text-align: center;
+    background-color: $primary-color;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.offlinelabel {
+    background-color: $dark-gray;
+}
+
 .calentry__title {
   font-weight: $global-weight-bold;
 
