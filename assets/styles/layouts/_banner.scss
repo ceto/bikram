@@ -139,6 +139,16 @@ body.no-hero {
             color: get-color(primary);
         }
     }
+
+    > li.featured {
+        > a {
+            background-color: $primary-color;
+            color:$white;
+            border-radius: 4px;
+            box-shadow: 0 0 .25rem 0 rgba(#000,.25);
+            // border:2px solid currentColor;
+        }
+    }
 }
 
 .menu--mobile {
@@ -157,6 +167,14 @@ body.no-hero {
     > li.active {
         > a {
             color: get-color(primary);
+        }
+    }
+    > li.featured {
+        > a {
+            // background-color: $primary-color;
+            // color:$white;
+            border:2px solid $primary-color;
+            border-radius: 4px;
         }
     }
 }

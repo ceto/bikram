@@ -34,7 +34,7 @@
   }
 }
 
-.owl-bupapslider {
+.owl-bupapslider.owl-carousel {
 
 
   .owl-nav {
@@ -43,7 +43,7 @@
     right:0;
     width:5.125rem;
     transform: translateY(-50%);
-    > div {
+    > button {
       height:3rem;
       width:2.5rem;
       font-size: 3rem;

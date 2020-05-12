@@ -1,5 +1,6 @@
+.owl-carousel {
 .owl-nav {
-  > div {
+  > div, > button {
     font-weight: $global-weight-bold;
     font-size:4rem;
     line-height: 1;
@@ -31,7 +32,14 @@
 
   }
 }
-.minical-carousel {
+
+.owl-nav button.owl-prev,
+	.owl-nav button.owl-next,
+	button.owl-dot {
+		font-size: 4rem;
+	}
+
+&.minical-carousel {
   .owl-nav {
 
     position: absolute;
@@ -54,7 +62,7 @@
 }
 
 
-.teacher-carousel {
+&.teacher-carousel {
   .owl-dots {
     // text-align: right;
     // position: absolute;
@@ -73,7 +81,7 @@
   }
 }
 
-.class-carousel {
+&.class-carousel {
   .owl-dots {
     text-align: left;
     position: absolute;
@@ -90,4 +98,5 @@
       background-color: $primary-color;
     }
   }
+}
 }
