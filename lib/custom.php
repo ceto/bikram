@@ -1,22 +1,23 @@
-  <?php
-    // Define path and URL to the ACF plugin.
-    define( 'BIKRAM_ACF_PATH', get_stylesheet_directory() . '/lib/acf/' );
-    define( 'BIKRAM_ACF_URL', get_stylesheet_directory_uri() . '/lib/acf/' );
-
-    // Include the ACF plugin.
-    include_once( BIKRAM_ACF_PATH . 'acf.php' );
-
-    // Customize the url setting to fix incorrect asset URLs.
-    add_filter('acf/settings/url', 'bikram_acf_settings_url');
-    function bikram_acf_settings_url( $url ) {
-        return BIKRAM_ACF_URL;
+<?php
+    // 1. customize ACF path
+    add_filter('acf/settings/path', 'bikram_acf_settings_path');
+    function bikram_acf_settings_path( $path ) {
+        $path = get_stylesheet_directory() . '/lib/acf/';
+        return $path;
     }
 
-    // (Optional) Hide the ACF admin menu item.
-    // add_filter('acf/settings/show_admin', 'bikram_acf_settings_show_admin');
-    // function bikram_acf_settings_show_admin( $show_admin ) {
-    //     return false;
-    // }
+    // 2. customize ACF dir
+    add_filter('acf/settings/dir', 'bikram_acf_settings_dir');
+    function bikram_acf_settings_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/lib/acf/';
+    return $dir;
+    }
+
+    // 3. Hide ACF field group menu item
+    //add_filter('acf/settings/show_admin', '__return_false');
+
+    // 4. Include ACF
+    include_once( get_stylesheet_directory() . '/lib/acf/acf.php' );
 
     // 5. Unhide native metabox
     // add_filter('acf/settings/remove_wp_meta_box', '__return_false');
@@ -36,9 +37,6 @@
         $paths[] = get_stylesheet_directory() . '/lib/jsonacf';
         return $paths;
     }
-
-  // 8 Generated fields include
-//   include_once( get_stylesheet_directory() . '/lib/acffields.php' );
 
   add_post_type_support( 'page', 'excerpt' );
 
