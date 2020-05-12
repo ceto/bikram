@@ -21,10 +21,13 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
-    <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="addtocalbtn">
+<!--     <a href="<?= the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="addtocalbtn">
       <svg viewBox="0 0 512 640" class="icon icon--calendar-plus">
             <use xlink:href="<?=  get_stylesheet_directory_uri(); ?>/dist/images/icons.svg#icon--calendar-plus"></use>
       </svg>
+    </a> -->
+    <a style="width:auto; height:auto; padding:0 0.333em 0.25em; line-height:1;" href="https://www.motibro.com/visitors/reservation_widget?operator=bikram-joga-kozpont<?php // echo the_gcaladdlink($post) ?>" target="_blank" rel="nofollow" class="addtocalbtn">
+      <span style="font-size:0.5em; display:inline-block; line-height:2;">JELENTKEZÉS</span>
     </a>
   </div>
 </div>
