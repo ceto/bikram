@@ -108,13 +108,40 @@
             "maxlength": 15
         },
         {
+            "key": "field_5ecf8038395ed",
+            "label": "Registration is needed",
+            "name": "regisneeded",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ebb195a90510",
             "label": "Registration URL",
             "name": "regurl",
             "type": "url",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5ecf8038395ed",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -141,5 +168,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589320043
+    "modified": 1590744040
 }
