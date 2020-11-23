@@ -26,8 +26,12 @@
     </figcaption>
   </figure>
   <div class="calcol calentry__actions">
+        <?php
+            $regurl='https://www.motibro.com/visitors/reservation_widget?operator=bikram-joga-kozpont';
+            if ( get_field('regurl') ) {$regurl=get_field('regurl');}
+        ?>
         <?php if ( get_field('regisneeded') ) : ?>
-        <a style="width:auto; height:auto; padding:0 0.333em 0.25em; line-height:1;" href="https://www.motibro.com/visitors/reservation_widget?operator=bikram-joga-kozpont" target="_blank" rel="nofollow" class="addtocalbtn">
+        <a style="width:auto; height:auto; padding:0 0.333em 0.25em; line-height:1;" href="<?= $regurl; ?>" target="_blank" rel="nofollow" class="addtocalbtn">
             <span style="font-size:0.5em; display:inline-block; line-height:2;"><?= _e('BEJELENTKEZÉS', 'bikram') ?></span>
         </a>
         <?php else: ?>
