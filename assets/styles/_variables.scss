@@ -1,0 +1,84 @@
+$fontsans: 'Oswald', 'Bw Modelica', 'Work Sans', sans-serif;
+$fontserif: 'Libre Baskerville', serif;
+
+
+
+
+$fw-black: 900;
+$fw-semibold: 600;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-normal: 400;
+$fw-light: 300;
+
+
+// Colors
+$cl-white: #fefefe;
+$cl-black: #2a2a2a;
+
+$cl-primary: #e60376;
+$cl-secondary: #2a2a2a;
+$cl-tertiary: #ec5840;
+
+
+$cl-light: #5b7eb7;
+
+$cl-dark: scale-color($cl-primary, $lightness: -20%);
+$cl-xdark: scale-color($cl-primary, $lightness: -60%);
+
+$cl-tdark: scale-color($cl-tertiary, $lightness: -20%);
+$cl-sdark: scale-color($cl-secondary, $lightness: -20%);
+
+
+$cl-gray: #555555;
+$cl-gray-dark: #323232;
+$cl-gray-xdark: #202020;
+$cl-gray-xlight: #f3f6fa;
+$cl-gray-light: #ababab;
+$cl-gray-center: #757575;
+$cl-body-font-color: $cl-black;
+$cl-body-background: $cl-white;
+
+$cl-bglight: #673ab7;
+$cl-bgdark: #482895;
+
+
+// Layout / Grid
+$layout-col-count: 12;
+$layout-col-width: 72px;
+$layout-gutter-width: 20px;
+$layout-content: ($layout-col-count * $layout-col-width) + (($layout-col-count - 1) * $layout-gutter-width);
+$layout-gutter-pct: percentage($layout-gutter-width / $layout-content);
+
+$global-width: rem-calc($layout-content);
+
+// Breakpoints
+$bp-medium: 414px;
+$bp-tablet: 768px;
+$bp-large: 1024px;
+$bp-xlarge: 1280px;
+$bp-xxlarge: 1440px;
+$bp-xxxlarge: 1920px;
+
+$bp-bigdesktop: 1560px;
+
+$globalheaderheight: 6rem;
+// $globalheaderheight-tablet: 5rem;
+$globalheaderheight-small: 4.25rem;
+$ctabarheight: 4.25rem;
+
+
+
+$pswp__show-hide-transition-duration: 333ms !default;
+$pswp__controls-transition-duration: 333ms !default;
+$pswp__background-color: $cl-gray-xdark !default;
+$pswp__placeholder-color: #222 !default;
+$pswp__box-sizing-border-box: true !default; // disable .pswp * { box-sizing:border-box } (in case you already have it in your site css)
+$pswp__root-z-index: 1500 !default;
+$pswp__assets-path: '../images/pswp-skin/' !default; // path to skin assets folder (preloader, PNG and SVG sprite)
+$pswp__error-text-color: #CCC !default; // "Image not loaded" text color
+$pswp__include-minimal-style: true !default;
+
+.pswp__bg {
+    background: #000000 !important;
+}

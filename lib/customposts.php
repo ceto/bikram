@@ -156,6 +156,58 @@ function bikram_custom_post_types() {
 
   register_post_type( 'class', $args );
 
+    $labels = array(
+        'name'                  => _x( 'Leads', 'Post Type General Name', 'bikram' ),
+        'singular_name'         => _x( 'Lead', 'Post Type Singular Name', 'bikram' ),
+        'menu_name'             => __( 'Leads', 'bikram' ),
+        'name_admin_bar'        => __( 'Lead', 'bikram' ),
+        'archives'              => __( 'Item Archives', 'bikram' ),
+        'attributes'            => __( 'Item Attributes', 'bikram' ),
+        'parent_item_colon'     => __( 'Parent Item:', 'bikram' ),
+        'all_items'             => __( 'Összes Lead', 'bikram' ),
+        'add_new_item'          => __( 'Új hozzáadása', 'bikram' ),
+        'add_new'               => __( 'Új hozzáadása', 'bikram' ),
+        'new_item'              => __( 'New Item', 'bikram' ),
+        'edit_item'             => __( 'Edit Item', 'bikram' ),
+        'update_item'           => __( 'Update Item', 'bikram' ),
+        'view_item'             => __( 'View Item', 'bikram' ),
+        'view_items'            => __( 'View Items', 'bikram' ),
+        'search_items'          => __( 'Search Item', 'bikram' ),
+        'not_found'             => __( 'Not found', 'bikram' ),
+        'not_found_in_trash'    => __( 'Not found in Trash', 'bikram' ),
+        'featured_image'        => __( 'Featured Image', 'bikram' ),
+        'set_featured_image'    => __( 'Set featured image', 'bikram' ),
+        'remove_featured_image' => __( 'Remove featured image', 'bikram' ),
+        'use_featured_image'    => __( 'Use as featured image', 'bikram' ),
+        'insert_into_item'      => __( 'Insert into item', 'bikram' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this item', 'bikram' ),
+        'items_list'            => __( 'Items list', 'bikram' ),
+        'items_list_navigation' => __( 'Items list navigation', 'bikram' ),
+        'filter_items_list'     => __( 'Filter items list', 'bikram' ),
+    );
+    $args = array(
+        'label'                 => __( 'Lead', 'bikram' ),
+        'description'           => __( 'Custom post type for Lead', 'bikram' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'custom-fields'),
+        'taxonomies'            => array(),
+        'hierarchical'          => false,
+        'public'                => false,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_icon'             => 'dashicons-beer',
+        'menu_position'         => 2,
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => false,
+        'exclude_from_search'   => true,
+        'publicly_queryable'    => false,
+        'capability_type'       => 'page',
+        'rewrite'               => array('slug' => 'leads')
+    );
+    register_post_type( 'lead', $args );
+
 }
 add_action( 'init', 'bikram_custom_post_types', 0 );
 

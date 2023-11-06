@@ -5,6 +5,8 @@
 @import "../../bower_components/motion-ui/src/motion-ui.scss";
 // endbower
 
+@import "variables";
+@import "global/mixins";
 @import "settings";
 @import "mui-settings";
 @include foundation-everything;
@@ -13,6 +15,7 @@
 @include motion-ui-animations;
 
 @import "globals";
+@import "global/typography";
 @import "layouts/banner";
 @import "layouts/header";
 @import "layouts/hero";
@@ -23,6 +26,8 @@
 @import "layouts/tinymce";
 @import "layouts/bloghead";
 @import "layouts/class";
+@import "layouts/pagewrap";
+@import "layouts/newpagehead";
 @import "components/wp-classes";
 @import "components/modals";
 @import "components/teachercard";
@@ -34,6 +39,7 @@
 @import "components/owl";
 @import "components/hero";
 @import "components/bupapslider";
+@import "components/forms";
 @import "pages/singleteacher";
 
 
