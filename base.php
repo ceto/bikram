@@ -8,7 +8,8 @@
   <body <?php body_class(); ?>>
     <?php if ((!defined('WP_ENV') || \WP_ENV === 'production') && !current_user_can('manage_options')) : ?>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TM5BFSH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WD5S4DT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <?php endif; ?>
     <!--[if IE]>
