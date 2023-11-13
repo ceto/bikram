@@ -5,11 +5,11 @@
 
 
 <?php
-    $to_email = get_field('r_email', 'option');
-    $bcc_email = get_field('bcc_email', 'option');
+    // $to_email = get_field('r_email', 'option');
+    // $bcc_email = get_field('bcc_email', 'option');
 
-    // $to_email = "szabogabor@hydrogene.hu";
-    // $bcc_email = "szabogabi@gmail.com";
+    $to_email = "szabogabor@hydrogene.hu";
+    $bcc_email = "szabogabi@gmail.com";
 
     $incomingsubject = __('BIKRAM.HU | Próbabérlet regisztráció', 'bikram');
     $respsubject = __('Próbabérlet regisztrációdat rögzítettük. | BIKRAM.HU', 'bikram');
@@ -24,6 +24,10 @@
         ),
         'landingid' => array (
             'label' => __('Jelentkezési oldal ID', 'sc'),
+            'value' => '',
+        ),
+        'landingpage' => array (
+            'label' => __('Jelentkezési oldal', 'gls'),
             'value' => '',
         ),
         'acceptgdpr' => array (
@@ -52,6 +56,9 @@
     $data['name']['value'] = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
     $data['email']['value'] = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
 
+    $data['landingid']['value'] = filter_var($_POST["landingid"], FILTER_SANITIZE_STRING);
+    $data['landingpage']['value'] = '<a href="'.get_permalink($data['landingid']['value']).'">'.get_the_title($data['landingid']['value']).'</a>';
+
     $data['acceptgdpr']['value'] = filter_var($_POST["acceptgdpr"], FILTER_SANITIZE_STRING);
     $data['acceptmarketing']['value'] = filter_var($_POST["acceptmarketing"], FILTER_SANITIZE_STRING);
 
@@ -78,8 +85,6 @@
     }
 
 ?>
-
-<?php $incomingsubject.=' | '.$metas['site']; ?>
 
 <?php ob_start(); ?>
 <table width="100%" cellpadding="0" cellspacing="5">
@@ -130,11 +135,11 @@
 
     $sentMail = @wp_mail($to_email, $incomingsubject, $incominghtmlcontent, $incomingheaders);
 
-    if(!$sentMail) {
+    if(FALSE && !$sentMail) {
         $output = json_encode(array('type'=>'error', 'text' => __('Hiba történt küldés során, próbálkozz újra!','bikram')));
         die($output);
     } else {
-        $incominghtmlcontent = get_field('emailthanks', 'option').$incominghtmlcontent;
+        $incominghtmlcontent = '<h3>'.__('Regisztráltuk a bérleted, várunk szerettel az óránkon','bikram').'</h3>'.$incominghtmlcontent;
         $respsentMail = @wp_mail($data['email']['value'], $respsubject, $incominghtmlcontent, $respincomingheaders);
         $output = json_encode(array('type'=>'success', 'text' => __('Regisztráltuk a bérleted, várunk szerettel az óránkon','bikram')));
         die($output);
