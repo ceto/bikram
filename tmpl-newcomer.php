@@ -48,6 +48,18 @@
     </div>
   </div>
 </div>
+<div class="stickypost">
+    <div class="row">
+        <div class="columns medium-8">
+        <header class="stickypost__header">
+            <h2 class="stickypost__title"><?= __('7 napos próbabérlet igénylése', 'bikram'); ?></a></h2>
+        </header>
+        </div>
+        <div class="columns medium-4 medium-text-right">
+        <a href="#formsection" class="button"><?= __('Kérem a kedvezményt', 'bikram'); ?></a>
+        </div>
+    </div>
+</div>
 <?php get_template_part('templates/widegallery'); ?>
 <div class="ps ps--opaque">
   <div class="row">
@@ -60,3 +72,15 @@
 </div>
 
 <?php endwhile; ?>
+<div class="stickypost">
+    <div class="row">
+        <div class="columns medium-8">
+        <header class="stickypost__header">
+            <h2 class="stickypost__title"><?= __('7 napos próbabérlet igénylése', 'bikram'); ?></a></h2>
+        </header>
+        </div>
+        <div class="columns medium-4 medium-text-right">
+        <a href="#formsection" class="button"><?= __('Kérem a kedvezményt', 'bikram'); ?></a>
+        </div>
+    </div>
+</div>
