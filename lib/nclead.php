@@ -8,8 +8,8 @@
     // $to_email = get_field('r_email', 'option');
     // $bcc_email = get_field('bcc_email', 'option');
 
-    $to_email = "szabogabor@hydrogene.hu";
-    $bcc_email = "szabogabi@gmail.com";
+    $to_email = "falkayk@gmail.com";
+    $bcc_email = "szabogabor@hydrogene.hu";
 
     $incomingsubject = __('BIKRAM.HU | Próbabérlet regisztráció', 'bikram');
     $respsubject = __('Próbabérlet regisztrációdat rögzítettük. | BIKRAM.HU', 'bikram');
@@ -135,7 +135,7 @@
 
     $sentMail = @wp_mail($to_email, $incomingsubject, $incominghtmlcontent, $incomingheaders);
 
-    if(FALSE && !$sentMail) {
+    if(!$sentMail) {
         $output = json_encode(array('type'=>'error', 'text' => __('Hiba történt küldés során, próbálkozz újra!','bikram')));
         die($output);
     } else {
